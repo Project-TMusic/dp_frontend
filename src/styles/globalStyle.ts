@@ -43,7 +43,6 @@ export const globalStyle = css`
     letter-spacing: -0.05rem;
     color: var(--color-text-primary);
     background-color: var(--color-background);
-    background-image: url('https://source.unsplash.com/featured/?food');
   }
 
   .outer {
