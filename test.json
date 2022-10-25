@@ -1,0 +1,35 @@
+{
+  "DATA": [
+    {
+      "id": 1,
+      "tel_no": "02-2164-6022",
+      "crtfc_gbn": "18",
+      "upd_time": 1661958000000,
+      "cob_code_nm": "일반음식점",
+      "crtfc_class": null,
+      "rdn_detail_addr": null,
+      "upso_sno": null,
+      "bizcnd_code_nm": "한식",
+      "upso_nm": "두란 (롯데백화점 영등포)",
+      "gnt_no": null,
+      "map_indict_yn": "Y",
+      "y_dnts": "37.5156284",
+      "cob_code": "101",
+      "x_cnts": "126.9084491",
+      "owner_nm": null,
+      "bizcnd_code": "10101",
+      "crtfc_ymd": "2022-09-01",
+      "crt_time": 1661958000000,
+      "crtfc_sno": null,
+      "crtfc_yn": "N",
+      "rdn_addr_code": null,
+      "rdn_code_nm": "서울특별시 영등포구 경인로 846",
+      "cgg_code": "3180000",
+      "cgg_code_nm": "영등포구",
+      "crtfc_upso_mgt_sno": 14354,
+      "use_yn": "Y",
+      "crtfc_gbn_nm": "채식가능음식점",
+      "food_menu": null
+    }
+  ]
+}
