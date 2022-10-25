@@ -1,6 +1,6 @@
-import CracoAlias from 'craco-alias';
+const CracoAlias = import('craco-alias');
 
-export const plugins = [
+const plugins = [
   {
     plugin: CracoAlias,
     options: {
