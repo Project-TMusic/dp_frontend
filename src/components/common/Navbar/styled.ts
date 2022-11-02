@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const NavbarContainer = styled.div`
   width: 100%;
   padding-top: 2rem;
-  padding-bottom: 1.8rem;
+  padding-bottom: 1rem;
   display: flex;
   border-bottom: 1px solid gray;
 `;
