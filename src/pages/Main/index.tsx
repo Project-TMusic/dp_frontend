@@ -1,5 +1,9 @@
 import React from 'react';
-
-export const Main = () => {
-  return <div>main</div>;
+import { Banner } from 'src/components';
+export const Main: React.FC = () => {
+  return (
+    <>
+      <Banner />
+    </>
+  );
 };

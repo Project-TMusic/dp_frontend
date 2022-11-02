@@ -25,10 +25,14 @@ export const globalStyle = css`
     --price-level-5: #e9b738;
     --color-flex: var(--price-level-5);
   }
-
+  @font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+      format('woff');
+  }
   * {
     box-sizing: border-box;
-    font-family: 'Spoqa Han Sans Neo', 'Robot', sans-serif;
+    font-family: 'Pretendard';
   }
 
   html {
@@ -39,7 +43,7 @@ export const globalStyle = css`
   body {
     font-size: 1.6rem;
     font-weight: 400;
-    font-family: 'Spoqa Han Sans Neo', 'Robot', sans-serif;
+    font-family: 'Pretendard';
     letter-spacing: -0.05rem;
     color: var(--color-text-primary);
     background-color: var(--color-background);
