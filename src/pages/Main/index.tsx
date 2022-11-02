@@ -1,5 +1,10 @@
 import React from 'react';
-
-export const Main = () => {
-  return <div>main</div>;
+import { Navbar, Banner } from 'src/components';
+export const Main: React.FC = () => {
+  return (
+    <>
+      <Navbar />
+      <Banner />
+    </>
+  );
 };
