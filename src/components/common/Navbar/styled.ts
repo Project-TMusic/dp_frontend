@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 
 export const NavbarContainer = styled.div`
   width: 100%;
@@ -11,6 +12,12 @@ export const NavbarContainer = styled.div`
 export const LogoContainer = styled.div`
   margin-bottom: 0.5rem;
   margin-left: 20rem;
+  @media screen and (max-width: 1200px) {
+    margin-left: 12rem;
+  }
+  @media screen and (max-width: 1000px) {
+    margin-left: 8rem;
+  }
 `;
 
 export const Logo = styled.div`
@@ -29,9 +36,12 @@ export const LogoText = styled.div`
 
 export const MenuContainer = styled.div`
   margin-bottom: 0.5rem;
-  width: 90rem;
+  width: 100%;
   margin-left: 20rem;
   display: flex;
+  @media screen and (max-width: 1250px) {
+    margin-left: 3rem;
+  }
 `;
 
 export const MenuLink = styled.div`
@@ -73,16 +83,87 @@ export const Profile = styled.div`
 export const ProfileContainer = styled.div`
   margin-left: 15rem;
   display: flex;
+  @media screen and (max-width: 1300px) {
+    margin-left: 10rem;
+  }
+  @media screen and (max-width: 1060px) {
+    margin-left: 5rem;
+  }
 `;
 
 export const MenusLinkContainer = styled.div`
   display: flex;
   margin-left: 8rem;
   font-weight: bold;
+  @media screen and (max-width: 1000px) {
+    margin-left: 4rem;
+  }
 `;
 
 export const HelloUser = styled.div`
   font-size: 1.6rem;
   color: black;
   margin: 2.3rem 2rem 0 2.5rem;
+`;
+
+export const NavLink = styled(Link)`
+  text-decoration: none;
+  color: black;
+`;
+
+export const ResponsiveProfile = styled.div`
+  width: 10rem;
+  height: 4rem;
+  z-index: 99;
+  background-color: #fff;
+  margin-top: 1rem;
+  margin-left: 5rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: row;
+`;
+
+export const ResponsiveProfileText = styled.div`
+  margin-top: 1.2rem;
+  margin-left: 2rem;
+`;
+
+export const ArrowContainer = styled.div`
+  margin: 1.5rem 0 0 1rem;
+  float: right;
+`;
+export const Arrow = styled.div<{ ArrowProps: boolean }>`
+  height: 0.9rem;
+  width: 0.9rem;
+  border: 1px solid black;
+  border-width: 2px 2px 0 0;
+  transition: 0.3s ease;
+  transform: ${(props) =>
+    props.ArrowProps ? 'rotate(315deg)' : 'rotate(133deg)'};
+`;
+
+export const ArrowProfileContainer = styled.div`
+  display: flex;
+  text-align: center;
+`;
+
+export const ProfileBoxContainer = styled.div`
+  position: absolute;
+  padding-top: 5.2rem;
+  padding-left: 5rem;
+`;
+
+export const ProfileBox = styled.div`
+  width: 10rem;
+  height: 10rem;
+  border-radius: 1.5rem;
+  background-color: black;
+`;
+
+export const ResponsiveContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
 `;
