@@ -5,7 +5,7 @@ export const BannerContainer = styled.div`
   margin-top: 2rem;
 `;
 export const Banner = styled.div`
-  width: 80%;
+  width: 90%;
   padding-top: 50rem;
   background-color: gray;
   margin: auto;
