@@ -1,4 +1,6 @@
 import React from 'react';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import * as S from './styled';
 
 export interface CategoryTemplateProps {
@@ -20,6 +22,17 @@ export const Category: React.FC<CategoryTemplateProps> = ({
 }) => {
   const right = true;
   const left = false;
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
+  };
   return (
     <S.CategoryContainer>
       <S.TopContainer>
@@ -40,12 +53,14 @@ export const Category: React.FC<CategoryTemplateProps> = ({
       <S.BottomContainer>
         <S.CategoryListContainer>
           <S.FlexPosition>
-            <S.CategorySection></S.CategorySection>
-            <S.CategorySection></S.CategorySection>
-            <S.CategorySection></S.CategorySection>
-            <S.CategorySection></S.CategorySection>
-            <S.CategorySection></S.CategorySection>
-            <S.CategorySection></S.CategorySection>
+            <S.CarouselStyled {...settings}>
+              <S.CategorySection></S.CategorySection>
+              <S.CategorySection></S.CategorySection>
+              <S.CategorySection></S.CategorySection>
+              <S.CategorySection></S.CategorySection>
+              <S.CategorySection></S.CategorySection>
+              <S.CategorySection></S.CategorySection>
+            </S.CarouselStyled>
           </S.FlexPosition>
         </S.CategoryListContainer>
       </S.BottomContainer>

@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import Slider from 'react-slick';
 
 export const CategoryContainer = styled.div`
   width: 100%;
@@ -78,6 +79,56 @@ export const CategorySection = styled.div`
   height: 12rem;
   border-radius: 2rem;
   background-color: rgba(0, 0, 0, 0.05);
+`;
 
-  margin: 0 3vw 0 3vw;
+export const CarouselStyled = styled(Slider)`
+  .slick-list {
+    width: 130rem;
+    margin-left: 6rem;
+
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+  }
+
+  .slick-slide {
+    width: 12rem;
+    height: 12rem;
+    margin-right: 20px;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+      border-radius: 2rem;
+    }
+  }
+
+  .slick-dots {
+    margin-bottom: 9rem;
+  }
+
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    top: 25%;
+    right: -80px;
+
+    display: block;
+
+    width: 25px;
+    height: 25px;
+
+    cursor: pointer;
+
+    color: black;
+    border-radius: 50%;
+    outline: none;
+    background: transparent;
+  }
+
+  .slick-arrow {
+    background-color: #8aaae5;
+  }
+  .slick-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
 `;
