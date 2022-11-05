@@ -6,7 +6,6 @@ export const NavbarContainer = styled.div`
   padding-top: 2rem;
   padding-bottom: 1rem;
   display: flex;
-  border-bottom: 1px solid gray;
 `;
 
 export const LogoContainer = styled.div`
@@ -39,6 +38,9 @@ export const MenuContainer = styled.div`
   width: 100%;
   margin-left: 20rem;
   display: flex;
+  @media screen and (max-width: 1300px) {
+    margin-left: 10rem;
+  }
   @media screen and (max-width: 1250px) {
     margin-left: 3rem;
   }
