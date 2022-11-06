@@ -29,8 +29,6 @@ export const Category: React.FC<CategoryTemplateProps> = ({
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
     pauseOnHover: true,
   };
   return (
@@ -54,12 +52,12 @@ export const Category: React.FC<CategoryTemplateProps> = ({
         <S.CategoryListContainer>
           <S.FlexPosition>
             <S.CarouselStyled {...settings}>
-              <S.CategorySection></S.CategorySection>
-              <S.CategorySection></S.CategorySection>
-              <S.CategorySection></S.CategorySection>
-              <S.CategorySection></S.CategorySection>
-              <S.CategorySection></S.CategorySection>
-              <S.CategorySection></S.CategorySection>
+              <S.CategorySection>1</S.CategorySection>
+              <S.CategorySection>2</S.CategorySection>
+              <S.CategorySection>3</S.CategorySection>
+              <S.CategorySection>4</S.CategorySection>
+              <S.CategorySection>5</S.CategorySection>
+              <S.CategorySection>6</S.CategorySection>
             </S.CarouselStyled>
           </S.FlexPosition>
         </S.CategoryListContainer>
