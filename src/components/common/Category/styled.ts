@@ -83,8 +83,7 @@ export const CategorySection = styled.div`
 
 export const CarouselStyled = styled(Slider)`
   .slick-list {
-    width: 130rem;
-    margin-left: 6rem;
+    width: 75vw;
 
     position: relative;
 
@@ -106,11 +105,10 @@ export const CarouselStyled = styled(Slider)`
     margin-bottom: 9rem;
   }
 
-  .slick-prev,
-  .slick-next {
+  .slick-prev {
     position: absolute;
     top: 25%;
-    right: -80px;
+    left: -50px;
 
     display: block;
 
@@ -125,10 +123,46 @@ export const CarouselStyled = styled(Slider)`
     background: transparent;
   }
 
+  .slick-next {
+    position: absolute;
+    top: 25%;
+    right: -50px;
+
+    display: block;
+
+    width: 25px;
+    height: 25px;
+
+    cursor: pointer;
+
+    color: black;
+    border-radius: 50%;
+    outline: none;
+    background: transparent;
+  }
+
+  .slick-prev:before {
+    padding: 0 0.25rem 0 0.25rem;
+    font-size: 20px;
+    font-family: 'Pretendard';
+    border-radius: 1.5rem;
+    color: black;
+  }
+
+  .slick-next:before {
+    padding: 0 0.25rem 0 0.25rem;
+    font-size: 20px;
+    font-family: 'Pretendard';
+    border-radius: 1.5rem;
+    color: black;
+  }
+
   .slick-arrow {
-    background-color: #8aaae5;
+    background-color: rgba(0, 0, 0, 0.1);
+    :hover {
+      background-color: rgba(138, 170, 229, 0.5);
+    }
   }
   .slick-arrow:hover {
-    background-color: rgba(0, 0, 0, 0.05);
   }
 `;
