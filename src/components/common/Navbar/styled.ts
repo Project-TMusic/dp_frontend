@@ -2,10 +2,15 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
 export const NavbarContainer = styled.div`
+  position: fixed;
+  z-index: 100;
   width: 100%;
   padding-top: 2rem;
   padding-bottom: 1rem;
+  top: 0;
   display: flex;
+  background-color: white;
+  border-bottom: 1px solid #e5e5e5;
 `;
 
 export const LogoContainer = styled.div`
