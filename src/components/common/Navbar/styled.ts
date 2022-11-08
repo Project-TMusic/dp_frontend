@@ -10,7 +10,7 @@ export const NavbarContainer = styled.div`
   top: 0;
   display: flex;
   background-color: white;
-  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 `;
 
 export const LogoContainer = styled.div`
