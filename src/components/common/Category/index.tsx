@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import * as S from './styled';
+import { NavLink } from 'react-router-dom';
 
 export interface CategoryTemplateProps {
-  CategoryTemplateType: 'food' | 'clothes' | 'health' | 'computer' | 'tool';
   food: React.ReactNode;
   clothes: React.ReactNode;
   health: React.ReactNode;
@@ -13,7 +13,6 @@ export interface CategoryTemplateProps {
 }
 
 export const Category: React.FC<CategoryTemplateProps> = ({
-  CategoryTemplateType,
   food,
   clothes,
   health,
@@ -24,44 +23,67 @@ export const Category: React.FC<CategoryTemplateProps> = ({
   const left = false;
 
   const settings = {
-    dots: true,
+    loop: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 2,
     slidesToScroll: 1,
     pauseOnHover: true,
   };
+  const [CategoryFood, setCategory] = useState('');
+  const CategoryOnClickFood = () => {
+    setCategory('food');
+  };
+  const CategoryOnClickClothes = () => {
+    setCategory('clothes');
+  };
+  const CategoryOnClickHealth = () => {
+    setCategory('health');
+  };
+  const CategoryOnClickTool = () => {
+    setCategory('tool');
+  };
   return (
-    <S.CategoryContainer>
-      <S.TopContainer>
-        <S.CategoryTitleContainer>
-          <S.CategoryTitle>카테고리</S.CategoryTitle>
-        </S.CategoryTitleContainer>
-        <S.ArrowContainer>
-          <S.positionRight>
-            <S.ArrowLeftContainer>
-              <S.Arrow directionProps={right}></S.Arrow>
-            </S.ArrowLeftContainer>
-            <S.ArrowRightContainer>
-              <S.Arrow directionProps={left}></S.Arrow>
-            </S.ArrowRightContainer>
-          </S.positionRight>
-        </S.ArrowContainer>
-      </S.TopContainer>
-      <S.BottomContainer>
-        <S.CategoryListContainer>
-          <S.FlexPosition>
-            <S.CarouselStyled {...settings}>
-              <S.CategorySection>1</S.CategorySection>
-              <S.CategorySection>2</S.CategorySection>
-              <S.CategorySection>3</S.CategorySection>
-              <S.CategorySection>4</S.CategorySection>
-              <S.CategorySection>5</S.CategorySection>
-              <S.CategorySection>6</S.CategorySection>
-            </S.CarouselStyled>
-          </S.FlexPosition>
-        </S.CategoryListContainer>
-      </S.BottomContainer>
-    </S.CategoryContainer>
+    <>
+      <S.CategoryContainer>
+        <S.TopContainer>
+          <S.CategoryTitleContainer>
+            <S.CategoryTitle>카테고리</S.CategoryTitle>
+          </S.CategoryTitleContainer>
+          <S.ArrowContainer>
+            <S.positionRight>
+              <S.ArrowLeftContainer>
+                <S.Arrow directionProps={right}></S.Arrow>
+              </S.ArrowLeftContainer>
+              <S.ArrowRightContainer>
+                <S.Arrow directionProps={left}></S.Arrow>
+              </S.ArrowRightContainer>
+            </S.positionRight>
+          </S.ArrowContainer>
+        </S.TopContainer>
+        <S.BottomContainer>
+          <S.CategoryListContainer>
+            <S.FlexPosition>
+              <S.CarouselStyled {...settings}>
+                <S.CategorySection onClick={CategoryOnClickFood}>
+                  food
+                </S.CategorySection>
+                <S.CategorySection onClick={CategoryOnClickClothes}>
+                  Clothes
+                </S.CategorySection>
+                <S.CategorySection onClick={CategoryOnClickHealth}>
+                  Health
+                </S.CategorySection>
+                <S.CategorySection onClick={CategoryOnClickTool}>
+                  Tool
+                </S.CategorySection>
+              </S.CarouselStyled>
+            </S.FlexPosition>
+          </S.CategoryListContainer>
+        </S.BottomContainer>
+      </S.CategoryContainer>
+      {CategoryFood === 'food' ? food : <></>}
+      {CategoryFood === 'clothes' ? clothes : <></>}
+    </>
   );
 };
