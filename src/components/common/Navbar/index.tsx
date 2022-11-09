@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 import * as S from './styled';
@@ -11,8 +11,18 @@ export const Navbar: React.FC = () => {
   const isProfile: boolean = useMediaQuery({
     query: '(max-width:872px)',
   });
+  const [scrollPosition, setScrollPosition] = useState(false);
+  const listenScrollEvent = () => {
+    window.scrollY > 10 ? setScrollPosition(true) : setScrollPosition(false);
+  };
+  useEffect(() => {
+    window.addEventListener('scroll', listenScrollEvent);
+    return () => {
+      window.removeEventListener('scroll', listenScrollEvent);
+    };
+  }, []);
   return (
-    <S.NavbarContainer>
+    <S.NavbarContainer scrollPosition={scrollPosition}>
       <S.LogoContainer>
         <S.Logo>
           <S.LogoText>dp</S.LogoText>

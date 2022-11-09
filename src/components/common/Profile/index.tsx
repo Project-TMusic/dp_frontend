@@ -6,9 +6,13 @@ export const Profile: React.FC = () => {
     <>
       <S.ProfileHeader />
       <S.ProfilePicture />
-      <S.ProfileName>
-        <S.InfoRevise>정보 수정</S.InfoRevise>
-      </S.ProfileName>
+      <S.ProfileName />
+      <S.InfoRevise>정보 수정</S.InfoRevise>
+      <S.ProfileBody>
+        <S.OrderHistory>주문 내역</S.OrderHistory>
+        <S.BookMark>찜 목록</S.BookMark>
+        <S.ReviewHistory>리뷰 내역</S.ReviewHistory>
+      </S.ProfileBody>
     </>
   );
 };

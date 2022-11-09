@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
-export const NavbarContainer = styled.div`
+export const NavbarContainer = styled.div<{ scrollPosition: boolean }>`
   position: fixed;
   z-index: 100;
   width: 100%;
@@ -10,7 +10,8 @@ export const NavbarContainer = styled.div`
   top: 0;
   display: flex;
   background-color: white;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  border-bottom: ${(props) =>
+    props.scrollPosition ? '1px solid #e5e5e5' : ''};
 `;
 
 export const LogoContainer = styled.div`
@@ -126,7 +127,6 @@ export const ResponsiveProfile = styled.div`
   margin-top: 1rem;
   margin-left: 5rem;
   border: 1px solid rgba(0, 0, 0, 0.3);
-
   border-radius: 1.5rem;
   display: flex;
   flex-direction: row;

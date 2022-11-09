@@ -14,7 +14,7 @@ export const ProfilePicture = styled.div`
   border-radius: 50%;
   top: 13%;
   left: 45%;
-  background-color: #848484;
+  background-color: #a4a4a4;
 `;
 
 export const ProfileName = styled.div`
@@ -22,9 +22,9 @@ export const ProfileName = styled.div`
   width: 40rem;
   height: 11rem;
   border-radius: 55px 55px 55px 55px;
-  top: 36.5%;
-  left: 39.9%;
-  background-color: #848484;
+  top: 38.5%;
+  left: 39%;
+  background-color: #a4a4a4;
 `;
 
 export const InfoRevise = styled.div`
@@ -36,10 +36,61 @@ export const InfoRevise = styled.div`
   color: white;
   text-align: center;
   line-height: 3rem;
-  left: 75%;
-  bottom: 0;
+  left: 70%;
+  top: 43%;
+  cursor: pointer;
 `;
 
-export const OrderHistory = styled.div``;
+export const ProfileBody = styled.div`
+  position: absolute;
+  background-color: #bdbdbd;
+  top: 44.4%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+`;
 
-export const ReviewHistory = styled.div``;
+export const OrderHistory = styled.div`
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  background-color: black;
+  border-radius: 55px 55px 55px 55px;
+  text-align: center;
+  line-height: 3rem;
+  width: 10rem;
+  height: 3rem;
+  top: 15%;
+  left: 15%;
+  cursor: pointer;
+`;
+
+export const BookMark = styled.div`
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  background-color: black;
+  border-radius: 55px 55px 55px 55px;
+  text-align: center;
+  line-height: 3rem;
+  width: 10rem;
+  height: 3rem;
+  top: 15%;
+  left: 48%;
+  cursor: pointer;
+`;
+
+export const ReviewHistory = styled.div`
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  background-color: black;
+  border-radius: 55px 55px 55px 55px;
+  text-align: center;
+  line-height: 3rem;
+  width: 10rem;
+  height: 3rem;
+  top: 15%;
+  right: 15%;
+  cursor: pointer;
+`;

@@ -3,45 +3,33 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import * as S from './styled';
 import { NavLink } from 'react-router-dom';
+import { FoodContainer } from '../Products/List/Food/styled';
 
 export interface CategoryTemplateProps {
+  CategoryType: 'food' | 'clothes' | 'health' | 'tool' | '';
   food: React.ReactNode;
   clothes: React.ReactNode;
   health: React.ReactNode;
-  computer: React.ReactNode;
   tool: React.ReactNode;
 }
 
 export const Category: React.FC<CategoryTemplateProps> = ({
+  CategoryType,
   food,
   clothes,
   health,
-  computer,
   tool,
 }) => {
   const right = true;
   const left = false;
 
   const settings = {
-    loop: false,
-    infinite: true,
+    infinite: false,
     speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
+    slidesToShow: 1,
+    slidesToScroll: 3,
     pauseOnHover: true,
-  };
-  const [CategoryFood, setCategory] = useState('');
-  const CategoryOnClickFood = () => {
-    setCategory('food');
-  };
-  const CategoryOnClickClothes = () => {
-    setCategory('clothes');
-  };
-  const CategoryOnClickHealth = () => {
-    setCategory('health');
-  };
-  const CategoryOnClickTool = () => {
-    setCategory('tool');
+    variableWidth: true,
   };
   return (
     <>
@@ -65,25 +53,27 @@ export const Category: React.FC<CategoryTemplateProps> = ({
           <S.CategoryListContainer>
             <S.FlexPosition>
               <S.CarouselStyled {...settings}>
-                <S.CategorySection onClick={CategoryOnClickFood}>
-                  food
+                <S.CategorySection>
+                  <S.SelectCategory style={{ width: 'none' }} to="/food">
+                    <FoodContainer />
+                  </S.SelectCategory>
                 </S.CategorySection>
-                <S.CategorySection onClick={CategoryOnClickClothes}>
-                  Clothes
+                <S.CategorySection>
+                  <S.SelectCategory to="/clothes">Clothes</S.SelectCategory>
                 </S.CategorySection>
-                <S.CategorySection onClick={CategoryOnClickHealth}>
-                  Health
-                </S.CategorySection>
-                <S.CategorySection onClick={CategoryOnClickTool}>
-                  Tool
-                </S.CategorySection>
+                <S.CategorySection>Health</S.CategorySection>
+                <S.CategorySection>Tool</S.CategorySection>
+                <S.CategorySection>Tool1</S.CategorySection>
+                <S.CategorySection>Tool2</S.CategorySection>
+                <S.CategorySection>Tool2</S.CategorySection>
               </S.CarouselStyled>
             </S.FlexPosition>
           </S.CategoryListContainer>
         </S.BottomContainer>
       </S.CategoryContainer>
-      {CategoryFood === 'food' ? food : <></>}
-      {CategoryFood === 'clothes' ? clothes : <></>}
+      {CategoryType === '' ? food : <></>}
+      {CategoryType === 'food' ? food : <></>}
+      {CategoryType === 'clothes' ? clothes : <></>}
     </>
   );
 };

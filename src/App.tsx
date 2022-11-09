@@ -10,9 +10,9 @@ export const App: React.FC = () => (
     <Global styles={globalPadding} />
     <Navbar />
     <Routes>
-      <Route path="/" element={<Main />}>
-        <Route path="food" element={<Main />} />
-      </Route>
+      <Route index element={<Main />} />
+      <Route path="food" element={<Main />} />
+      <Route path="clothes" element={<Main />} />
       <Route path="about" element={<About />} />
       <Route path="profile" element={<ProfilePage />} />
     </Routes>

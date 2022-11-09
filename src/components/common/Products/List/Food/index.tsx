@@ -1,5 +1,6 @@
 import React from 'react';
+import * as S from './styled';
 
 export const Food: React.FC = () => {
-  return <div>asd</div>;
+  return <div>짜라란~</div>;
 };
