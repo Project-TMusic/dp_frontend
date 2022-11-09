@@ -5,13 +5,14 @@ import { Category } from 'src/components';
 
 export const CategoryTemplate: React.FC = () => {
   const location = useLocation();
+  const CategoryType = location.pathname.split('/')[1];
   return (
     <>
       <Category
+        CategoryType={CategoryType as any}
         food={<Food />}
         clothes={<Clothes />}
         health={<></>}
-        computer={<></>}
         tool={<></>}
       />
     </>
