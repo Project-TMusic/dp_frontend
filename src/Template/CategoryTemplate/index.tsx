@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { Food, Clothes } from 'src/components/common/Products/List';
 import { Category } from 'src/components';

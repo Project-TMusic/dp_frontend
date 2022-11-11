@@ -86,59 +86,48 @@ export const CarouselStyled = styled(Slider)`
   margin-bottom: 17rem;
   .slick-list {
     width: 63vw;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 875ba80c530d687ff851fbc6e7d1d9225344dc22
     position: relative;
-
     display: block;
     overflow: hidden;
   }
-
   .slick-slide {
     width: 12rem;
     height: 12rem;
     margin-right: 20px;
   }
-
   .slick-dots {
     margin-bottom: 9rem;
   }
-
   .slick-prev {
     position: absolute;
     top: 25%;
     left: -50px;
-
     display: block;
-
     width: 25px;
     height: 25px;
-
     cursor: pointer;
-
     color: black;
     border-radius: 50%;
     outline: none;
     background: transparent;
   }
-
   .slick-next {
     position: absolute;
     top: 25%;
     right: -50px;
-
     display: block;
-
     width: 25px;
     height: 25px;
-
     cursor: pointer;
-
     color: black;
     border-radius: 50%;
     outline: none;
     background: transparent;
   }
-
   .slick-prev:before {
     padding: 0 0.25rem 0 0.25rem;
     font-size: 20px;
@@ -147,7 +136,6 @@ export const CarouselStyled = styled(Slider)`
     color: black;
     margin-right: 10rem;
   }
-
   .slick-next:before {
     padding: 0 0.25rem 0 0.25rem;
     font-size: 20px;
@@ -155,7 +143,6 @@ export const CarouselStyled = styled(Slider)`
     border-radius: 1.5rem;
     color: black;
   }
-
   .slick-arrow {
     background-color: rgba(0, 0, 0, 0.1);
     margin: 2.5rem -3.5vw 0 -3.5vw;

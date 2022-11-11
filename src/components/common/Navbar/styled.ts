@@ -127,7 +127,6 @@ export const ResponsiveProfile = styled.div`
   margin-top: 1rem;
   margin-left: 5rem;
   border: 1px solid rgba(0, 0, 0, 0.3);
-
   border-radius: 1.5rem;
   display: flex;
   flex-direction: row;
