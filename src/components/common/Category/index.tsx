@@ -24,12 +24,8 @@ export const Category: React.FC<CategoryTemplateProps> = ({
   const left = false;
 
   const settings = {
-<<<<<<< HEAD
     infinite: false,
-=======
     dots: false,
-    infinite: true,
->>>>>>> 7c6ea61d4b20b8aa339268b739d719b4ead7afab
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 3,
