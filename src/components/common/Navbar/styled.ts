@@ -9,7 +9,7 @@ export const NavbarContainer = styled.div<{ scrollPosition: boolean }>`
   padding-bottom: 1rem;
   top: 0;
   display: flex;
-  background-color: white;
+  background-color: #f7f7f7;
   border-bottom: ${(props) =>
     props.scrollPosition ? '1px solid #e5e5e5' : ''};
 `;
@@ -32,11 +32,15 @@ export const Logo = styled.div`
 `;
 
 export const LogoText = styled.div`
-  color: black;
   font-size: 2rem;
   font-weight: bold;
   margin-left: 2rem;
   padding-top: 2rem;
+`;
+
+export const DPLink = styled(Link)`
+  text-decoration: none;
+  color: black;
 `;
 
 export const MenuContainer = styled.div`
@@ -111,7 +115,7 @@ export const MenusLinkContainer = styled.div`
 export const HelloUser = styled.div`
   font-size: 1.6rem;
   color: black;
-  margin: 2.3rem 2rem 0 2.5rem;
+  margin: 2.5rem 2rem 0 2.5rem;
 `;
 
 export const NavLink = styled(Link)`
@@ -173,4 +177,9 @@ export const ResponsiveContainer = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+`;
+
+export const ProfileLink = styled(Link)`
+  text-decoration: none;
+  color: black;
 `;

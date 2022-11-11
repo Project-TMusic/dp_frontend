@@ -25,7 +25,9 @@ export const Navbar: React.FC = () => {
     <S.NavbarContainer scrollPosition={scrollPosition}>
       <S.LogoContainer>
         <S.Logo>
-          <S.LogoText>dp</S.LogoText>
+          <S.LogoText>
+            <S.DPLink to="/">dp</S.DPLink>
+          </S.LogoText>
         </S.Logo>
       </S.LogoContainer>
       <S.MenuContainer>
@@ -63,7 +65,9 @@ export const Navbar: React.FC = () => {
           <S.ProfileContainer>
             <S.Wish></S.Wish>
             <S.Basket></S.Basket>
-            <S.HelloUser>Hello, User</S.HelloUser>
+            <S.HelloUser>
+              <S.ProfileLink to="profile">프로필</S.ProfileLink>
+            </S.HelloUser>
             <S.Profile></S.Profile>
           </S.ProfileContainer>
         )}

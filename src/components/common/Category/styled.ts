@@ -5,7 +5,7 @@ import Slider from 'react-slick';
 export const CategoryContainer = styled.div`
   width: 100%;
   padding-top: 12rem;
-  background-color: white;
+  background-color: #f7f7f7;
 `;
 
 export const CategoryTitleContainer = styled.div`
@@ -86,10 +86,6 @@ export const CarouselStyled = styled(Slider)`
   margin-bottom: 17rem;
   .slick-list {
     width: 63vw;
-<<<<<<< HEAD
-
-=======
->>>>>>> 875ba80c530d687ff851fbc6e7d1d9225344dc22
     position: relative;
     display: block;
     overflow: hidden;
