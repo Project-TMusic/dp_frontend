@@ -3,6 +3,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import * as S from './styled';
 import { NavLink } from 'react-router-dom';
+import { Title } from 'src/components';
 import { FoodContainer } from '../Products/List/Food/styled';
 
 export interface CategoryTemplateProps {
@@ -72,9 +73,25 @@ export const Category: React.FC<CategoryTemplateProps> = ({
           </S.CategoryListContainer>
         </S.BottomContainer>
       </S.CategoryContainer>
-      {CategoryType === '' ? food : <></>}
-      {CategoryType === 'food' ? food : <></>}
-      {CategoryType === 'clothes' ? clothes : <></>}
+      <S.FlexPosition>
+        <Title TitleProp="추천 상품" />
+        <S.positionRight style={{ width: '100%' }}>
+          <S.SeeAllContainer>
+            <S.SeeAllButton>
+              <S.SeeAllText>모두보기</S.SeeAllText>
+            </S.SeeAllButton>
+          </S.SeeAllContainer>
+        </S.positionRight>
+      </S.FlexPosition>
+      <S.CategoryTypeCenter>
+        <S.CategoryTypeContainer>
+          <S.CategoryTypeFlex>
+            {CategoryType === '' ? food : <></>}
+            {CategoryType === 'food' ? food : <></>}
+            {CategoryType === 'clothes' ? clothes : <></>}
+          </S.CategoryTypeFlex>
+        </S.CategoryTypeContainer>
+      </S.CategoryTypeCenter>
     </>
   );
 };
