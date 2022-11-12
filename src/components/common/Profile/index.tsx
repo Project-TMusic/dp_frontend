@@ -12,6 +12,7 @@ export const Profile: React.FC = () => {
         <S.OrderHistory>주문 내역</S.OrderHistory>
         <S.BookMark>찜 목록</S.BookMark>
         <S.ReviewHistory>리뷰 내역</S.ReviewHistory>
+        <S.Coupon>쿠폰함</S.Coupon>
       </S.ProfileBody>
     </>
   );

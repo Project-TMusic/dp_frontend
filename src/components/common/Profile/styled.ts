@@ -4,7 +4,7 @@ export const ProfileHeader = styled.div`
   position: absolute;
   width: 100%;
   height: 33rem;
-  background-color: #e6e6e6;
+  background-color: #dfdfdf;
 `;
 
 export const ProfilePicture = styled.div`
@@ -14,7 +14,7 @@ export const ProfilePicture = styled.div`
   border-radius: 50%;
   top: 13%;
   left: 45%;
-  background-color: #a4a4a4;
+  background-color: white;
 `;
 
 export const ProfileName = styled.div`
@@ -24,7 +24,7 @@ export const ProfileName = styled.div`
   border-radius: 55px 55px 55px 55px;
   top: 38.5%;
   left: 39%;
-  background-color: #a4a4a4;
+  background-color: white;
 `;
 
 export const InfoRevise = styled.div`
@@ -43,7 +43,7 @@ export const InfoRevise = styled.div`
 
 export const ProfileBody = styled.div`
   position: absolute;
-  background-color: #bdbdbd;
+  background-color: #e6e6e6;
   top: 44.4%;
   width: 100%;
   height: 100%;
@@ -92,5 +92,20 @@ export const ReviewHistory = styled.div`
   height: 3rem;
   top: 15%;
   right: 15%;
+  cursor: pointer;
+`;
+
+export const Coupon = styled.div`
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  background-color: black;
+  border-radius: 55px 55px 55px 55px;
+  text-align: center;
+  line-height: 3rem;
+  width: 10rem;
+  height: 3rem;
+  top: 60%;
+  left: 48%;
   cursor: pointer;
 `;

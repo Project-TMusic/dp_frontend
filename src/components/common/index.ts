@@ -5,3 +5,5 @@ export * from './Category';
 export * from './Products';
 export * from './Profile';
 export * from './ProductComponent';
+export * from './Account/Login';
+export * from './Account/Register';
