@@ -16,7 +16,7 @@ export const NavbarContainer = styled.div<{ scrollPosition: boolean }>`
 
 export const LogoContainer = styled.div`
   margin-bottom: 0.5rem;
-  margin-left: 20rem;
+  margin-left: 24rem;
   @media screen and (max-width: 1200px) {
     margin-left: 12rem;
   }
@@ -46,7 +46,7 @@ export const DPLink = styled(Link)`
 export const MenuContainer = styled.div`
   margin-bottom: 0.5rem;
   width: 100%;
-  margin-left: 20rem;
+  margin-left: 16rem;
   display: flex;
   @media screen and (max-width: 1300px) {
     margin-left: 10rem;
@@ -93,7 +93,7 @@ export const Profile = styled.div`
 `;
 
 export const ProfileContainer = styled.div`
-  margin-left: 15rem;
+  margin-left: 20rem;
   display: flex;
   @media screen and (max-width: 1300px) {
     margin-left: 10rem;

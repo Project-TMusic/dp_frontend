@@ -10,7 +10,7 @@ export const CategoryContainer = styled.div`
 
 export const CategoryTitleContainer = styled.div`
   width: 20%;
-  margin-left: 8vw;
+  margin-left: 13vw;
 `;
 
 export const CategoryTitle = styled.div`
@@ -57,7 +57,7 @@ export const ArrowRightContainer = styled.div`
 `;
 
 export const TopContainer = styled.div`
-  width: 100%;
+  width: 95%;
   display: flex;
   margin-bottom: 5rem;
 `;
@@ -85,7 +85,7 @@ export const CategorySection = styled.div`
 export const CarouselStyled = styled(Slider)`
   margin-bottom: 17rem;
   .slick-list {
-    width: 63vw;
+    width: 58vw;
     position: relative;
     display: block;
     overflow: hidden;
@@ -141,7 +141,7 @@ export const CarouselStyled = styled(Slider)`
   }
   .slick-arrow {
     background-color: rgba(0, 0, 0, 0.1);
-    margin: 2.5rem -3.5vw 0 -3.5vw;
+    margin: 2.5rem -1.5vw 0 -1.5vw;
     :hover {
       background-color: rgba(138, 170, 229, 0.5);
     }
@@ -159,7 +159,7 @@ export const SeeAllButton = styled.button`
   border-radius: 2rem;
   border: none;
   float: right;
-  margin-right: 17rem;
+  margin-right: 24rem;
   margin-top: 0.6rem;
 `;
 
@@ -173,7 +173,7 @@ export const SeeAllText = styled.div`
 `;
 
 export const CategoryTypeContainer = styled.div`
-  width: 77%;
+  width: 68%;
   margin: auto;
 `;
 

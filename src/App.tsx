@@ -8,7 +8,6 @@ import { globalPadding } from './styles/globalPadding';
 export const App: React.FC = () => (
   <>
     <Global styles={globalPadding} />
-    <Navbar />
     <Routes>
       <Route index element={<Main />} />
       <Route path="food" element={<Main />} />

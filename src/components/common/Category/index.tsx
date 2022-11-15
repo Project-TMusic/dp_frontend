@@ -74,7 +74,7 @@ export const Category: React.FC<CategoryTemplateProps> = ({
         </S.BottomContainer>
       </S.CategoryContainer>
       <S.FlexPosition>
-        <Title TitleProp="추천 상품" />
+        <Title TitleProp="인기 상품" />
         <S.positionRight style={{ width: '100%' }}>
           <S.SeeAllContainer>
             <S.SeeAllButton>
