@@ -2,5 +2,9 @@ import React from 'react';
 import * as S from './styled';
 
 export const Login: React.FC = () => {
-  return <></>;
+  return (
+    <>
+      <S.LoginBackground></S.LoginBackground>
+    </>
+  );
 };

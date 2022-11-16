@@ -1,5 +1,10 @@
 import React from 'react';
+import { Register } from 'src/components';
 
-export const Register: React.FC = () => {
-  return <></>;
+export const RegisterPage: React.FC = () => {
+  return (
+    <>
+      <Register />
+    </>
+  );
 };

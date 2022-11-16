@@ -1,5 +1,10 @@
 import React from 'react';
+import { Login } from 'src/components';
 
-export const Login: React.FC = () => {
-  return <></>;
+export const LoginPage: React.FC = () => {
+  return (
+    <>
+      <Login />
+    </>
+  );
 };
