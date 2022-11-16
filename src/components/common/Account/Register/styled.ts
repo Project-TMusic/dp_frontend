@@ -13,14 +13,14 @@ export const RegisterContainer = styled.div`
   left: 35%;
   top: 10%;
   width: 30%;
-  height: 65%;
+  height: 70%;
   border: 1px solid #848484;
   box-shadow: 1em 1em 0.4em #848484;
 `;
 
 export const RegisterTitle = styled.div`
   text-align: center;
-  padding-top: 4.5rem;
+  padding-top: 5rem;
   font-size: 3.5rem;
   font-weight: bold;
 `;
