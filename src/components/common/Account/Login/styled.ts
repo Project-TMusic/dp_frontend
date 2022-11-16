@@ -66,3 +66,8 @@ export const LoginButton = styled.button`
     background-color: #7d9ffa;
   }
 `;
+
+export const HomeLink = styled(Link)`
+  text-decoration: none;
+  color: #4f7cfb;
+`;

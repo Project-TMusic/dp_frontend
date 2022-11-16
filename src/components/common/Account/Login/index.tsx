@@ -14,7 +14,9 @@ export const Login: React.FC = () => {
           <S.RegisterLink to="/register">
             <S.LoginText>회원가입 하러가기</S.LoginText>
           </S.RegisterLink>
-          <S.LoginButton>로그인</S.LoginButton>
+          <S.HomeLink to="/">
+            <S.LoginButton>로그인</S.LoginButton>
+          </S.HomeLink>
         </S.LoginContainer>
       </S.LoginBackground>
     </>
