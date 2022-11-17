@@ -151,3 +151,37 @@ export const CarouselStyled = styled(Slider)`
 `;
 
 export const SelectCategory = styled(NavLink)``;
+
+export const SeeAllButton = styled.button`
+  width: 13rem;
+  padding-top: 1rem;
+  background-color: rgba(138, 170, 229, 0.8);
+  border-radius: 2rem;
+  border: none;
+  float: right;
+  margin-right: 17rem;
+  margin-top: 0.6rem;
+`;
+
+export const SeeAllContainer = styled.div`
+  width: 100%;
+`;
+
+export const SeeAllText = styled.div`
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+`;
+
+export const CategoryTypeContainer = styled.div`
+  width: 77%;
+  margin: auto;
+`;
+
+export const CategoryTypeCenter = styled.div`
+  width: 100%;
+  display: flex;
+`;
+
+export const CategoryTypeFlex = styled.div`
+  display: flex;
+`;

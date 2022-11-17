@@ -36,7 +36,7 @@ export const Navbar: React.FC = () => {
           <S.MenuLink>카테고리</S.MenuLink>
           <S.MenuLink>상품</S.MenuLink>
           <S.MenuLink>
-            <S.NavLink to="about">About us</S.NavLink>
+            <S.NavLink to="/about">About us</S.NavLink>
           </S.MenuLink>
         </S.MenusLinkContainer>
         {isProfile ? (
@@ -66,7 +66,7 @@ export const Navbar: React.FC = () => {
             <S.Wish></S.Wish>
             <S.Basket></S.Basket>
             <S.HelloUser>
-              <S.ProfileLink to="profile">프로필</S.ProfileLink>
+              <S.ProfileLink to="/profile">프로필</S.ProfileLink>
             </S.HelloUser>
             <S.Profile></S.Profile>
           </S.ProfileContainer>
