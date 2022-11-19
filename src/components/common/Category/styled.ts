@@ -155,7 +155,7 @@ export const SelectCategory = styled(NavLink)``;
 export const SeeAllButton = styled.button`
   width: 13rem;
   padding-top: 1rem;
-  background-color: rgba(138, 170, 229, 0.8);
+  background-color: rgba(138, 170, 229, 0.4);
   border-radius: 2rem;
   border: none;
   float: right;

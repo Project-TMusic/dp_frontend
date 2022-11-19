@@ -7,7 +7,6 @@ export const RecommendContainer = styled.div`
 
 export const RecommendBanner = styled.div`
   margin: auto;
-  width: 68%;
   padding-bottom: 5rem;
   border-radius: 3rem;
   background-color: rgba(138, 170, 229, 0.2);
