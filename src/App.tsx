@@ -1,7 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router';
-import { About, LoginPage, Main, ProfilePage, Register } from 'src/pages';
-import { Navbar } from 'src/components';
+import { About, LoginPage, Main, ProfilePage, RegisterPage } from 'src/pages';
 
 export const App: React.FC = () => (
   <>
@@ -11,7 +10,7 @@ export const App: React.FC = () => (
       <Route path="clothes" element={<Main />} />
       <Route path="about" element={<About />} />
       <Route path="profile" element={<ProfilePage />} />
-      <Route path="register" element={<Register />} />
+      <Route path="register" element={<RegisterPage />} />
       <Route path="login" element={<LoginPage />} />
     </Routes>
   </>
