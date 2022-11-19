@@ -16,13 +16,7 @@ export const NavbarContainer = styled.div<{ scrollPosition: boolean }>`
 
 export const LogoContainer = styled.div`
   margin-bottom: 0.5rem;
-  margin-left: 24rem;
-  @media screen and (max-width: 1200px) {
-    margin-left: 12rem;
-  }
-  @media screen and (max-width: 1000px) {
-    margin-left: 8rem;
-  }
+  margin-left: 17%;
 `;
 
 export const Logo = styled.div`
