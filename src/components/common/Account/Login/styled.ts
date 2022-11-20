@@ -53,10 +53,13 @@ export const AuthContainerId = styled.div`
   background: rgba(0, 0, 0, 0.04);
   margin-top: 5.5rem;
   margin-left: 4rem;
+  border-radius: 0.6rem;
+  &:focus-within {
+    background: rgba(0, 0, 0, 0.08);
+  }
   @media screen and (max-width: 400px) {
     margin: 5.5rem 0 0 2.2rem;
   }
-  border-radius: 0.6rem;
 `;
 
 export const AuthContainerPw = styled.div`
@@ -65,6 +68,9 @@ export const AuthContainerPw = styled.div`
   margin-top: 1.1rem;
   margin-left: 4rem;
   border-radius: 0.6rem;
+  &:focus-within {
+    background: rgba(0, 0, 0, 0.08);
+  }
   @media screen and (max-width: 400px) {
     margin: 2rem 0 0 2.2rem;
   }

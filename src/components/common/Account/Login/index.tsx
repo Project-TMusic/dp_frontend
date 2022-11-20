@@ -18,7 +18,7 @@ export const Login: React.FC = () => {
             <S.AuthId placeholder="아이디" />
           </S.AuthContainerId>
           <S.AuthContainerPw>
-            <S.AuthPw placeholder="비밀번호" />
+            <S.AuthPw placeholder="비밀번호" type="password" />
           </S.AuthContainerPw>
           <S.ButtonContainer>
             <S.AuthButton>로그인</S.AuthButton>
