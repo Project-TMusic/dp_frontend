@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 export const AboutUsContainer = styled.div`
   width: 100%;
   margin-top: 5rem;
+  margin-bottom: 30rem;
 `;
 
 export const Title = styled.div`
