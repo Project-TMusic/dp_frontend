@@ -5,11 +5,12 @@ import 'slick-carousel/slick/slick-theme.css';
 export const Review: React.FC = () => {
   const settings = {
     arrows: false,
-    centerMode: true,
-    centerPadding: '40px',
-    slidesToShow: 1,
-    dots: true,
+    infinite: true,
     variableWidth: true,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: 'linear',
   };
   /**
    * 유저 구매횟수는 결제버튼을 눌렀을 때 db에 count를 하나 늘리고
@@ -75,7 +76,7 @@ export const Review: React.FC = () => {
             </S.ProfilePhotoContainer>
             <S.ProfileInfoContainer>
               <S.InfoContainer>
-                <S.Info>문재인</S.Info>
+                <S.Info>짭준희1</S.Info>
               </S.InfoContainer>
               <S.BuyConutContainer>
                 <S.BuyCount>12번 재구매</S.BuyCount>
@@ -86,10 +87,49 @@ export const Review: React.FC = () => {
             <S.Star>⭐⭐⭐⭐⭐</S.Star>
           </S.StarContainer>
           <S.ReviewTextContainer>
-            <S.ReviewText>
-              훠훠훠 훠거에 넣어먹을 채소를 구매했는데 정말 신선합니다 훠훠
-              불어먹어 훠거
-            </S.ReviewText>
+            <S.ReviewText>내가 진짜 박준희임</S.ReviewText>
+          </S.ReviewTextContainer>
+        </S.ReviewCardContainer>
+        <S.ReviewCardContainer>
+          <S.ProfileIntoBuyContainer>
+            <S.ProfilePhotoContainer>
+              <S.ProfileImg />
+            </S.ProfilePhotoContainer>
+            <S.ProfileInfoContainer>
+              <S.InfoContainer>
+                <S.Info>짭준희2</S.Info>
+              </S.InfoContainer>
+              <S.BuyConutContainer>
+                <S.BuyCount>12번 재구매</S.BuyCount>
+              </S.BuyConutContainer>
+            </S.ProfileInfoContainer>
+          </S.ProfileIntoBuyContainer>
+          <S.StarContainer>
+            <S.Star>⭐⭐⭐⭐⭐</S.Star>
+          </S.StarContainer>
+          <S.ReviewTextContainer>
+            <S.ReviewText>내가 진짜 박준희임</S.ReviewText>
+          </S.ReviewTextContainer>
+        </S.ReviewCardContainer>
+        <S.ReviewCardContainer>
+          <S.ProfileIntoBuyContainer>
+            <S.ProfilePhotoContainer>
+              <S.ProfileImg />
+            </S.ProfilePhotoContainer>
+            <S.ProfileInfoContainer>
+              <S.InfoContainer>
+                <S.Info>짭준희3</S.Info>
+              </S.InfoContainer>
+              <S.BuyConutContainer>
+                <S.BuyCount>12번 재구매</S.BuyCount>
+              </S.BuyConutContainer>
+            </S.ProfileInfoContainer>
+          </S.ProfileIntoBuyContainer>
+          <S.StarContainer>
+            <S.Star>⭐⭐⭐⭐⭐</S.Star>
+          </S.StarContainer>
+          <S.ReviewTextContainer>
+            <S.ReviewText>내가 진짜 박준희임</S.ReviewText>
           </S.ReviewTextContainer>
         </S.ReviewCardContainer>
       </S.CarouselStyled>

@@ -66,10 +66,11 @@ export const MenuLink = styled.div`
   margin: 2.3rem 2rem 0 2rem;
 `;
 
-export const Home = styled.div`
+export const HomeLink = styled(Link)`
   font-size: 1.6rem;
   color: #8aaae5;
   margin: 2.3rem 2rem 0 2rem;
+  text-decoration: none;
 `;
 
 export const Wish = styled.div`

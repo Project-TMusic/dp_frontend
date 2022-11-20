@@ -24,6 +24,9 @@ export const ReviewCardContainer = styled.div`
   background: #fff;
   border-radius: 1.5rem;
   height: 20rem;
+  &:hover {
+    box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.2);
+  }
 `;
 
 export const ReviewCard = styled.div``;
