@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 export const ReviewContainer = styled.div`
   background: rgba(0, 0, 0, 0.02);
   width: 100%;
+  height: 48rem;
   margin-top: 10rem;
 `;
 
