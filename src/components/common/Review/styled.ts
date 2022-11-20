@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 export const ReviewContainer = styled.div`
   background: rgba(0, 0, 0, 0.02);
   width: 100%;
-  height: 48rem;
+  height: 40rem;
   margin-top: 10rem;
 `;
 
@@ -22,39 +22,11 @@ export const ReviewTitle = styled.div`
 
 export const ReviewCardContainer = styled.div`
   background: #fff;
-  border-radius: 1.5rem;
-  height: 20rem;
+  width: 34rem;
+  height: 13rem;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
 `;
-
-export const ReviewCard = styled.div``;
-
-export const InfoContainer = styled.div``;
-
-export const Info = styled.div`
-  font-weight: bold;
-  font-size: 1.8rem;
-  letter-spacing: 0.1rem;
-`;
-
-export const StarContainer = styled.div`
-  margin: 2rem 0 0 2rem;
-`;
-
-export const Star = styled.div`
-  font-size: 2rem;
-`;
-
-export const ReviewTextContainer = styled.div`
-  width: 80%;
-  margin: 2rem 0 0 2rem;
-`;
-
-export const ReviewText = styled.div`
-  font-weight: bold;
-  font-size: 1.5rem;
-  letter-spacing: 0.1rem;
-`;
-
 export const CarouselStyled = styled(Slider)`
   margin-bottom: 13rem;
   margin-top: 4rem;
@@ -66,7 +38,6 @@ export const CarouselStyled = styled(Slider)`
   .slick-slide {
     width: 37rem;
     margin-right: 10rem;
-
     margin-left: -5rem;
   }
   .slick-dots {
@@ -77,20 +48,43 @@ export const CarouselStyled = styled(Slider)`
     color: #4c51ff;
   }
 `;
+export const ReviewCard = styled.div``;
 
-export const ProfilePhotoContainer = styled.div`
-  margin: 2rem 0 0 2rem;
+export const InfoContainer = styled.div``;
+
+export const Info = styled.div`
+  font-weight: bold;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  display: flex;
 `;
 
-export const ProfileImg = styled.div`
-  width: 4rem;
-  padding-top: 4rem;
-  border-radius: 4rem;
-  background: black;
+export const StarContainer = styled.div`
+  margin-left: 8rem;
+  display: flex;
+`;
+
+export const Star = styled.img`
+  width: 2.3rem;
+  height: 2.3rem;
+  margin-left: -0.5rem;
+`;
+
+export const ReviewTextContainer = styled.div`
+  width: 80%;
+  margin: 1rem 0 0 4rem;
+`;
+
+export const ReviewText = styled.div`
+  font-weight: 400;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.7rem;
 `;
 
 export const BuyConutContainer = styled.div`
-  margin-top: 0.5rem;
+  margin-top: 0.7rem;
+  margin-left: 0.3rem;
 `;
 
 export const BuyCount = styled.div`
@@ -99,7 +93,8 @@ export const BuyCount = styled.div`
 `;
 
 export const ProfileInfoContainer = styled.div`
-  margin: 2.5rem 0 0 2rem;
+  display: flex;
+  margin: 2.9rem 0 0 4rem;
 `;
 
 export const ProfileIntoBuyContainer = styled.div`
