@@ -5,8 +5,7 @@ export const NavbarContainer = styled.div<{ scrollPosition: boolean }>`
   position: fixed;
   z-index: 100;
   width: 100%;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+  padding-top: 1rem;
   top: 0;
   display: flex;
   background-color: #f7f7f7;
