@@ -8,8 +8,8 @@ export interface TitlePropsType {
 
 export const Title: React.FC<TitlePropsType> = ({ TitleProp }) => {
   return (
-    <S.CategoryTitleContainer>
+    <S.CategoryTitleSelectContainer>
       <S.CategoryTitle>{TitleProp}</S.CategoryTitle>
-    </S.CategoryTitleContainer>
+    </S.CategoryTitleSelectContainer>
   );
 };

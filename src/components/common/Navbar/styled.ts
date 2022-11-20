@@ -16,7 +16,10 @@ export const NavbarContainer = styled.div<{ scrollPosition: boolean }>`
 
 export const LogoContainer = styled.div`
   margin-bottom: 0.5rem;
-  margin-left: 17%;
+  margin-left: 13%;
+  @media screen and (min-width: 1200px) {
+    margin-left: 15%;
+  }
 `;
 
 export const Logo = styled.div`
@@ -48,6 +51,13 @@ export const MenuContainer = styled.div`
   @media screen and (max-width: 1250px) {
     margin-left: 3rem;
   }
+
+  @media screen and (min-width: 1100px) {
+    margin-left: 9rem;
+  }
+  @media screen and (min-width: 1260px) {
+    margin-left: 15%;
+  }
 `;
 
 export const MenuLink = styled.div`
@@ -56,10 +66,11 @@ export const MenuLink = styled.div`
   margin: 2.3rem 2rem 0 2rem;
 `;
 
-export const Home = styled.div`
+export const HomeLink = styled(Link)`
   font-size: 1.6rem;
   color: #8aaae5;
   margin: 2.3rem 2rem 0 2rem;
+  text-decoration: none;
 `;
 
 export const Wish = styled.div`
@@ -99,10 +110,10 @@ export const ProfileContainer = styled.div`
 
 export const MenusLinkContainer = styled.div`
   display: flex;
-  margin-left: 8rem;
+  margin-left: -2rem;
   font-weight: bold;
   @media screen and (max-width: 1000px) {
-    margin-left: 4rem;
+    margin-left: 0;
   }
 `;
 

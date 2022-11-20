@@ -10,7 +10,7 @@ export const CategoryContainer = styled.div`
 
 export const CategoryTitleContainer = styled.div`
   width: 20%;
-  margin-left: 13vw;
+  margin-left: 14%;
 `;
 
 export const CategoryTitle = styled.div`

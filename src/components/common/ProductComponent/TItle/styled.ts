@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 
-export const CategoryTitleContainer = styled.div`
+export const CategoryTitleSelectContainer = styled.div`
   width: 20%;
-  margin-left: 12vw;
+  margin-left: 13%;
 `;
 
 export const CategoryTitle = styled.div`
