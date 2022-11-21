@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { Food, Clothes } from 'src/components/common/Products/List';
+import { Food, Clothes } from 'src/components';
 import { Category } from 'src/components';
 
 export const CategoryTemplate: React.FC = () => {
