@@ -10,19 +10,43 @@ export const Register: React.FC = () => {
       <S.RegisterBackground>
         <S.RegisterContainer>
           <S.RegisterTitle>회원가입</S.RegisterTitle>
-          <S.RegisterText>아이디</S.RegisterText>
-          <S.RegisterInput required />
-          <S.RegisterText>비밀번호</S.RegisterText>
-          <S.RegisterInput type="password" required />
-          <S.RegisterText>비밀번호 확인</S.RegisterText>
-          <S.RegisterInput type="password" required />
-          <S.RegisterText>전화번호</S.RegisterText>
-          <S.RegisterInput required />
-          <S.RegisterText>이메일 주소</S.RegisterText>
-          <S.RegisterInput required />
+          <S.RegisterDescription>
+            빠르고 안전한 배달 서비스 dp에 가입하세요!
+          </S.RegisterDescription>
+          <S.RegisterAuthContainer>
+            <S.RegisterInput type="text" placeholder="아이디" required />
+          </S.RegisterAuthContainer>
+          <S.RegisterAuthContainer>
+            <S.RegisterInput type="password" placeholder="비밀번호" required />
+          </S.RegisterAuthContainer>
+          <S.RegisterAuthContainer>
+            <S.RegisterInput
+              type="password"
+              placeholder="비밀번호 확인"
+              required
+            />
+          </S.RegisterAuthContainer>
+          <S.RegisterAuthContainer>
+            <S.RegisterInput
+              type="tel"
+              pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+              placeholder="전화번호"
+              required
+            />
+          </S.RegisterAuthContainer>
           <S.LoginLink to="/login">
             <S.RegisterButton>가입</S.RegisterButton>
           </S.LoginLink>
+          <S.horizontalContainer>
+            <S.horizontalLineLeft />
+            <S.horizontalText>or</S.horizontalText>
+            <S.horizontalLineRight />
+          </S.horizontalContainer>
+          <S.OtherOptionContainer>
+            <S.OtherOptionText to="/login">
+              이미 계정이 있으신가요?
+            </S.OtherOptionText>
+          </S.OtherOptionContainer>
         </S.RegisterContainer>
       </S.RegisterBackground>
     </>

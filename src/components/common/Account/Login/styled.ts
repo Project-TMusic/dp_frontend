@@ -39,6 +39,7 @@ export const LoginTitle = styled.div`
 export const LoginDescriptionContainer = styled.div`
   margin-top: 2rem;
 `;
+
 export const LoginDescription = styled.div`
   color: rgba(0, 0, 0, 0.4);
   font-size: 1.7rem;
