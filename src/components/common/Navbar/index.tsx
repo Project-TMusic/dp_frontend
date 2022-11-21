@@ -32,7 +32,7 @@ export const Navbar: React.FC = () => {
       </S.LogoContainer>
       <S.MenuContainer>
         <S.MenusLinkContainer>
-          <S.Home>Home</S.Home>
+          <S.HomeLink to="/">Home</S.HomeLink>
           <S.MenuLink>카테고리</S.MenuLink>
           <S.MenuLink>상품</S.MenuLink>
           <S.MenuLink>

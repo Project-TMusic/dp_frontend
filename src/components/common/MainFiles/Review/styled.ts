@@ -22,10 +22,18 @@ export const ReviewTitle = styled.div`
 
 export const ReviewCardContainer = styled.div`
   background: #fff;
+<<<<<<< HEAD:src/components/common/MainFiles/Review/styled.ts
   width: 34rem;
   height: 13rem;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+=======
+  border-radius: 1.5rem;
+  height: 20rem;
+  &:hover {
+    box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.2);
+  }
+>>>>>>> 0c7577bad1cd8751cba884aaac235a5da015c9cb:src/components/common/Review/styled.ts
 `;
 export const CarouselStyled = styled(Slider)`
   margin-bottom: 13rem;

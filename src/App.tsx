@@ -1,6 +1,13 @@
 import React from 'react';
 import { Routes, Route } from 'react-router';
-import { About, LoginPage, Main, ProfilePage, RegisterPage } from 'src/pages';
+import {
+  About,
+  LoginPage,
+  Main,
+  PaymentPage,
+  ProfilePage,
+  RegisterPage,
+} from 'src/pages';
 
 export const App: React.FC = () => (
   <>
@@ -12,6 +19,7 @@ export const App: React.FC = () => (
       <Route path="profile" element={<ProfilePage />} />
       <Route path="register" element={<RegisterPage />} />
       <Route path="login" element={<LoginPage />} />
+      <Route path="payment" element={<PaymentPage />} />
     </Routes>
   </>
 );
