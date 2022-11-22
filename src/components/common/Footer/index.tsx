@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
       <S.coverMargin>
         <S.AboutContainer>
           <S.About>About</S.About>
-          <S.FooterText>회사소개</S.FooterText>
+          <S.FooterAboutUsLink to="/about">회사소개</S.FooterAboutUsLink>
           <S.FooterText>사용방법</S.FooterText>
           <S.FooterText>팀원</S.FooterText>
         </S.AboutContainer>

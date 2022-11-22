@@ -14,12 +14,12 @@ export const AboutUs: React.FC = () => {
         <S.Flex>
           <S.Logo />
           <S.Description>
-            <S.DescriptionTitle>대충 소개글... </S.DescriptionTitle>
-            국가원로자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다.
-            국회에서 의결된 법률안은 정부에 이송되어 15일 이내에 대통령이
-            공포한다. 선거에 관한 경비는 법률이 정하는 경우를 제외하고는 정당
-            또는 후보자에게 부담시킬 수 없다. 각급 선거관리위원회의
-            조직·직무범위 기타 필요한 사항은 법률로 정한다.
+            <S.DescriptionTitle>
+              신속하고 안전한 다종류 배달 서비스 dp!
+            </S.DescriptionTitle>
+            여러 카테고리의 상품들을 신속하고 안전하게 배달시켜보세요! 저희 dp는
+            드론을 통해 다양한 상품들을 신속하고 안전하게 배달해주는 드론 배달
+            서비스입니다.
           </S.Description>
         </S.Flex>
       </S.AboutUsContainer>

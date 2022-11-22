@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 
 export const FooterContainer = styled.div`
   display: flex;
@@ -39,6 +40,15 @@ export const FooterText = styled.div`
   font-weight: 300;
   color: rgba(255, 255, 255, 0.3);
   margin-top: 2rem;
+`;
+
+export const FooterAboutUsLink = styled(Link)`
+  display: inline-block;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
 `;
 
 export const FooterLogoContainer = styled.div``;

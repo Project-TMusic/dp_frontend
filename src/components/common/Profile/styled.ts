@@ -38,7 +38,7 @@ export const InfoRevise = styled.div`
   text-align: center;
   line-height: 3rem;
   left: 70%;
-  top: 42.3%;
+  top: 43%;
   cursor: pointer;
 `;
 
