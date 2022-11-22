@@ -5,6 +5,7 @@ import * as S from './styled';
 import axios from 'axios';
 import { useCookies } from 'react-cookie';
 import { LoginBottom } from 'src/components/common/Account/Login/Bottom';
+import { host } from 'src/host';
 
 export const LoginPage: React.FC = () => {
   const [userId, setUserId] = useState('');
@@ -13,7 +14,7 @@ export const LoginPage: React.FC = () => {
   const [user, setUser] = useState({ username: '', status: false });
   const login = () => {
     const data = { username: userId, password: userPw };
-    axios.post('http://localhost:3001/auth/login', data).then((res) => {
+    axios.post(`http://${host.key}/auth/login`, data).then((res) => {
       if (res.data.error) {
         console.log('1');
       } else {
@@ -26,7 +27,7 @@ export const LoginPage: React.FC = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:3001/auth/authenticate', {
+      .get(`http://${host.key}/auth/authenticate`, {
         headers: {
           Authorization: localStorage.getItem('Authorization') as any,
         },

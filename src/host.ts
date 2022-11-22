@@ -1,1 +1,3 @@
-export const host = process.env.REACT_HOST || 'localhost';
+export const host = {
+  key: '',
+};
