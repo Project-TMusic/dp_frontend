@@ -8,7 +8,7 @@ export const ProfilePage: React.FC = () => {
     <>
       <Global styles={globalPadding} />
 
-      <Navbar />
+      <Navbar username="" />
       <Profile />
     </>
   );

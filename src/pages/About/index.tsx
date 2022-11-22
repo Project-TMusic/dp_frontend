@@ -8,7 +8,7 @@ export const About: React.FC = () => {
     <>
       <Global styles={globalPadding} />
 
-      <Navbar />
+      <Navbar username="" />
       <AboutUs />
     </>
   );

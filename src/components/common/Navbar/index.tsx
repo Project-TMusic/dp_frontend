@@ -3,7 +3,11 @@ import { useMediaQuery } from 'react-responsive';
 
 import * as S from './styled';
 
-export const Navbar: React.FC = () => {
+export interface UserInfo {
+  username: string;
+}
+
+export const Navbar: React.FC<UserInfo> = (username) => {
   const [isOpen, setIsOpen] = useState(false);
   const isOpenClicked = () => {
     setIsOpen(!isOpen);

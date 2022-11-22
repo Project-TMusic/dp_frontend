@@ -8,7 +8,7 @@ export const Main: React.FC = () => {
     <>
       <Global styles={globalPadding} />
 
-      <Navbar />
+      <Navbar username="asd" />
       <Banner />
       <CategoryTemplate />
       <Review />

@@ -15,9 +15,9 @@ export const icCardNeonSign = styled.div`
 `;
 
 export const icImg = styled.img`
-  width: 3.5rem;
-  height: 4.5rem;
-  margin-left: 8.8rem;
+  width: 3.3rem;
+  height: 4.3rem;
+  margin-left: 8.7rem;
 `;
 
 export const icCardContainer = styled.div`

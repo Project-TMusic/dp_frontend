@@ -2,7 +2,7 @@ import { Global } from '@emotion/react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-
+import { CookiesProvider } from 'react-cookie';
 import { App } from './App';
 import reportWebVitals from './reportWebVitals';
 import { globalStyle } from './styles';
@@ -13,8 +13,10 @@ const root = ReactDOM.createRoot(
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-      <Global styles={globalStyle} />
-      <App />
+      <CookiesProvider>
+        <Global styles={globalStyle} />
+        <App />
+      </CookiesProvider>
     </React.StrictMode>
   </BrowserRouter>
 );

@@ -1,6 +1,6 @@
 import React from 'react';
 import * as S from './styled';
-import { IcCard, Receipt } from './PaymentComponents';
+import { EmptyCircle, IcCard, Receipt } from './PaymentComponents';
 
 export const Payment: React.FC = () => {
   return (
@@ -8,6 +8,7 @@ export const Payment: React.FC = () => {
       <S.CardContent>
         <Receipt />
         <IcCard />
+        <EmptyCircle />
       </S.CardContent>
     </>
   );
