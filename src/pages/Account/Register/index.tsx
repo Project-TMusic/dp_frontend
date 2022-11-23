@@ -7,29 +7,37 @@ import * as S from './styled';
 //backend
 import axios from 'axios';
 import { host } from 'src/host';
-import { Form, Formik } from 'formik';
-import * as Yup from 'yup';
+import { useNavigate } from 'react-router';
 
 export const RegisterPage: React.FC = () => {
+  const [username, setUserName] = useState('');
+  const [userId, setUserId] = useState('');
+  const [userPw, setUserPw] = useState('');
+  const [userNumber, setUserNumber] = useState('');
   const [userCheckPw, setUserCheckPw] = useState('');
-  const initialValues = {
-    username: '',
-    user_id: '',
-    user_pw: '',
-    user_number: '',
+  const navigate = useNavigate();
+  const registerData = {
+    username: username,
+    user_id: userId,
+    user_pw: userPw,
+    user_number: userNumber,
   };
   const register = () => {
-    const data = {};
-    axios.post(`http://${host.key}/auth/register`, data).then(() => {
-      console.log(data);
+    axios.post(`http://${host.key}/auth/register`, registerData).then((res) => {
+      if (res.data.error) {
+        console.log('0');
+      } else {
+        console.log(res.data);
+        navigate('/login');
+      }
     });
   };
   let check = '';
-  if (initialValues.user_pw != userCheckPw) {
+  if (userPw != userCheckPw) {
     check = '땡';
-  } else if (initialValues.user_pw.length < 1) {
+  } else if (userPw.length < 1) {
     check = '입력없음';
-  } else if (initialValues.user_pw == userCheckPw) {
+  } else if (userPw == userCheckPw) {
     check = '일치';
   }
   return (
@@ -37,7 +45,15 @@ export const RegisterPage: React.FC = () => {
       <S.RegisterBackground>
         <S.RegisteradAdjustment>
           <Register />
-          <RegisterInput Check={check} setUserCheckPw={setUserCheckPw} />
+          <RegisterInput
+            Register={register}
+            setUserName={setUserName}
+            setUserId={setUserId}
+            setUserPw={setUserPw}
+            setUserNumber={setUserNumber}
+            Check={check}
+            setUserCheckPw={setUserCheckPw}
+          />
           <RegisterBottom />
         </S.RegisteradAdjustment>
       </S.RegisterBackground>
