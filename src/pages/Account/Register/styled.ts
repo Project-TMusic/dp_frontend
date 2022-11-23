@@ -14,7 +14,7 @@ export const RegisterBackground = styled.div`
 
 export const RegisteradAdjustment = styled.div`
   margin-left: 20vw;
-  margin-top: 20rem;
+  margin-top: 10vw;
   @media screen and (max-width: 900px) {
     margin: 0;
   }
