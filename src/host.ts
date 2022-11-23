@@ -1,3 +1,3 @@
 export const host = {
-  key: '',
+  key: 'localhost:3001',
 };

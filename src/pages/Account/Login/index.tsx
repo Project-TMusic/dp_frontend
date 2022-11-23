@@ -13,7 +13,7 @@ export const LoginPage: React.FC = () => {
   const [cookies, SetCookies] = useCookies(['id']);
   const [user, setUser] = useState({ username: '', status: false });
   const login = () => {
-    const data = { username: userId, password: userPw };
+    const data = { user_id: userId, user_pw: userPw };
     axios.post(`http://${host.key}/auth/login`, data).then((res) => {
       if (res.data.error) {
         console.log('1');
