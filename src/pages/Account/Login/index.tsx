@@ -10,8 +10,7 @@ import { host } from 'src/host';
 export const LoginPage: React.FC = () => {
   const [userId, setUserId] = useState('');
   const [userPw, setUserPw] = useState('');
-  const [cookies, SetCookies] = useCookies(['id']);
-  const [user, setUser] = useState({ username: '', status: false });
+  const [cookies, SetCookies] = useCookies(['jwt']);
   const login = () => {
     const data = { user_id: userId, user_pw: userPw };
     axios.post(`http://${host.key}/auth/login`, data).then((res) => {
@@ -19,37 +18,17 @@ export const LoginPage: React.FC = () => {
         console.log('1');
       } else {
         console.log(res.data);
-        SetCookies('id', res.data.token);
+        SetCookies('jwt', res.data.token);
         localStorage.setItem('Authorization', res.data.token);
       }
     });
   };
 
-  useEffect(() => {
-    axios
-      .get(`http://${host.key}/auth/authenticate`, {
-        headers: {
-          Authorization: localStorage.getItem('Authorization') as any,
-        },
-      })
-      .then((res) => {
-        if (res.data.error) {
-          console.log(0);
-        } else {
-          console.log(user);
-          setUser({
-            username: res.data.username,
-            status: true,
-          });
-        }
-      });
-  }, []);
-  console.log(user);
   return (
     <>
       <S.LoginBackground>
         <S.Center>
-          <Login username={user.username} status={user.status} />
+          <Login />
           <LoginInput
             Login={login}
             setUserId={setUserId}

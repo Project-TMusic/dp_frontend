@@ -1,18 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import * as S from './styled';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface UserType {
-  username: any;
-  status: boolean;
-}
 
-export const Login: React.FC<UserType> = ({ username, status }) => {
+export const Login: React.FC = () => {
   return (
     <>
       <S.LoginMainContainer>
         <S.LoginTitleContainer>
-          <S.LoginTitle>{status ? username : '로그인'}</S.LoginTitle>
+          <S.LoginTitle>로그인</S.LoginTitle>
         </S.LoginTitleContainer>
         <S.LoginDescriptionContainer>
           <S.LoginDescription>
