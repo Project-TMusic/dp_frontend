@@ -14,7 +14,7 @@ export const coverMargin = styled.div`
 `;
 
 export const AboutContainer = styled.div`
-  margin-left: 40%;
+  margin-left: 30%;
 `;
 
 export const About = styled.div`
@@ -49,6 +49,17 @@ export const FooterAboutUsLink = styled(Link)`
   font-weight: 300;
   color: rgba(255, 255, 255, 0.3);
   text-decoration: none;
+`;
+
+export const PolicyContainer = styled.div`
+  margin-left: 14%;
+`;
+
+export const Policy = styled.div`
+  font-family: 'Pretendard';
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
 `;
 
 export const FooterLogoContainer = styled.div``;

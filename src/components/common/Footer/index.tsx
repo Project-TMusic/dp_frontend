@@ -14,6 +14,11 @@ export const Footer: React.FC = () => {
           <S.FooterText>사용방법</S.FooterText>
           <S.FooterText>팀원</S.FooterText>
         </S.AboutContainer>
+        <S.PolicyContainer>
+          <S.Policy>Policy</S.Policy>
+          <S.FooterText>이용약관</S.FooterText>
+          <S.FooterText>개인정보처리방침</S.FooterText>
+        </S.PolicyContainer>
         <S.CompanyInfoContainer>
           <S.CompanyInfo>Info</S.CompanyInfo>
           <S.FooterText>
