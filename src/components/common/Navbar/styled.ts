@@ -30,7 +30,7 @@ export const Logo = styled.div`
 export const LogoText = styled.div`
   font-size: 2rem;
   font-weight: bold;
-  margin-left: 2rem;
+  margin-left: 5rem;
   padding-top: 2rem;
 `;
 
