@@ -57,7 +57,7 @@ export const StoreProduct = styled.div`
   height: auto;
   padding-top: 1rem;
   padding-bottom: 3rem;
-  box-shadow: 6px 5px 5px #8aaae5;
+  box-shadow: 6px 5px 5px rgba(0, 0, 0, 0.5);
 `;
 
 export const ProductContainer = styled.div`
