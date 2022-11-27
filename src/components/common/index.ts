@@ -7,3 +7,4 @@ export * from './Account/Register';
 export * from './Footer';
 export * from './MainFiles';
 export * from './Payment';
+export * from './ShoppingCart';

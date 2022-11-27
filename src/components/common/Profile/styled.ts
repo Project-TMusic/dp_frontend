@@ -3,7 +3,8 @@ import styled from '@emotion/styled';
 export const ProfileHeader = styled.div`
   position: absolute;
   width: 100%;
-  height: 33rem;
+  height: 37rem;
+  top: 8rem;
   background-color: #dfdfdf;
 `;
 
@@ -23,7 +24,7 @@ export const ProfileName = styled.div`
   height: 11rem;
   border-radius: 55px 55px 55px 55px;
   top: 38.5%;
-  left: 39%;
+  left: 39.8%;
   background-color: white;
 `;
 
@@ -37,7 +38,7 @@ export const InfoRevise = styled.div`
   text-align: center;
   line-height: 3rem;
   left: 70%;
-  top: 42.3%;
+  top: 43%;
   cursor: pointer;
 `;
 

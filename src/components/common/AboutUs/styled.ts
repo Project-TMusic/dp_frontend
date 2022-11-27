@@ -35,5 +35,5 @@ export const DescriptionTitle = styled.div`
   font-size: 3rem;
   font-weight: bold;
   padding-bottom: 2rem;
-  letter-spacing: 0.7rem;
+  letter-spacing: 0.3rem;
 `;
