@@ -1,7 +1,34 @@
 import React, { useState } from 'react';
 import * as S from './style';
 
-export const IcCard: React.FC = () => {
+export interface CardNumberType {
+  OneNumber: any;
+  TwoNumber: any;
+  ThreeNumber: any;
+  FourNumber: any;
+}
+
+export const IcCard: React.FC<CardNumberType> = ({
+  OneNumber,
+  TwoNumber,
+  ThreeNumber,
+  FourNumber,
+}) => {
+  let star1 = '';
+  let star2 = '';
+  let star3 = '';
+  let i = 0;
+  for (i = 1; i < 5; i++) {
+    if (TwoNumber.length == i) {
+      star1 = '*'.repeat(i);
+    }
+    if (ThreeNumber.length == i) {
+      star2 = '*'.repeat(i);
+    }
+    if (FourNumber.length == i) {
+      star3 = '*'.repeat(i);
+    }
+  }
   return (
     <S.icCardContainer>
       <S.icCardNeonSignContainer>
@@ -23,10 +50,13 @@ export const IcCard: React.FC = () => {
           </S.icCardNameContainer>
           <S.icCardNumberContainer>
             <S.icCardNumber>
-              1234
-              <S.Empty /> 5678
-              <S.Empty /> 8901 <S.Empty />
-              1512
+              {OneNumber}
+              <S.Empty />
+              {star1 == '' ? <div style={{ width: '2rem' }}></div> : star1}
+              <S.Empty />{' '}
+              {star2 == '' ? <div style={{ width: '2rem' }}></div> : star2}{' '}
+              <S.Empty />
+              {star3 == '' ? <div style={{ width: '2rem' }}></div> : star3}
             </S.icCardNumber>
           </S.icCardNumberContainer>
           <S.ExpirationPeriodContainer>

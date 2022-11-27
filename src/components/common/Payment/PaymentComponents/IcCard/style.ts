@@ -7,7 +7,7 @@ export const icCardNeonSignContainer = styled.div`
 
 export const icCardNeonSign = styled.div`
   width: 6rem;
-  padding-top: 0.3rem;
+  padding-top: 0.5rem;
   background: #6685ff;
   box-shadow: 0px 6px 20px 2px #6685ff;
   border-radius: 1rem 1rem 0 0;
@@ -23,12 +23,12 @@ export const icImg = styled.img`
 export const icCardContainer = styled.div`
   width: 23rem;
   position: relative;
-  margin-left: 3.3rem;
+  margin-left: 4.5rem;
 `;
 
 export const icCard = styled.div`
-  width: 23rem;
-  height: 35rem;
+  width: 21rem;
+  height: 32rem;
   border-radius: 2.1rem;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -88,5 +88,5 @@ export const ExpirationPeriod = styled.div`
 `;
 
 export const icCardInfo = styled.div`
-  margin-left: 2.5rem;
+  margin-left: 1.5rem;
 `;
