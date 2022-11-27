@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const CircleContainer = styled.div`
-  margin-top: 18rem;
+  margin-top: 13rem;
   position: relative;
   display: flex;
 `;
