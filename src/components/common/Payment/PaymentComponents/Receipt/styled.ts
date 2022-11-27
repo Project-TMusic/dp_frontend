@@ -7,7 +7,7 @@ export const ReceiptBackgroundContainer = styled.div`
 
 export const ReceiptBackground = styled.div`
   width: 30rem;
-  height: 55rem;
+  height: 50rem;
   border-radius: 1.8rem;
   background: rgba(227, 233, 238);
 `;
