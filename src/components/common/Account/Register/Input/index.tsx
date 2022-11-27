@@ -2,23 +2,54 @@ import React from 'react';
 import * as S from './styled';
 
 export interface RegisterInputType {
-  setUserCheckPw: any;
   Check: string;
+  Register: any;
+  setUserName: any;
+  setUserId: any;
+  setUserPw: any;
+  setUserCheckPw: any;
+  setUserNumber: any;
 }
 export const RegisterInput: React.FC<RegisterInputType> = ({
-  setUserCheckPw,
   Check,
+  Register,
+  setUserName,
+  setUserId,
+  setUserPw,
+  setUserCheckPw,
+  setUserNumber,
 }) => {
   return (
     <>
       <S.RegisterAuthContainer>
-        <S.RegisterInput type="text" placeholder="이름" required />
+        <S.RegisterInput
+          type="text"
+          placeholder="이름"
+          onChange={(event) => {
+            setUserName(event.target.value);
+          }}
+          required
+        />
       </S.RegisterAuthContainer>
       <S.RegisterAuthContainer>
-        <S.RegisterInput type="text" placeholder="아이디" required />
+        <S.RegisterInput
+          type="text"
+          placeholder="아이디"
+          onChange={(event) => {
+            setUserId(event.target.value);
+          }}
+          required
+        />
       </S.RegisterAuthContainer>
       <S.RegisterAuthContainer>
-        <S.RegisterInput type="password" placeholder="비밀번호" required />
+        <S.RegisterInput
+          type="password"
+          placeholder="비밀번호"
+          onChange={(event) => {
+            setUserPw(event.target.value);
+          }}
+          required
+        />
       </S.RegisterAuthContainer>
       <S.RegisterAuthContainer>
         <S.RegisterInput
@@ -36,10 +67,14 @@ export const RegisterInput: React.FC<RegisterInputType> = ({
           type="tel"
           pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
           placeholder="전화번호"
+          onChange={(event) => {
+            setUserNumber(event.target.value);
+          }}
           required
         />
       </S.RegisterAuthContainer>
-      <S.RegisterButton>가입</S.RegisterButton>
+
+      <S.RegisterButton onClick={Register}>가입</S.RegisterButton>
     </>
   );
 };

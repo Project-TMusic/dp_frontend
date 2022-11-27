@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import {
   EmptyCircle,
+  FiveLine,
+  FourLine,
   IcCard,
   Receipt,
   ThreeLine,
@@ -38,6 +40,8 @@ export const PaymentPage: React.FC = () => {
             setFourNumber={setFourNumber}
           />
           <ThreeLine />
+          <FourLine />
+          <FiveLine />
         </S.MainSection>
         <S.Paypaper>
           <Receipt />

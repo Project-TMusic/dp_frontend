@@ -10,7 +10,7 @@ import { host } from 'src/host';
 export const LoginPage: React.FC = () => {
   const [userId, setUserId] = useState('');
   const [userPw, setUserPw] = useState('');
-  const [cookies, SetCookies] = useCookies(['id']);
+  const [cookies, SetCookies] = useCookies(['jwt']);
   const [user, setUser] = useState({ username: '', status: false });
   const login = () => {
     const data = { user_id: userId, user_pw: userPw };
@@ -19,7 +19,7 @@ export const LoginPage: React.FC = () => {
         console.log('1');
       } else {
         console.log(res.data);
-        SetCookies('id', res.data.token);
+        SetCookies('jwt', res.data.token);
         localStorage.setItem('Authorization', res.data.token);
       }
     });
