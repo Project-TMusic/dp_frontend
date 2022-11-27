@@ -19,15 +19,16 @@ export const LoginPage: React.FC = () => {
       } else {
         console.log(res.data);
         SetCookies('id', res.data.token);
-        localStorage.setItem('Authorization', 'Bearer ' + res.data.token);
+        localStorage.setItem('Authorization', res.data.token);
       }
     });
   };
+
   useEffect(() => {
     axios
       .get('http://localhost:3001/auth/authenticate', {
         headers: {
-          accessToken: localStorage.getItem('Authorization') as any,
+          Authorization: localStorage.getItem('Authorization') as any,
         },
       })
       .then((res) => {
@@ -42,6 +43,7 @@ export const LoginPage: React.FC = () => {
         }
       });
   }, []);
+  console.log(user);
   return (
     <>
       <S.LoginBackground>
