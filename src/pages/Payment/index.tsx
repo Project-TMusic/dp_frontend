@@ -4,6 +4,7 @@ import {
   FiveLine,
   FourLine,
   IcCard,
+  PayButton,
   Receipt,
   ThreeLine,
   TwoLine,
@@ -42,6 +43,7 @@ export const PaymentPage: React.FC = () => {
           <ThreeLine />
           <FourLine />
           <FiveLine />
+          <PayButton />
         </S.MainSection>
         <S.Paypaper>
           <Receipt />

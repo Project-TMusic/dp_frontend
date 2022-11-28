@@ -21,7 +21,7 @@ export const FiveLineHelp = styled.div`
 
 export const FiveLineFiveContainer = styled.div`
   display: flex;
-  width: 30rem;
+  width: 22rem;
   height: 7rem;
   background: rgba(243, 243, 243, 0.5);
   border-radius: 1.5rem;

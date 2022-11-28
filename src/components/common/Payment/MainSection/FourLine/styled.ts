@@ -21,7 +21,7 @@ export const FourLineHelp = styled.div`
 
 export const FourLineMMContainer = styled.div`
   display: flex;
-  width: 13rem;
+  width: 9.25rem;
   height: 7rem;
   background: rgba(243, 243, 243, 0.5);
   border-radius: 1.5rem;
@@ -30,7 +30,7 @@ export const FourLineMMContainer = styled.div`
 
 export const FourLineYYContainer = styled.div`
   display: flex;
-  width: 13rem;
+  width: 9.25rem;
   height: 7rem;
   background: rgba(243, 243, 243, 0.5);
   border-radius: 1.5rem;
@@ -44,7 +44,7 @@ export const FourLineMM = styled.input`
   text-align: center;
   font-size: 2rem;
   font-weight: 500;
-  width: 10rem;
+  width: 9rem;
   height: 5rem;
   margin-top: 1rem;
   margin: auto;
@@ -57,7 +57,7 @@ export const FourLineYY = styled.input`
   text-align: center;
   font-size: 2rem;
   font-weight: 500;
-  width: 10rem;
+  width: 9rem;
   height: 5rem;
   margin-top: 1rem;
   margin: auto;
@@ -70,7 +70,7 @@ export const FourLineLeft = styled.div`
 
 export const FourLineRight = styled.div`
   display: flex;
-  margin-left: 12rem;
+  margin-left: 5rem;
 `;
 
 export const slash = styled.div`

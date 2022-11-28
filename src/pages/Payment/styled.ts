@@ -12,5 +12,5 @@ export const Paypaper = styled.div`
 
 export const MainSection = styled.div`
   width: 90%;
-  margin-left: 5%;
+  margin-left: 7%;
 `;

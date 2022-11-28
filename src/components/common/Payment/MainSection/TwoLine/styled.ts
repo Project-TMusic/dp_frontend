@@ -18,7 +18,7 @@ export const TwoLineHelp = styled.div`
 
 export const TwoLineInputCardNumberContainer = styled.div`
   display: flex;
-  width: 60rem;
+  width: 52.25rem;
   height: 7rem;
   background: rgba(243, 243, 243, 0.5);
 
