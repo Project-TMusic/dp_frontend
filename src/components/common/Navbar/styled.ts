@@ -72,7 +72,7 @@ export const HomeLink = styled(Link)`
   text-decoration: none;
 `;
 
-export const Wish = styled.div`
+export const Wish = styled(Link)`
   width: 3rem;
   height: 3rem;
   border-radius: 2rem;
@@ -80,7 +80,7 @@ export const Wish = styled.div`
   margin-top: 1.7rem;
 `;
 
-export const Basket = styled.div`
+export const Basket = styled(Link)`
   width: 3rem;
   height: 3rem;
   border-radius: 2rem;
