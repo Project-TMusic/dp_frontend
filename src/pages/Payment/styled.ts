@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const CardContent = styled.div`
   display: flex;
   margin-left: 5rem;
-  margin-top: 3rem;
+  margin-top: 10rem;
 `;
 
 export const Paypaper = styled.div`
