@@ -18,8 +18,24 @@ export const PaymentPage: React.FC = () => {
   const [twoNumber, setTwoNumber] = useState('');
   const [threeNumber, setThreeNumber] = useState('');
   const [fourNumber, setFourNumber] = useState('');
-
+  const [cvcNumber, setCvcNumber] = useState('');
+  const [MM, setMM] = useState('');
+  const [YY, setYY] = useState('');
+  const [Pw, setPw] = useState('');
+  let enable = true;
   let check = false;
+  if (
+    cvcNumber.length == 3 &&
+    MM.length == 2 &&
+    YY.length == 2 &&
+    Pw.length > 1
+  ) {
+    enable = false;
+    console.log('바뀜');
+  } else {
+    enable = true;
+    console.log('false');
+  }
   if (
     oneNumber.length == 4 &&
     twoNumber.length == 4 &&
@@ -40,10 +56,10 @@ export const PaymentPage: React.FC = () => {
             setThreeNumber={setThreeNumber}
             setFourNumber={setFourNumber}
           />
-          <ThreeLine />
-          <FourLine />
-          <FiveLine />
-          <PayButton />
+          <ThreeLine setCvcNumber={setCvcNumber} />
+          <FourLine MM={setMM} YY={setYY} />
+          <FiveLine PayPassword={setPw} />
+          <PayButton enable={enable} />
         </S.MainSection>
         <S.Paypaper>
           <Receipt />
