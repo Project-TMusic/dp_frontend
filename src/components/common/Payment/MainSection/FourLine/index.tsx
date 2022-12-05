@@ -1,7 +1,12 @@
 import React from 'react';
 import * as S from './styled';
 
-export const FourLine: React.FC = () => {
+export interface AvailableDataType {
+  MM: any;
+  YY: any;
+}
+
+export const FourLine: React.FC<AvailableDataType> = ({ MM, YY }) => {
   return (
     <S.FourLineContainer>
       <S.FourLineLeft>
@@ -13,11 +18,21 @@ export const FourLine: React.FC = () => {
       </S.FourLineLeft>
       <S.FourLineRight>
         <S.FourLineMMContainer>
-          <S.FourLineMM maxLength={2} />
+          <S.FourLineMM
+            maxLength={2}
+            onChange={(event) => {
+              MM(event.target.value);
+            }}
+          />
         </S.FourLineMMContainer>
         <S.slash>/</S.slash>
         <S.FourLineYYContainer>
-          <S.FourLineYY maxLength={2} />
+          <S.FourLineYY
+            maxLength={2}
+            onChange={(event) => {
+              YY(event.target.value);
+            }}
+          />
         </S.FourLineYYContainer>
       </S.FourLineRight>
     </S.FourLineContainer>

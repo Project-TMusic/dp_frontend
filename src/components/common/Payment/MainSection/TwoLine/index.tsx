@@ -21,7 +21,7 @@ export const TwoLine: React.FC<TwoLineInputType> = ({
       <S.TwoLineTitle>카드번호</S.TwoLineTitle>
       <S.TwoLineHelp>카드 16자리 숫자를 입력해주세요.</S.TwoLineHelp>
       <S.TwoLineInputCardNumberContainer>
-        {check ? (
+        {check === true ? (
           <S.TwoLineCheckImg src="https://cdn-icons-png.flaticon.com/512/5610/5610944.png" />
         ) : (
           <div style={{ width: '6rem' }}></div>

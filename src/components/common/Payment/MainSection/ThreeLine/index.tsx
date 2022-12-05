@@ -1,7 +1,11 @@
 import React from 'react';
 import * as S from './styled';
 
-export const ThreeLine: React.FC = () => {
+export interface CvcType {
+  setCvcNumber: any;
+}
+
+export const ThreeLine: React.FC<CvcType> = ({ setCvcNumber }) => {
   return (
     <S.ThreeLineContainer>
       <S.ThreeLineLeft>
@@ -12,7 +16,12 @@ export const ThreeLine: React.FC = () => {
       </S.ThreeLineLeft>
       <S.ThreeLineRight>
         <S.ThreeLineCVCContainer>
-          <S.ThreeLineCVC maxLength={3} />
+          <S.ThreeLineCVC
+            maxLength={3}
+            onChange={(event) => {
+              setCvcNumber(event.target.value);
+            }}
+          />
         </S.ThreeLineCVCContainer>
       </S.ThreeLineRight>
     </S.ThreeLineContainer>

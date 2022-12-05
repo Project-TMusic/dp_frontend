@@ -1,7 +1,11 @@
 import React from 'react';
 import * as S from './styled';
 
-export const FiveLine: React.FC = () => {
+export interface PayPasswordType {
+  PayPassword: any;
+}
+
+export const FiveLine: React.FC<PayPasswordType> = ({ PayPassword }) => {
   return (
     <S.FiveLineContainer>
       <S.FiveLineLeft>
@@ -10,7 +14,12 @@ export const FiveLine: React.FC = () => {
       </S.FiveLineLeft>
       <S.FiveLineRight>
         <S.FiveLineFiveContainer>
-          <S.FiveLineFive type="password" />
+          <S.FiveLineFive
+            type="password"
+            onChange={(event) => {
+              PayPassword(event.target.value);
+            }}
+          />
         </S.FiveLineFiveContainer>
       </S.FiveLineRight>
     </S.FiveLineContainer>
