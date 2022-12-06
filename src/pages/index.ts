@@ -4,3 +4,4 @@ export * from './Profile';
 export * from './Account';
 export * from './Payment';
 export * from './ShoppingCart';
+export * from './Wish';

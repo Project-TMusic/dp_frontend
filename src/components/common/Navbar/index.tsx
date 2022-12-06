@@ -67,8 +67,8 @@ export const Navbar: React.FC<UserInfo> = (username) => {
           </S.ResponsiveContainer>
         ) : (
           <S.ProfileContainer>
-            <S.Wish></S.Wish>
-            <S.Basket></S.Basket>
+            <S.Wish to="/wish"></S.Wish>
+            <S.Basket to="/cart"></S.Basket>
             <S.HelloUser>
               <S.ProfileLink to="/profile">프로필</S.ProfileLink>
             </S.HelloUser>

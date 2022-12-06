@@ -8,3 +8,4 @@ export * from './Footer';
 export * from './MainFiles';
 export * from './Payment';
 export * from './ShoppingCart';
+export * from './Wish';
