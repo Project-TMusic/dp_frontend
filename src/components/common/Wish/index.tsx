@@ -13,12 +13,13 @@ export const Wish: React.FC = () => {
       setOpen(false);
     }
   };
+
   return (
     <>
       <S.DropdownContainer>
         <S.DropdownContent ref={dropdownRef}>
-          <S.DropdownButton onClick={(e) => handleDropdown(open)}>
-            쨘
+          <S.DropdownButton onClick={() => handleDropdown(open)}>
+            카테고리
           </S.DropdownButton>
           {open && (
             <S.DropdownUnorderdList>
@@ -30,6 +31,52 @@ export const Wish: React.FC = () => {
           )}
         </S.DropdownContent>
       </S.DropdownContainer>
+      <S.WishListContainer>
+        <S.WishListContent>
+          <S.WishListImage></S.WishListImage>
+          <S.WishListDescription>
+            <S.WishListTitle>준희네 떡볶이 남가좌동점</S.WishListTitle>
+            <S.WishListHeart>❤️</S.WishListHeart>
+          </S.WishListDescription>
+          <S.WishListStore>
+            가게 설명 가게 설명 가게 설명 가게 설명 가게 설명 가게 설명 가게
+            설명 가게 설명 가게 설명
+          </S.WishListStore>
+        </S.WishListContent>
+        <S.WishListContent>
+          <S.WishListImage></S.WishListImage>
+          <S.WishListDescription>
+            <S.WishListTitle>준희네 떡볶이 남가좌동점</S.WishListTitle>
+            <S.WishListHeart>❤️</S.WishListHeart>
+          </S.WishListDescription>
+          <S.WishListStore>
+            가게 설명 가게 설명 가게 설명 가게 설명 가게 설명 가게 설명 가게
+            설명 가게 설명 가게 설명
+          </S.WishListStore>
+        </S.WishListContent>
+        <S.WishListContent>
+          <S.WishListImage></S.WishListImage>
+          <S.WishListDescription>
+            <S.WishListTitle>준희네 떡볶이 남가좌동점</S.WishListTitle>
+            <S.WishListHeart>❤️</S.WishListHeart>
+          </S.WishListDescription>
+          <S.WishListStore>
+            가게 설명 가게 설명 가게 설명 가게 설명 가게 설명 가게 설명 가게
+            설명 가게 설명 가게 설명
+          </S.WishListStore>
+        </S.WishListContent>
+        <S.WishListContent>
+          <S.WishListImage></S.WishListImage>
+          <S.WishListDescription>
+            <S.WishListTitle>준희네 떡볶이 남가좌동점</S.WishListTitle>
+            <S.WishListHeart>❤️</S.WishListHeart>
+          </S.WishListDescription>
+          <S.WishListStore>
+            가게 설명 가게 설명 가게 설명 가게 설명 가게 설명 가게 설명 가게
+            설명 가게 설명 가게 설명
+          </S.WishListStore>
+        </S.WishListContent>
+      </S.WishListContainer>
     </>
   );
 };
