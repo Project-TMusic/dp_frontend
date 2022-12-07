@@ -15,7 +15,7 @@ export const Wish: React.FC = () => {
   };
 
   return (
-    <>
+    <S.WishCenterContainer>
       <S.DropdownContainer>
         <S.DropdownContent ref={dropdownRef}>
           <S.DropdownButton onClick={() => handleDropdown(open)}>
@@ -77,6 +77,6 @@ export const Wish: React.FC = () => {
           </S.WishListStore>
         </S.WishListContent>
       </S.WishListContainer>
-    </>
+    </S.WishCenterContainer>
   );
 };
