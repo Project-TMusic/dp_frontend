@@ -1,8 +1,6 @@
 import styled from '@emotion/styled';
 
-export const DropdownContainer = styled.div`
-  margin-left: 150rem;
-`;
+export const DropdownContainer = styled.div``;
 
 export const DropdownContent = styled.div`
   width: 20rem;
@@ -58,12 +56,14 @@ export const DropdownListItem = styled.button`
   }
 `;
 
+export const WishCenterContainer = styled.div`
+  margin-left: 10%;
+`;
+
 export const WishListContainer = styled.div`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  width: 75%;
-  margin-left: 22rem;
 `;
 
 export const WishListContent = styled.div`
@@ -72,7 +72,6 @@ export const WishListContent = styled.div`
   border-radius: 5%;
   background-color: #d8d8d8;
   margin-top: 5rem;
-  margin-left: 10rem;
 
   &:hover {
     box-shadow: 10px 5px 10px #bdbdbd;
