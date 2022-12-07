@@ -7,6 +7,7 @@ export const DropdownContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 5%;
   position: relative;
 `;
 
@@ -57,7 +58,13 @@ export const DropdownListItem = styled.button`
 `;
 
 export const WishCenterContainer = styled.div`
-  margin-left: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const WishCenterDisplay = styled.div`
+  margin: auto;
 `;
 
 export const WishListContainer = styled.div`
@@ -67,12 +74,12 @@ export const WishListContainer = styled.div`
 `;
 
 export const WishListContent = styled.div`
-  width: 30rem;
-  height: 36rem;
+  width: 27rem;
+  height: 33rem;
   border-radius: 5%;
   background-color: #d8d8d8;
   margin-top: 5rem;
-
+  margin-left: 5%;
   &:hover {
     box-shadow: 10px 5px 10px #bdbdbd;
   }
