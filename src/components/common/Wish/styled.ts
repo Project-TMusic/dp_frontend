@@ -1,5 +1,29 @@
 import styled from '@emotion/styled';
 
+export const WishHeaderContainer = styled.div`
+  width: 100%;
+  padding-left: 18%;
+  padding-top: 5rem;
+`;
+
+export const WishHeader = styled.div`
+  padding-top: 2rem;
+`;
+
+export const WishHeaderText = styled.div`
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 40px;
+  font-weight: 500;
+`;
+
+export const WishHeaderUnderLine = styled.div`
+  margin-top: 3.5rem;
+  width: 75%;
+  height: 0.3rem;
+  background: rgba(0, 0, 0, 0.8);
+  margin-bottom: 10rem;
+`;
+
 export const DropdownContainer = styled.div``;
 
 export const DropdownContent = styled.div`

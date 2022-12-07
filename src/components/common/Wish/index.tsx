@@ -16,6 +16,12 @@ export const Wish: React.FC = () => {
 
   return (
     <S.WishCenterContainer>
+      <S.WishHeaderContainer>
+        <S.WishHeader>
+          <S.WishHeaderText>관심목록</S.WishHeaderText>
+          <S.WishHeaderUnderLine />
+        </S.WishHeader>
+      </S.WishHeaderContainer>
       <S.WishCenterDisplay>
         <S.DropdownContainer>
           <S.DropdownContent ref={dropdownRef}>
