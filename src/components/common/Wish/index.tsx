@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import * as S from './styled';
+import { DUMMY_ITEM } from 'src/api';
 
 export const Wish: React.FC = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -42,7 +43,7 @@ export const Wish: React.FC = () => {
           <S.WishListContent>
             <S.WishListImage></S.WishListImage>
             <S.WishListDescription>
-              <S.WishListTitle>준희네 떡볶이 남가좌동점</S.WishListTitle>
+              <S.WishListTitle>{DUMMY_ITEM[0].name} 남가좌동점</S.WishListTitle>
               <S.WishListHeart>❤️</S.WishListHeart>
             </S.WishListDescription>
             <S.WishListStore>
