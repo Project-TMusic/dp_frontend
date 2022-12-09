@@ -1,8 +1,10 @@
 import styled from '@emotion/styled';
+export const positionCenter = styled.div`
+  margin: auto;
+`;
 
 export const WishHeaderContainer = styled.div`
-  width: 100%;
-  padding-left: 18%;
+  width: 91rem;
   padding-top: 5rem;
 `;
 
@@ -18,7 +20,6 @@ export const WishHeaderText = styled.div`
 
 export const WishHeaderUnderLine = styled.div`
   margin-top: 3.5rem;
-  width: 75%;
   height: 0.3rem;
   background: rgba(0, 0, 0, 0.8);
   margin-bottom: 10rem;
@@ -53,14 +54,11 @@ export const DropdownButton = styled.button`
 `;
 
 export const DropdownUnorderdList = styled.ul`
+  width: 91rem;
   margin: 0;
   padding: 0;
-  position: absolute;
   top: calc(100% + 5px);
-  min-width: 100%;
-  width: max-content;
   display: flex;
-  flex-direction: column;
   gap: 1px;
   border-radius: 4px;
   box-shadow: 0 0 5px #d4d4d4;
@@ -81,13 +79,14 @@ export const DropdownListItem = styled.button`
   }
 `;
 
-export const WishCenterContainer = styled.div`
+export const WishAllContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
 `;
 
 export const WishCenterDisplay = styled.div`
+  width: 91rem;
   margin: auto;
 `;
 
@@ -103,10 +102,14 @@ export const WishListContent = styled.div`
   border-radius: 5%;
   background-color: #d8d8d8;
   margin-top: 5rem;
-  margin-left: 5%;
   &:hover {
     box-shadow: 10px 5px 10px #bdbdbd;
   }
+`;
+
+export const EmptySpace = styled.div`
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
 `;
 
 export const WishListImage = styled.img`
@@ -114,6 +117,7 @@ export const WishListImage = styled.img`
   height: 15rem;
   border-radius: 5% 5% 0% 0%;
   background-color: #e6e6e6;
+  object-fit: cover;
 `;
 
 export const WishListDescription = styled.div`
