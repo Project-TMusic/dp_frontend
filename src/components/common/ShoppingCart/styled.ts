@@ -1,11 +1,14 @@
 import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 
 export const CartContainer = styled.div`
   padding-left: 35rem;
 `;
 
 export const CartHeader = styled.div`
+  display: flex;
   padding-top: 2rem;
+  width: 70%;
 `;
 
 export const CartHeaderText = styled.div`
@@ -15,7 +18,7 @@ export const CartHeaderText = styled.div`
 `;
 
 export const CartHeaderUnderline = styled.div`
-  margin-top: 3.5rem;
+  margin-top: 1.5rem;
   width: 75%;
   height: 0.3rem;
   background: rgba(0, 0, 0, 0.8);
@@ -99,4 +102,11 @@ export const ProductPrice = styled.div`
   margin-top: 1.5rem;
   margin-left: 2rem;
   color: rgba(0, 0, 0, 0.8);
+`;
+
+export const PaymentLink = styled(Link)`
+  position: absolute;
+  margin-left: 95rem;
+  font-size: 40px;
+  text-decoration: none;
 `;
