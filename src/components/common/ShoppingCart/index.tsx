@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import * as S from './styled';
 
 export const ShoppingCart: React.FC = () => {
@@ -8,8 +7,9 @@ export const ShoppingCart: React.FC = () => {
       <S.CartContainer>
         <S.CartHeader>
           <S.CartHeaderText>장바구니</S.CartHeaderText>
-          <S.CartHeaderUnderline />
+          <S.PaymentLink to="/payment">결제하러 가기</S.PaymentLink>
         </S.CartHeader>
+        <S.CartHeaderUnderline />
         <S.CartBody>
           <S.StoreHeader>
             <S.StoreImage />
@@ -80,7 +80,6 @@ export const ShoppingCart: React.FC = () => {
             </S.ProductContainer>
           </S.StoreProduct>
         </S.CartBody>
-        <Link to="/payment">결제하러 가기</Link>
       </S.CartContainer>
     </>
   );
