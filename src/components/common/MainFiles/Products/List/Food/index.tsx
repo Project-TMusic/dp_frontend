@@ -1,6 +1,6 @@
 import React from 'react';
 import * as S from './styled';
-import { Card, Empty, Recommend } from 'src/components';
+import { Card, Empty } from 'src/components';
 import { DUMMY_ITEM } from 'src/api';
 
 export const Food: React.FC = () => {
