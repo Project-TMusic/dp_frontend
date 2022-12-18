@@ -14,9 +14,3 @@ export const Flex = styled.div`
 export const Container = styled.div`
   display: flex;
 `;
-
-export const ReContainer = styled.div`
-  margin: auto;
-`;
-
-export const CardContainer = styled.div``;

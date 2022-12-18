@@ -40,58 +40,46 @@ export const Category: React.FC<CategoryTemplateProps> = ({
           <S.CategoryTitleContainer>
             <S.CategoryTitle>카테고리</S.CategoryTitle>
           </S.CategoryTitleContainer>
-          <S.ArrowContainer>
-            <S.positionRight>
-              <S.ArrowLeftContainer>
-                <S.Arrow directionProps={right}></S.Arrow>
-              </S.ArrowLeftContainer>
-              <S.ArrowRightContainer>
-                <S.Arrow directionProps={left}></S.Arrow>
-              </S.ArrowRightContainer>
-            </S.positionRight>
-          </S.ArrowContainer>
+          <S.BottomContainer>
+            <S.CategoryListContainer>
+              <S.FlexPosition>
+                <S.CarouselStyled {...settings}>
+                  <S.CategorySection>
+                    <S.SelectCategory style={{ width: 'none' }} to="/food">
+                      <FoodContainer />
+                    </S.SelectCategory>
+                  </S.CategorySection>
+                  <S.CategorySection>
+                    <S.SelectCategory to="/clothes">Clothes</S.SelectCategory>
+                  </S.CategorySection>
+                  <S.CategorySection>Health</S.CategorySection>
+                  <S.CategorySection>Tool</S.CategorySection>
+                  <S.CategorySection>Tool1</S.CategorySection>
+                  <S.CategorySection>Tool2</S.CategorySection>
+                  <S.CategorySection>Tool2</S.CategorySection>
+                </S.CarouselStyled>
+              </S.FlexPosition>
+            </S.CategoryListContainer>
+          </S.BottomContainer>
         </S.TopContainer>
-        <S.BottomContainer>
-          <S.CategoryListContainer>
-            <S.FlexPosition>
-              <S.CarouselStyled {...settings}>
-                <S.CategorySection>
-                  <S.SelectCategory style={{ width: 'none' }} to="/food">
-                    <FoodContainer />
-                  </S.SelectCategory>
-                </S.CategorySection>
-                <S.CategorySection>
-                  <S.SelectCategory to="/clothes">Clothes</S.SelectCategory>
-                </S.CategorySection>
-                <S.CategorySection>Health</S.CategorySection>
-                <S.CategorySection>Tool</S.CategorySection>
-                <S.CategorySection>Tool1</S.CategorySection>
-                <S.CategorySection>Tool2</S.CategorySection>
-                <S.CategorySection>Tool2</S.CategorySection>
-              </S.CarouselStyled>
-            </S.FlexPosition>
-          </S.CategoryListContainer>
-        </S.BottomContainer>
+        <S.PopularContainer>
+          <S.FlexPosition>
+            <Title TitleProp="인기 상품" />
+          </S.FlexPosition>
+          <S.CategoryTitleDescription>
+            현재 많이 주문하고 있어요.
+          </S.CategoryTitleDescription>
+          <S.CategoryTypeCenter>
+            <S.CategoryTypeContainer>
+              <S.CategoryTypeFlex>
+                {CategoryType === '' ? food : <></>}
+                {CategoryType === 'food' ? food : <></>}
+                {CategoryType === 'clothes' ? clothes : <></>}
+              </S.CategoryTypeFlex>
+            </S.CategoryTypeContainer>
+          </S.CategoryTypeCenter>
+        </S.PopularContainer>
       </S.CategoryContainer>
-      <S.FlexPosition>
-        <Title TitleProp="인기 상품" />
-        <S.positionRight style={{ width: '100%' }}>
-          <S.SeeAllContainer>
-            <S.SeeAllButton>
-              <S.SeeAllText>모두보기</S.SeeAllText>
-            </S.SeeAllButton>
-          </S.SeeAllContainer>
-        </S.positionRight>
-      </S.FlexPosition>
-      <S.CategoryTypeCenter>
-        <S.CategoryTypeContainer>
-          <S.CategoryTypeFlex>
-            {CategoryType === '' ? food : <></>}
-            {CategoryType === 'food' ? food : <></>}
-            {CategoryType === 'clothes' ? clothes : <></>}
-          </S.CategoryTypeFlex>
-        </S.CategoryTypeContainer>
-      </S.CategoryTypeCenter>
     </>
   );
 };

@@ -15,7 +15,7 @@ export const Card: React.FC<CardType> = ({
 }) => {
   return (
     <S.CardContainer>
-      <S.Card></S.Card>
+      <S.Card>{priceprops}</S.Card>
     </S.CardContainer>
   );
 };

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
 
 export const EmptySpace3rem = styled.div`
-  width: 3rem;
+  margin: 0 2rem 0 2rem;
 `;

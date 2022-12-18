@@ -2,6 +2,10 @@ import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 import Slider from 'react-slick';
 
+export const CategoryComponent = styled.div`
+  width: 100%;
+`;
+
 export const CategoryContainer = styled.div`
   width: 100%;
   padding-top: 12rem;
@@ -11,6 +15,7 @@ export const CategoryContainer = styled.div`
 export const CategoryTitleContainer = styled.div`
   width: 20%;
   margin-left: 14%;
+  margin-bottom: 2%;
 `;
 
 export const CategoryTitle = styled.div`
@@ -26,10 +31,6 @@ export const ArrowContainer = styled.div`
   margin-right: 17.5rem;
 `;
 
-export const positionRight = styled.div`
-  display: flex;
-  float: right;
-`;
 export const ArrowLeftContainer = styled.div`
   background-color: rgba(0, 0, 0, 0.05);
   width: 3.5rem;
@@ -49,6 +50,11 @@ export const Arrow = styled.div<{ directionProps: boolean }>`
     props.directionProps ? 'rotate(225deg)' : 'rotate(47deg)'};
 `;
 
+export const PopularContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 export const ArrowRightContainer = styled.div`
   background-color: #8aaae5;
   width: 3.5rem;
@@ -57,9 +63,10 @@ export const ArrowRightContainer = styled.div`
 `;
 
 export const TopContainer = styled.div`
-  width: 95%;
+  width: 100%;
   display: flex;
   margin-bottom: 5rem;
+  flex-direction: column;
 `;
 
 export const BottomContainer = styled.div`
@@ -152,28 +159,8 @@ export const CarouselStyled = styled(Slider)`
 
 export const SelectCategory = styled(NavLink)``;
 
-export const SeeAllButton = styled.button`
-  width: 13rem;
-  padding-top: 1rem;
-  background-color: rgba(138, 170, 229, 0.4);
-  border-radius: 2rem;
-  border: none;
-  float: right;
-  margin-right: 24rem;
-  margin-top: 0.6rem;
-`;
-
-export const SeeAllContainer = styled.div`
-  width: 100%;
-`;
-
-export const SeeAllText = styled.div`
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-`;
-
 export const CategoryTypeContainer = styled.div`
-  width: 68%;
+  width: 65%;
   margin: auto;
 `;
 
@@ -184,4 +171,10 @@ export const CategoryTypeCenter = styled.div`
 
 export const CategoryTypeFlex = styled.div`
   display: flex;
+`;
+
+export const CategoryTitleDescription = styled.div`
+  font-weight: 500;
+  color: black;
+  margin-left: 17.5%;
 `;
