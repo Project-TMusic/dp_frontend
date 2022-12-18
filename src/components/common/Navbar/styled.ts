@@ -100,7 +100,7 @@ export const ProfileContainer = styled.div`
   margin-left: 20rem;
   display: flex;
   @media screen and (max-width: 1300px) {
-    margin-left: 10rem;
+    margin-left: 8rem;
   }
   @media screen and (max-width: 1060px) {
     margin-left: 5rem;

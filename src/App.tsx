@@ -9,6 +9,7 @@ import {
   RegisterPage,
   Cart,
   WishPage,
+  TestPage,
 } from 'src/pages';
 
 export const App: React.FC = () => (
@@ -24,6 +25,7 @@ export const App: React.FC = () => (
       <Route path="payment" element={<PaymentPage />} />
       <Route path="cart" element={<Cart />} />
       <Route path="wish" element={<WishPage />} />
+      <Route path="test" element={<TestPage />} />
     </Routes>
   </>
 );

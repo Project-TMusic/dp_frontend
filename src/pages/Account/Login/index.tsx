@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router';
 import { Login } from 'src/components';
 import { LoginInput } from 'src/components/common/Account/Login/Input';
 import * as S from './styled';
@@ -12,6 +13,7 @@ export const LoginPage: React.FC = () => {
   const [userPw, setUserPw] = useState('');
   const [cookies, SetCookies] = useCookies(['jwt']);
   const [user, setUser] = useState({ username: '', status: false });
+  const navigate = useNavigate();
   const login = () => {
     const data = { user_id: userId, user_pw: userPw };
     axios.post(`http://${host.key}/auth/login`, data).then((res) => {
@@ -26,6 +28,9 @@ export const LoginPage: React.FC = () => {
   };
 
   useEffect(() => {
+    if (localStorage.getItem('Authorization')) {
+      navigate('/');
+    }
     axios
       .get(`http://${host.key}/auth/authenticate`, {
         headers: {
