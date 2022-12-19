@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import * as S from './styled';
+import { useRecoilState } from 'recoil';
+import { todoAtom } from 'src/atoms';
 
 export const TestPage: React.FC = () => {
   const [sticky, setSticky] = useState(0);
@@ -14,13 +16,14 @@ export const TestPage: React.FC = () => {
       window.addEventListener('scroll', listenScrollEvent);
     };
   }, []);
+  const [address, setAddress] = useRecoilState(todoAtom);
   return (
     <S.heightPadding>
       <S.container>
         <S.sidebar>
           <S.stick style={{ opacity: sticky }}>엉</S.stick>
         </S.sidebar>
-        <S.longtext></S.longtext>
+        <S.longtext>{address}</S.longtext>
       </S.container>
     </S.heightPadding>
   );
