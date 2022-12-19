@@ -1,15 +1,14 @@
 import React from 'react';
 import * as S from './styled';
 import { Card, Empty } from 'src/components';
-import { DUMMY_ITEM } from 'src/api';
+import { DUMMY_ITEM_Food } from 'src/api';
 
 export const Food: React.FC = () => {
-  console.log(DUMMY_ITEM);
+  console.log(DUMMY_ITEM_Food);
   return (
     <S.Flex>
       <S.Container>
-        {DUMMY_ITEM.map((value: any, key: any) => {
-          console.log(value.id);
+        {DUMMY_ITEM_Food.map((value: any, key: any) => {
           return (
             <>
               <div key={key}>

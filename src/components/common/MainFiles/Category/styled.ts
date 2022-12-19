@@ -2,6 +2,15 @@ import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 import Slider from 'react-slick';
 
+export const CategoryImg = styled.div<{ ImgUrl: string }>`
+  width: 6.4rem;
+  height: 6rem;
+  background: url(${(props) => props.ImgUrl});
+  object-fit: cover;
+  border-radius: 2rem;
+  margin: 3rem 0 0 3rem;
+`;
+
 export const CategoryComponent = styled.div`
   width: 100%;
 `;

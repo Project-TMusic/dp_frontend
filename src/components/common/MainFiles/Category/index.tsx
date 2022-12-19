@@ -46,13 +46,31 @@ export const Category: React.FC<CategoryTemplateProps> = ({
                 <S.CarouselStyled {...settings}>
                   <S.CategorySection>
                     <S.SelectCategory style={{ width: 'none' }} to="/food">
-                      <FoodContainer />
+                      <S.CategoryImg
+                        ImgUrl={
+                          'https://cdn4.iconfinder.com/data/icons/restaurant-135/32/Restaurant_restaurant_food_dish_hand_serve-64.png'
+                        }
+                      />
                     </S.SelectCategory>
                   </S.CategorySection>
                   <S.CategorySection>
-                    <S.SelectCategory to="/clothes">Clothes</S.SelectCategory>
+                    <S.SelectCategory to="/clothes">
+                      <S.CategoryImg
+                        ImgUrl={
+                          'https://cdn3.iconfinder.com/data/icons/font-awesome-solid/640/shirt-64.png'
+                        }
+                      />
+                    </S.SelectCategory>
                   </S.CategorySection>
-                  <S.CategorySection>Health</S.CategorySection>
+                  <S.CategorySection>
+                    <S.SelectCategory to="/health">
+                      <S.CategoryImg
+                        ImgUrl={
+                          'https://cdn2.iconfinder.com/data/icons/css-vol-2/24/gym-64.png'
+                        }
+                      />
+                    </S.SelectCategory>
+                  </S.CategorySection>
                   <S.CategorySection>Tool</S.CategorySection>
                   <S.CategorySection>Tool1</S.CategorySection>
                   <S.CategorySection>Tool2</S.CategorySection>

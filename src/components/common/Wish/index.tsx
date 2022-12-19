@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
 import * as S from './styled';
-import { DUMMY_ITEM } from 'src/api';
 
 export const Wish: React.FC = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -35,11 +34,9 @@ export const Wish: React.FC = () => {
         <S.WishCenterDisplay>
           <S.WishListContainer>
             <S.WishListContent>
-              <S.WishListImage src={DUMMY_ITEM[0].img} />
+              <S.WishListImage />
               <S.WishListDescription>
-                <S.WishListTitle>
-                  {DUMMY_ITEM[0].name} 남가좌동점
-                </S.WishListTitle>
+                <S.WishListTitle>남가좌동점</S.WishListTitle>
                 <S.WishListHeart>❤️</S.WishListHeart>
               </S.WishListDescription>
               <S.WishListStore>
@@ -49,9 +46,9 @@ export const Wish: React.FC = () => {
             </S.WishListContent>
             <S.EmptySpace />
             <S.WishListContent>
-              <S.WishListImage src={DUMMY_ITEM[1].img} />
+              <S.WishListImage />
               <S.WishListDescription>
-                <S.WishListTitle>{DUMMY_ITEM[1].name}</S.WishListTitle>
+                <S.WishListTitle></S.WishListTitle>
                 <S.WishListHeart>❤️</S.WishListHeart>
               </S.WishListDescription>
               <S.WishListStore>
@@ -61,9 +58,9 @@ export const Wish: React.FC = () => {
             </S.WishListContent>
             <S.EmptySpace />
             <S.WishListContent>
-              <S.WishListImage src={DUMMY_ITEM[2].img} />
+              <S.WishListImage />
               <S.WishListDescription>
-                <S.WishListTitle>{DUMMY_ITEM[2].name}</S.WishListTitle>
+                <S.WishListTitle></S.WishListTitle>
                 <S.WishListHeart>❤️</S.WishListHeart>
               </S.WishListDescription>
               <S.WishListStore>
