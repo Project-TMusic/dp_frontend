@@ -6,6 +6,7 @@ import { CookiesProvider } from 'react-cookie';
 import { App } from './App';
 import reportWebVitals from './reportWebVitals';
 import { globalStyle } from './styles';
+import { RecoilRoot } from 'recoil';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,10 +14,12 @@ const root = ReactDOM.createRoot(
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-      <CookiesProvider>
-        <Global styles={globalStyle} />
-        <App />
-      </CookiesProvider>
+      <RecoilRoot>
+        <CookiesProvider>
+          <Global styles={globalStyle} />
+          <App />
+        </CookiesProvider>
+      </RecoilRoot>
     </React.StrictMode>
   </BrowserRouter>
 );
