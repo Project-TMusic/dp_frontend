@@ -11,7 +11,6 @@ export const About: React.FC = () => {
     <>
       <Global styles={globalPadding} />
 
-      <Navbar username="" />
       <S.AboutContainer>
         <AboutUs />
         <S.Flex>
