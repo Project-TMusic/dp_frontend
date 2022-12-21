@@ -99,6 +99,7 @@ export const Profile = styled.div`
 export const ProfileContainer = styled.div`
   margin-left: 20rem;
   display: flex;
+
   @media screen and (max-width: 1300px) {
     margin-left: 8rem;
   }
@@ -107,13 +108,15 @@ export const ProfileContainer = styled.div`
   }
 `;
 
-export const MenusLinkContainer = styled.div`
+export const MenusLinkContainer = styled.div<{ SearchProps: boolean }>`
   display: flex;
-  margin-left: -2rem;
+  margin-left: -8rem;
   font-weight: bold;
   @media screen and (max-width: 1000px) {
     margin-left: 0;
   }
+
+  display: ${(props) => (props.SearchProps ? 'none' : '')};
 `;
 
 export const HelloUser = styled.div`
@@ -186,4 +189,36 @@ export const ResponsiveContainer = styled.div`
 export const ProfileLink = styled(Link)`
   text-decoration: none;
   color: black;
+`;
+
+export const SearchBarContainer = styled.div`
+  margin-top: 1.2rem;
+  margin-right: 10rem;
+
+  background: #a9d0f5;
+  height: 40px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  transtion: 0.8s;
+  box-shadow: 0 0 5px 0 #58acfa;
+`;
+
+export const SearchIcon = styled.div``;
+
+export const SearchInput = styled.input<{ SearchProps: boolean }>`
+  background: transparent;
+  color: black;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.8s;
+
+  &::placeholder {
+    color: white;
+  }
+
+  width: ${(props) => (props.SearchProps ? '20vw' : '0px')};
 `;

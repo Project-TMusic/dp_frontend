@@ -15,6 +15,7 @@ export const Navbar: React.FC<UserInfo> = (username) => {
   const isProfile: boolean = useMediaQuery({
     query: '(max-width:872px)',
   });
+
   const [scrollPosition, setScrollPosition] = useState(false);
   const listenScrollEvent = () => {
     window.scrollY > 10 ? setScrollPosition(true) : setScrollPosition(false);
@@ -25,6 +26,11 @@ export const Navbar: React.FC<UserInfo> = (username) => {
       window.removeEventListener('scroll', listenScrollEvent);
     };
   }, []);
+
+  const [isActive, setIsActive] = useState(false);
+  const inActiveClicked = () => {
+    setIsActive(!isActive);
+  };
   return (
     <S.NavbarContainer scrollPosition={scrollPosition}>
       <S.LogoContainer>
@@ -35,9 +41,18 @@ export const Navbar: React.FC<UserInfo> = (username) => {
         </S.Logo>
       </S.LogoContainer>
       <S.MenuContainer>
-        <S.MenusLinkContainer>
+        <S.SearchBarContainer>
+          <S.SearchInput
+            onFocus={inActiveClicked}
+            onBlur={inActiveClicked} // onFocus 반대
+            SearchProps={isActive}
+            type="text"
+            placeholder="Search"
+          />
+          <S.SearchIcon>🔍</S.SearchIcon>
+        </S.SearchBarContainer>
+        <S.MenusLinkContainer SearchProps={isActive}>
           <S.HomeLink to="/">Home</S.HomeLink>
-          <S.MenuLink>카테고리</S.MenuLink>
           <S.MenuLink>상품</S.MenuLink>
           <S.MenuLink>
             <S.NavLink to="/about">About us</S.NavLink>

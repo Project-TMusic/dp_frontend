@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import * as S from './styled';
-import { useRecoilState } from 'recoil';
-import { todoAtom } from 'src/atoms';
-import { ITodo } from 'src/types/interfaces';
 
 export const TestPage: React.FC = () => {
   const [sticky, setSticky] = useState(0);
@@ -17,18 +14,25 @@ export const TestPage: React.FC = () => {
       window.addEventListener('scroll', listenScrollEvent);
     };
   }, []);
-  const [address, setAddress] = useRecoilState<ITodo>(todoAtom);
+  const [Address, setAddress] = useState('');
+  const onChangeAddressInput = (e: any) => {
+    setAddress(e.target.value);
+    console.log(e.target.value);
+    console.log(Address, 'gd');
+  };
+  const onSubmit = (e: any) => {
+    try {
+      localStorage.setItem('address', Address);
+    } catch (e) {
+      console.log(e, 'localstorage set error');
+    }
+  };
   return (
-    <S.heightPadding>
-      <S.container>
-        <S.sidebar>
-          <S.stick style={{ opacity: sticky }}>엉</S.stick>
-        </S.sidebar>
-        <S.longtext>
-          {address.name}
-          {address.address}
-        </S.longtext>
-      </S.container>
-    </S.heightPadding>
+    <>
+      <form>
+        <input onChange={onChangeAddressInput} />
+        <button onClick={onSubmit}>Submit</button>
+      </form>
+    </>
   );
 };
