@@ -16,9 +16,11 @@ import { Navbar } from './components';
 export const App: React.FC = () => {
   const location = useLocation();
   const ShowNavbarBoolean = location.pathname.split('/')[1];
+  const HomeNavbarBoolean = location.pathname.split('/')[0];
 
   return (
     <>
+      {HomeNavbarBoolean === '' ? <Navbar username="asd" /> : <></>}
       {ShowNavbarBoolean === 'profile' ? <Navbar username="asd" /> : <></>}
       {ShowNavbarBoolean === 'about' ? <Navbar username="asd" /> : <></>}
 
