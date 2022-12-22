@@ -96,8 +96,8 @@ export const Profile = styled.div`
   margin-top: 1.7rem;
 `;
 
-export const ProfileContainer = styled.div`
-  margin-left: 20rem;
+export const ProfileContainer = styled.div<{ SearchProps: boolean }>`
+  margin-left: ${(props) => (props.SearchProps ? '6rem' : '20rem')};
   display: flex;
 
   @media screen and (max-width: 1300px) {
@@ -197,12 +197,11 @@ export const SearchBarContainer = styled.div`
 
   background: #a9d0f5;
   height: 40px;
-  border-radius: 30px;
+  border-radius: 20px;
   padding: 10px 20px;
   display: flex;
   align-items: center;
-  transtion: 0.8s;
-  box-shadow: 0 0 5px 0 #58acfa;
+  transition: 0.8s;
 `;
 
 export const SearchIcon = styled.div``;

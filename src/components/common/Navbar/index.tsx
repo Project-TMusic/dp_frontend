@@ -30,6 +30,10 @@ export const Navbar: React.FC<UserInfo> = (username) => {
   const [isActive, setIsActive] = useState(false);
   const inActiveClicked = () => {
     setIsActive(!isActive);
+    console.log(isActive);
+  };
+  const onBlurClicked = () => {
+    setIsActive(!isActive);
   };
   return (
     <S.NavbarContainer scrollPosition={scrollPosition}>
@@ -43,13 +47,12 @@ export const Navbar: React.FC<UserInfo> = (username) => {
       <S.MenuContainer>
         <S.SearchBarContainer>
           <S.SearchInput
-            onFocus={inActiveClicked}
-            onBlur={inActiveClicked} // onFocus 반대
+            onBlur={onBlurClicked}
             SearchProps={isActive}
             type="text"
             placeholder="Search"
           />
-          <S.SearchIcon>🔍</S.SearchIcon>
+          <S.SearchIcon onClick={inActiveClicked}>🔍</S.SearchIcon>
         </S.SearchBarContainer>
         <S.MenusLinkContainer SearchProps={isActive}>
           <S.HomeLink to="/">Home</S.HomeLink>
@@ -81,7 +84,7 @@ export const Navbar: React.FC<UserInfo> = (username) => {
             )}
           </S.ResponsiveContainer>
         ) : (
-          <S.ProfileContainer>
+          <S.ProfileContainer SearchProps={isActive}>
             <S.Wish to="/wish"></S.Wish>
             <S.Basket to="/cart"></S.Basket>
             <S.HelloUser>
