@@ -11,17 +11,16 @@ import {
   WishPage,
   TestPage,
 } from 'src/pages';
-import { TestPage2 } from './pages/test2';
 import { Navbar } from './components';
 
 export const App: React.FC = () => {
   const location = useLocation();
-  const ShowNavbarBoolean = location.pathname.split('/')[0];
+  const ShowNavbarBoolean = location.pathname.split('/')[1];
 
   return (
     <>
-      {ShowNavbarBoolean === 'profile' ? <></> : <Navbar username="asd" />}
-      {ShowNavbarBoolean === 'about' ? <></> : <Navbar username="asd" />}
+      {ShowNavbarBoolean === 'profile' ? <Navbar username="asd" /> : <></>}
+      {ShowNavbarBoolean === 'about' ? <Navbar username="asd" /> : <></>}
 
       <Routes>
         <Route index element={<Main />} />
@@ -35,7 +34,6 @@ export const App: React.FC = () => {
         <Route path="cart" element={<Cart />} />
         <Route path="wish" element={<WishPage />} />
         <Route path="test" element={<TestPage />} />
-        <Route path="test2" element={<TestPage2 />} />
       </Routes>
     </>
   );
