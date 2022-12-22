@@ -192,6 +192,8 @@ export const ProfileLink = styled(Link)`
 `;
 
 export const SearchBarContainer = styled.div`
+  position: relative;
+
   margin-top: 1.2rem;
   margin-right: 10rem;
 
@@ -200,8 +202,27 @@ export const SearchBarContainer = styled.div`
   border-radius: 20px;
   padding: 10px 20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   transition: 0.8s;
+  z-index: 99;
+`;
+
+export const SearchResultContainer = styled.div`
+  position: absolute;
+  margin-top: 3rem;
+`;
+
+export const SearchResult = styled.div`
+  width: 25vw;
+  height: 10rem;
+  border-radius: 1.5rem;
+  background-color: black;
+  color: white;
+`;
+
+export const SearchResultText = styled.div`
+  margin-left: 1rem;
 `;
 
 export const SearchIcon = styled.div``;

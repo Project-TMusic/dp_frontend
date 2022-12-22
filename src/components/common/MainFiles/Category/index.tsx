@@ -21,9 +21,6 @@ export const Category: React.FC<CategoryTemplateProps> = ({
   health,
   tool,
 }) => {
-  const right = true;
-  const left = false;
-
   const settings = {
     infinite: false,
     dots: false,

@@ -7,7 +7,7 @@ export const Clothes: React.FC = () => {
   return (
     <S.Flex>
       <S.Container>
-        {DUMMY_ITEM_Clothes.map((value: any, key: any) => {
+        {DUMMY_ITEM_Clothes.map((value: any, key: number) => {
           return (
             <>
               <div key={key}>

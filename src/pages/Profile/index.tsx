@@ -30,11 +30,7 @@ export const ProfilePage: React.FC = () => {
     removeCookie('jwt', '');
   };
   const navigate = useNavigate();
-  useEffect(() => {
-    if (!localStorage.getItem('Authorization')) {
-      navigate('/login');
-    }
-  });
+
   return (
     <>
       <Global styles={globalPadding} />

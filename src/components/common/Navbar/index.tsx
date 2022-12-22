@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 import * as S from './styled';
-import { DUMMY_ITEM_Food } from 'src/api';
+import { DUMMY_ITEM_Food, DUMMY_ITEM_Clothes, All_Product } from 'src/api';
 
 export interface UserInfo {
   username: string;
@@ -42,15 +42,7 @@ export const Navbar: React.FC<UserInfo> = (username) => {
     setSearchTerm(e.target.value);
     console.log(searchTerm);
   };
-  {
-    DUMMY_ITEM_Food.filter((value) => {
-      if (searchTerm === '') {
-        return console.log('비어있음');
-      } else if (value.name.toLowerCase().includes(searchTerm.toLowerCase())) {
-        return console.log(value.name, '여기여');
-      }
-    });
-  }
+
   return (
     <S.NavbarContainer scrollPosition={scrollPosition}>
       <S.LogoContainer>
@@ -62,14 +54,35 @@ export const Navbar: React.FC<UserInfo> = (username) => {
       </S.LogoContainer>
       <S.MenuContainer>
         <S.SearchBarContainer>
-          <S.SearchInput
-            onBlur={onBlurClicked}
-            SearchProps={isActive}
-            type="text"
-            placeholder="Search"
-            onChange={searchHandler}
-          />
-          <S.SearchIcon onClick={inActiveClicked}>🔍</S.SearchIcon>
+          <div style={{ display: 'flex' }}>
+            <S.SearchInput
+              onBlur={onBlurClicked}
+              SearchProps={isActive}
+              type="text"
+              placeholder="Search"
+              onChange={searchHandler}
+            />
+            <S.SearchIcon onClick={inActiveClicked}>🔍</S.SearchIcon>
+          </div>
+          {All_Product.filter((value) => {
+            if (searchTerm === '') {
+              return console.log('비어있을까');
+            } else if (
+              value.name.toLowerCase().includes(searchTerm.toLowerCase())
+            ) {
+              return value;
+            }
+          }).map((value, key) => {
+            return isActive ? (
+              <S.SearchResultContainer key={key}>
+                <S.SearchResult>
+                  <S.SearchResultText>{value.name}</S.SearchResultText>
+                </S.SearchResult>
+              </S.SearchResultContainer>
+            ) : (
+              <></>
+            );
+          })}
         </S.SearchBarContainer>
         <S.MenusLinkContainer SearchProps={isActive}>
           <S.HomeLink to="/">Home</S.HomeLink>
