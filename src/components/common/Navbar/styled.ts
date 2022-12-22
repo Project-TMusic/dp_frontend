@@ -101,10 +101,10 @@ export const ProfileContainer = styled.div<{ SearchProps: boolean }>`
   display: flex;
 
   @media screen and (max-width: 1300px) {
-    margin-left: 8rem;
+    margin-left: ${(props) => (props.SearchProps ? '3rem' : '8rem')};
   }
   @media screen and (max-width: 1060px) {
-    margin-left: 5rem;
+    margin-left: ${(props) => (props.SearchProps ? '3rem' : '5rem')};
   }
 `;
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 import * as S from './styled';
+import { DUMMY_ITEM_Food } from 'src/api';
 
 export interface UserInfo {
   username: string;
@@ -35,6 +36,21 @@ export const Navbar: React.FC<UserInfo> = (username) => {
   const onBlurClicked = () => {
     setIsActive(!isActive);
   };
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const searchHandler = (e: any) => {
+    setSearchTerm(e.target.value);
+    console.log(searchTerm);
+  };
+  {
+    DUMMY_ITEM_Food.filter((value) => {
+      if (searchTerm === '') {
+        return console.log('비어있음');
+      } else if (value.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+        return console.log(value.name, '여기여');
+      }
+    });
+  }
   return (
     <S.NavbarContainer scrollPosition={scrollPosition}>
       <S.LogoContainer>
@@ -51,6 +67,7 @@ export const Navbar: React.FC<UserInfo> = (username) => {
             SearchProps={isActive}
             type="text"
             placeholder="Search"
+            onChange={searchHandler}
           />
           <S.SearchIcon onClick={inActiveClicked}>🔍</S.SearchIcon>
         </S.SearchBarContainer>
