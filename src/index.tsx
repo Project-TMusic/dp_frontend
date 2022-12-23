@@ -13,14 +13,12 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <BrowserRouter>
-    <React.StrictMode>
-      <RecoilRoot>
-        <CookiesProvider>
-          <Global styles={globalStyle} />
-          <App />
-        </CookiesProvider>
-      </RecoilRoot>
-    </React.StrictMode>
+    <RecoilRoot>
+      <CookiesProvider>
+        <Global styles={globalStyle} />
+        <App />
+      </CookiesProvider>
+    </RecoilRoot>
   </BrowserRouter>
 );
 

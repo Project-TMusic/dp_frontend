@@ -7,7 +7,7 @@ export const Cart: React.FC = () => {
   return (
     <>
       <Global styles={globalPadding} />
-      <Navbar username="" />
+      <Navbar />
       <ShoppingCart />
     </>
   );

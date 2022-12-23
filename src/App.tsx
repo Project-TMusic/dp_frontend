@@ -20,9 +20,9 @@ export const App: React.FC = () => {
 
   return (
     <>
-      {HomeNavbarBoolean === '' ? <Navbar username="asd" /> : <></>}
-      {ShowNavbarBoolean === 'profile' ? <Navbar username="asd" /> : <></>}
-      {ShowNavbarBoolean === 'about' ? <Navbar username="asd" /> : <></>}
+      {HomeNavbarBoolean === '' ? <Navbar /> : <></>}
+      {ShowNavbarBoolean === 'profile' ? <Navbar /> : <></>}
+      {ShowNavbarBoolean === 'about' ? <Navbar /> : <></>}
 
       <Routes>
         <Route index element={<Main />} />

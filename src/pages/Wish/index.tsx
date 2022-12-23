@@ -7,7 +7,7 @@ export const WishPage: React.FC = () => {
   return (
     <>
       <Global styles={globalPadding} />
-      <Navbar username="" />
+      <Navbar />
       <Wish />
     </>
   );
