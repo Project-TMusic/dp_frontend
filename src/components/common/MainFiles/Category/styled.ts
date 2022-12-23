@@ -169,7 +169,7 @@ export const CarouselStyled = styled(Slider)`
 export const SelectCategory = styled(NavLink)``;
 
 export const CategoryTypeContainer = styled.div`
-  width: 65%;
+  width: 80%;
   margin: auto;
 `;
 
