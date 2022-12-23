@@ -7,10 +7,13 @@ export const FoodContainer = styled.div`
 `;
 
 export const Flex = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
 `;
 
 export const Container = styled.div`
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 `;

@@ -9,7 +9,7 @@ export const Food: React.FC = () => {
     <S.Flex>
       <S.Container>
         {DUMMY_ITEM_Food.map((value: any, key: any) => {
-          return (
+          return value.orderCount > 20 ? (
             <>
               <div key={key}>
                 <Card
@@ -20,6 +20,8 @@ export const Food: React.FC = () => {
               </div>
               <Empty />
             </>
+          ) : (
+            <></>
           );
         })}
       </S.Container>
