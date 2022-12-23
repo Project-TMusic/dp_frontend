@@ -8,20 +8,19 @@ export const Clothes: React.FC = () => {
     <S.Flex>
       <S.Container>
         {DUMMY_ITEM_Clothes.map((value: any, key: number) => {
-          return (
-            value.orderCount >
-            10(
-              <>
-                <div key={key}>
-                  <Card
-                    cardtitleprops="aasd"
-                    priceprops={value.name}
-                    imgprops="asd"
-                  />
-                </div>
-                <Empty />
-              </>
-            )
+          return value.orderCount > 10 ? (
+            <>
+              <div key={key}>
+                <Card
+                  cardtitleprops="aasd"
+                  priceprops={value.name}
+                  imgprops="asd"
+                />
+              </div>
+              <Empty />
+            </>
+          ) : (
+            <></>
           );
         })}
       </S.Container>
