@@ -1,16 +1,20 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
-export const NavbarContainer = styled.div<{ scrollPosition: boolean }>`
+export const NavbarContainer = styled.div<{
+  scrollPosition: boolean;
+  scrollShowNav: boolean;
+}>`
   position: fixed;
   z-index: 100;
   width: 100%;
   padding-top: 1rem;
-  top: 0;
+  top: ${(props) => (props.scrollShowNav ? 0 : '-90px')};
   display: flex;
   background-color: #f7f7f7;
   border-bottom: ${(props) =>
     props.scrollPosition ? '1px solid #e5e5e5' : ''};
+  transition: top 0.4s ease-out;
 `;
 
 export const LogoContainer = styled.div`

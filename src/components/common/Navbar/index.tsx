@@ -3,6 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 
 import * as S from './styled';
 import { DUMMY_ITEM_Food, DUMMY_ITEM_Clothes, All_Product } from 'src/api';
+import { useLocation } from 'react-router';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +24,27 @@ export const Navbar: React.FC = () => {
       window.removeEventListener('scroll', listenScrollEvent);
     };
   }, []);
+  const [position, setPosition] = useState(window.pageYOffset);
+  const [visible, setVisible] = useState(true);
+  const location = useLocation();
+  const asd = location.pathname.split('/')[1];
+  {
+    asd === 'about'
+      ? useEffect(() => {
+          const handleScroll = () => {
+            const moving = window.pageYOffset;
 
+            setVisible(position > moving);
+            setPosition(moving);
+          };
+          window.addEventListener('scroll', handleScroll);
+          return () => {
+            window.addEventListener('scroll', handleScroll);
+          };
+        })
+      : null;
+  }
+  const cls = visible ? true : false;
   const [isActive, setIsActive] = useState(false);
   const inActiveClicked = () => {
     setIsActive(!isActive);
@@ -40,7 +61,7 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <S.NavbarContainer scrollPosition={scrollPosition}>
+    <S.NavbarContainer scrollShowNav={cls} scrollPosition={scrollPosition}>
       <S.LogoContainer>
         <S.Logo>
           <S.LogoText>
@@ -62,7 +83,7 @@ export const Navbar: React.FC = () => {
           </div>
           {All_Product.filter((value) => {
             if (searchTerm === '') {
-              return console.log('비어있을까');
+              return 0;
             } else if (
               value.name.toLowerCase().includes(searchTerm.toLowerCase())
             ) {
@@ -70,8 +91,8 @@ export const Navbar: React.FC = () => {
             }
           }).map((value, key) => {
             return isActive ? (
-              <S.SearchResultContainer key={key}>
-                <S.SearchResult>
+              <S.SearchResultContainer>
+                <S.SearchResult key={key}>
                   <S.SearchResultText>{value.name}</S.SearchResultText>
                 </S.SearchResult>
               </S.SearchResultContainer>
