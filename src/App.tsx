@@ -12,15 +12,15 @@ import {
   TestPage,
 } from 'src/pages';
 import { Navbar } from './components';
+import { TestPage2 } from './pages/test2/index';
 
 export const App: React.FC = () => {
   const location = useLocation();
   const ShowNavbarBoolean = location.pathname.split('/')[1];
-  const HomeNavbarBoolean = location.pathname.split('/')[0];
 
   return (
     <>
-      {HomeNavbarBoolean === '' ? <Navbar /> : <></>}
+      {ShowNavbarBoolean === '' ? <Navbar /> : <></>}
       {ShowNavbarBoolean === 'profile' ? <Navbar /> : <></>}
       {ShowNavbarBoolean === 'about' ? <Navbar /> : <></>}
 
@@ -36,6 +36,7 @@ export const App: React.FC = () => {
         <Route path="cart" element={<Cart />} />
         <Route path="wish" element={<WishPage />} />
         <Route path="test" element={<TestPage />} />
+        <Route path="test2" element={<TestPage2 />} />
       </Routes>
     </>
   );

@@ -1,7 +1,7 @@
 export const All_Product = [
   {
     id: 1 as number,
-    name: '엽기떡볶이' as string,
+    name: '동대문엽기떡볶이' as string,
     packingState: '포장불가' as string,
     description: '',
     img: 'https://www.yupdduk.com/images/logo61.png' as string,
