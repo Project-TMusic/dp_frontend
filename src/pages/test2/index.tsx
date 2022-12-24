@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import styled from '@emotion/styled';
-import useScrollDirection from 'src/hooks/useScrollDirection';
 import * as S from './styled';
 
 export const TestPage2: React.FC = () => {
