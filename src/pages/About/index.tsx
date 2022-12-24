@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { AboutUs, Navbar } from 'src/components';
 import { Global } from '@emotion/react';
 import { globalPadding } from 'src/styles/globalPadding';
 import { Footer } from 'src/components';
 
 import * as S from './styled';
+import useIntersectionObsever from '../../hooks/useIntersectionObsever';
 
 export const About: React.FC = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInViewport = useIntersectionObsever(ref);
   return (
     <>
       <Global styles={globalPadding} />
@@ -24,6 +27,14 @@ export const About: React.FC = () => {
             서비스입니다.
           </S.Description>
         </S.Flex>
+        <S.DescriptionTop />
+        <S.ScrollAnimation
+          ref={ref}
+          className={isInViewport ? 'animation' : ''}
+        >
+          어바웃잇
+        </S.ScrollAnimation>
+        <S.DescriptionTop />
       </S.AboutContainer>
       <Footer />
     </>

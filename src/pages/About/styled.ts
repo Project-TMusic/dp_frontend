@@ -34,3 +34,30 @@ export const DescriptionTitle = styled.div`
   padding-bottom: 2rem;
   letter-spacing: 0.3rem;
 `;
+
+export const DescriptionTop = styled.div`
+  padding-top: 50rem;
+`;
+
+export const ScrollAnimation = styled.div`
+  height: 200px;
+  font-size: 36px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.animation {
+    animation-name: opacity;
+    animation-duration: 1000ms;
+
+    @keyframes opacity {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+`;
