@@ -7,6 +7,20 @@ export const AboutContainer = styled.div`
 export const Flex = styled.div`
   display: flex;
   padding-top: 10rem;
+  &.animation {
+    animation-name: opacity;
+    animation-duration: 1000ms;
+
+    @keyframes opacity {
+      from {
+        opacity: 0;
+        transform: translate3d(0, 5rem, 0);
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
 `;
 
 export const Logo = styled.img`
@@ -19,7 +33,7 @@ export const Logo = styled.img`
 export const Description = styled.div`
   position: sticky;
   top: 0;
-  opacity: 0.5;
+  opacity: 1;
   backdrop-filter: blur(30px);
   width: 30%;
   margin-left: 35rem;
@@ -49,11 +63,12 @@ export const ScrollAnimation = styled.div`
 
   &.animation {
     animation-name: opacity;
-    animation-duration: 1000ms;
+    animation-duration: 1500ms;
 
     @keyframes opacity {
       from {
         opacity: 0;
+        transform: translate3d(0, 5rem, 0);
       }
       to {
         opacity: 1;

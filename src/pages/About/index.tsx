@@ -15,8 +15,8 @@ export const About: React.FC = () => {
       <Global styles={globalPadding} />
 
       <S.AboutContainer>
-        <AboutUs />
-        <S.Flex>
+        <AboutUs Ref={ref} ViewportBoolean={isInViewport} />
+        <S.Flex ref={ref} className={isInViewport ? 'animation' : 'animation'}>
           <S.Logo />
           <S.Description>
             <S.DescriptionTitle>
