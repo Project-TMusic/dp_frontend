@@ -53,6 +53,10 @@ export const DescriptionTop = styled.div`
   padding-top: 50rem;
 `;
 
+export const DescriptionTop20Rem = styled.div`
+  padding-top: 20rem;
+`;
+
 export const ScrollAnimation = styled.div`
   height: 200px;
   font-size: 36px;
@@ -63,7 +67,7 @@ export const ScrollAnimation = styled.div`
 
   &.animation {
     animation-name: opacity;
-    animation-duration: 1500ms;
+    animation-duration: 1000ms;
 
     @keyframes opacity {
       from {
@@ -75,4 +79,12 @@ export const ScrollAnimation = styled.div`
       }
     }
   }
+`;
+
+export const AboutCardContainer = styled.div`
+  display: flex;
+`;
+
+export const AboutSectionOne = styled.div`
+  width: 75.5%;
 `;
