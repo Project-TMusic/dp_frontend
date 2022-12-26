@@ -1,5 +1,5 @@
 export * from './Navbar';
-export * from './AboutUs';
+export * from './AboutComponents';
 export * from './MainFiles/Category';
 export * from './Profile';
 export * from './Account/Login';

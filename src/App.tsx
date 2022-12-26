@@ -21,6 +21,8 @@ export const App: React.FC = () => {
   return (
     <>
       {ShowNavbarBoolean === '' ? <Navbar /> : <></>}
+      {ShowNavbarBoolean === 'food' ? <Navbar /> : <></>}
+      {ShowNavbarBoolean === 'clothes' ? <Navbar /> : <></>}
       {ShowNavbarBoolean === 'profile' ? <Navbar /> : <></>}
       {ShowNavbarBoolean === 'about' ? <Navbar /> : <></>}
 
