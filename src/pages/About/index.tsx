@@ -61,11 +61,16 @@ export const About: React.FC = () => {
             <S.AboutOurPossibility>Possibility</S.AboutOurPossibility>
             <AboutTitle
               AboutTitleFontCenter="center"
-              AboutTitleFontSize="2.7rem"
+              AboutTitleFontSize="3rem"
               AboutTitleFontWeight="900"
               AboutTitleTextProps="dp의 비전"
             />
           </S.AboutOurVisionTitle>
+          <S.AboutVisionContainer>
+            <AboutVision />
+            <AboutVision />
+            <AboutVision />
+          </S.AboutVisionContainer>
         </S.AboutSectionTwo>
         <S.DescriptionTop />
       </S.AboutContainer>

@@ -80,3 +80,8 @@ export const AboutOurPossibility = styled.div`
   color: rgba(1, 92, 216, 0.5);
   margin-bottom: 1rem;
 `;
+
+export const AboutVisionContainer = styled.div`
+  display: flex;
+  margin-top: 4rem;
+`;
