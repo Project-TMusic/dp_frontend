@@ -4,15 +4,17 @@ import { globalPadding } from 'src/styles/globalPadding';
 import { AboutUs, Footer } from 'src/components';
 
 import * as S from './styled';
-import { AboutCard } from '../../components/common/AboutComponents/AboutCard/index';
+import { AboutUsService } from '../../components/common/AboutComponents/AboutUsService/index';
 import { EmptySpace3rem } from 'src/components/common/MainFiles/ProductComponent/EmptySpace/styled';
 import { AboutTitle } from 'src/components/common/AboutComponents/AboutTitle';
 import { useScrollFadeIn } from 'src/hooks/useScrollFadeIn';
+import { AboutVision } from 'src/components/common/AboutComponents/AboutVision';
 
 export const About: React.FC = () => {
   const scrollAnimated = {
-    0: useScrollFadeIn<HTMLHeadingElement>('up', 0.7),
-    1: useScrollFadeIn<HTMLHeadingElement>('up', 0.7),
+    0: useScrollFadeIn<HTMLHeadingElement>('up', 0.7, 0),
+    1: useScrollFadeIn<HTMLHeadingElement>('up', 1, 0),
+    2: useScrollFadeIn<HTMLHeadingElement>('up', 1, 0),
   };
   return (
     <>
@@ -31,7 +33,7 @@ export const About: React.FC = () => {
             서비스입니다.
           </S.Description>
         </S.Flex>
-        <S.DescriptionTop20Rem />
+        <S.DescriptionTop10Rem />
         <S.ScrollAnimation {...scrollAnimated[1]}>
           <S.AboutSectionOne>
             <AboutTitle
@@ -41,17 +43,30 @@ export const About: React.FC = () => {
               AboutTitleTextProps="dp에서 제공하는 서비스"
             />
             <S.AboutCardContainer>
-              <AboutCard
-                AboutNumber={1}
-                AboutText={'매장의 드론 배달 서비스'}
+              <AboutUsService AboutNumber={1} AboutText={'매장의 드론 배달'} />
+              <EmptySpace3rem />
+              <AboutUsService AboutNumber={2} AboutText={'빠른 배달 속도'} />
+              <EmptySpace3rem />
+              <AboutUsService
+                AboutNumber={3}
+                AboutText={'실시간 상품위치 제공'}
               />
               <EmptySpace3rem />
-              <AboutCard AboutNumber={2} AboutText={'매일 같은 속도 보장'} />
-              <EmptySpace3rem />
-              <AboutCard AboutNumber={3} AboutText={'정확한 위치 제공'} />
+              <AboutUsService AboutNumber={4} AboutText={'좋은 상품 품질'} />
             </S.AboutCardContainer>
           </S.AboutSectionOne>
         </S.ScrollAnimation>
+        <S.AboutSectionTwo>
+          <S.AboutOurVisionTitle {...scrollAnimated[2]}>
+            <S.AboutOurPossibility>Possibility</S.AboutOurPossibility>
+            <AboutTitle
+              AboutTitleFontCenter="center"
+              AboutTitleFontSize="2.7rem"
+              AboutTitleFontWeight="900"
+              AboutTitleTextProps="dp의 비전"
+            />
+          </S.AboutOurVisionTitle>
+        </S.AboutSectionTwo>
         <S.DescriptionTop />
       </S.AboutContainer>
       <Footer />

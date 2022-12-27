@@ -7,6 +7,7 @@ export const AboutContainer = styled.div`
 export const Flex = styled.div`
   display: flex;
   padding-top: 10rem;
+  margin-bottom: 12.5rem;
 `;
 
 export const Logo = styled.img`
@@ -39,23 +40,43 @@ export const DescriptionTop = styled.div`
   padding-top: 50rem;
 `;
 
-export const DescriptionTop20Rem = styled.div`
-  padding-top: 20rem;
+export const DescriptionTop10Rem = styled.div`
+  padding-top: 10rem;
 `;
 
 export const ScrollAnimation = styled.div`
-  height: 200px;
   font-size: 36px;
   margin: 20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
 
 export const AboutCardContainer = styled.div`
   display: flex;
+  margin-top: 2rem;
 `;
 
 export const AboutSectionOne = styled.div`
   width: 75.5%;
+`;
+
+export const AboutSectionTwo = styled.div`
+  width: 100%;
+  height: 40rem;
+  background: rgba(237, 241, 244);
+  margin-top: 20rem;
+`;
+
+export const AboutOurVisionTitle = styled.div`
+  padding-top: 4rem;
+`;
+
+export const AboutOurPossibility = styled.div`
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+  color: rgba(1, 92, 216, 0.5);
+  margin-bottom: 1rem;
 `;

@@ -1,2 +1,2 @@
 export * from './AboutUs';
-export * from './AboutCard';
+export * from './AboutUsService';

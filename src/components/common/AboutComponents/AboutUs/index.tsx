@@ -9,7 +9,7 @@ export const AboutUs: React.FC = () => {
   return (
     <>
       <S.AboutUsContainer>
-        <S.Title>drone package</S.Title>
+        <S.Title>About Us</S.Title>
       </S.AboutUsContainer>
     </>
   );

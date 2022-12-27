@@ -9,4 +9,6 @@ export const AboutTitleText = styled.div<{
   font-weight: ${(props) => props.AboutTitleFontWeight};
   text-align: ${(props) => props.AboutTitleFontCenter};
   margin-bottom: 4rem;
+  letter-spacing: 0.5px;
+  margin: auto;
 `;
