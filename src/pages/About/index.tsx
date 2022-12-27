@@ -4,21 +4,23 @@ import { globalPadding } from 'src/styles/globalPadding';
 import { AboutUs, Footer } from 'src/components';
 
 import * as S from './styled';
-import useIntersectionObsever from '../../hooks/useIntersectionObsever';
 import { AboutCard } from '../../components/common/AboutComponents/AboutCard/index';
 import { EmptySpace3rem } from 'src/components/common/MainFiles/ProductComponent/EmptySpace/styled';
 import { AboutTitle } from 'src/components/common/AboutComponents/AboutTitle';
+import { useScrollFadeIn } from 'src/hooks/useScrollFadeIn';
 
 export const About: React.FC = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInViewport = useIntersectionObsever(ref);
+  const scrollAnimated = {
+    0: useScrollFadeIn('up', 1, 0.2),
+    1: useScrollFadeIn('up', 1, 0.7),
+  };
   return (
     <>
       <Global styles={globalPadding} />
 
       <S.AboutContainer>
-        <AboutUs Ref={ref} ViewportBoolean={isInViewport} />
-        <S.Flex ref={ref} className={isInViewport ? 'animation' : 'animation'}>
+        <AboutUs />
+        <S.Flex {...scrollAnimated[0]}>
           <S.Logo />
           <S.Description>
             <S.DescriptionTitle>
@@ -30,10 +32,7 @@ export const About: React.FC = () => {
           </S.Description>
         </S.Flex>
         <S.DescriptionTop20Rem />
-        <S.ScrollAnimation
-          ref={ref}
-          className={isInViewport ? 'animation' : ''}
-        >
+        <S.ScrollAnimation {...scrollAnimated[1]}>
           <S.AboutSectionOne>
             <AboutTitle
               AboutTitleFontCenter="left"

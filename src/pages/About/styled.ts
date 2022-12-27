@@ -7,20 +7,6 @@ export const AboutContainer = styled.div`
 export const Flex = styled.div`
   display: flex;
   padding-top: 10rem;
-  &.animation {
-    animation-name: opacity;
-    animation-duration: 1000ms;
-
-    @keyframes opacity {
-      from {
-        opacity: 0;
-        transform: translate3d(0, 5rem, 0);
-      }
-      to {
-        opacity: 1;
-      }
-    }
-  }
 `;
 
 export const Logo = styled.img`
@@ -64,21 +50,6 @@ export const ScrollAnimation = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  &.animation {
-    animation-name: opacity;
-    animation-duration: 1000ms;
-
-    @keyframes opacity {
-      from {
-        opacity: 0;
-        transform: translate3d(0, 5rem, 0);
-      }
-      to {
-        opacity: 1;
-      }
-    }
-  }
 `;
 
 export const AboutCardContainer = styled.div`
