@@ -9,14 +9,14 @@ const useIntersectionObsever = (targetRef: RefObject<HTMLDivElement>) => {
     if (!observer.current) {
       const observerCallback = (entries: IntersectionObserverEntry[]) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.intersectionRatio) {
             setIsInViewport(true);
           }
         });
       };
 
       observer.current = new window.IntersectionObserver(observerCallback, {
-        threshold: 0,
+        threshold: 1,
       });
     }
 
