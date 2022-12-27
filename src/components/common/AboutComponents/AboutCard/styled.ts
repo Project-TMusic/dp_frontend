@@ -12,4 +12,5 @@ export const AboutService = styled.div`
 export const DotPoint = styled.div`
   margin-right: 0.5rem;
   font-size: 4rem;
+  color: #99ccff;
 `;

@@ -11,8 +11,8 @@ import { useScrollFadeIn } from 'src/hooks/useScrollFadeIn';
 
 export const About: React.FC = () => {
   const scrollAnimated = {
-    0: useScrollFadeIn('up', 1, 0.2),
-    1: useScrollFadeIn('up', 1, 0.7),
+    0: useScrollFadeIn<HTMLHeadingElement>('up', 0.7),
+    1: useScrollFadeIn<HTMLHeadingElement>('up', 0.7),
   };
   return (
     <>
@@ -37,7 +37,7 @@ export const About: React.FC = () => {
             <AboutTitle
               AboutTitleFontCenter="left"
               AboutTitleFontSize="2.7rem"
-              AboutTitleFontWeight="800"
+              AboutTitleFontWeight="900"
               AboutTitleTextProps="dp에서 제공하는 서비스"
             />
             <S.AboutCardContainer>
@@ -46,8 +46,9 @@ export const About: React.FC = () => {
                 AboutText={'매장의 드론 배달 서비스'}
               />
               <EmptySpace3rem />
-              <EmptySpace3rem />
               <AboutCard AboutNumber={2} AboutText={'매일 같은 속도 보장'} />
+              <EmptySpace3rem />
+              <AboutCard AboutNumber={3} AboutText={'정확한 위치 제공'} />
             </S.AboutCardContainer>
           </S.AboutSectionOne>
         </S.ScrollAnimation>
