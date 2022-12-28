@@ -11,7 +11,7 @@ import {
   WishPage,
   TestPage,
 } from 'src/pages';
-import { Navbar } from './components';
+import { Footer, Navbar } from './components';
 import { TestPage2 } from './pages/test2/index';
 
 export const App: React.FC = () => {
@@ -25,6 +25,8 @@ export const App: React.FC = () => {
       {ShowNavbarBoolean === 'clothes' ? <Navbar /> : <></>}
       {ShowNavbarBoolean === 'profile' ? <Navbar /> : <></>}
       {ShowNavbarBoolean === 'about' ? <Navbar /> : <></>}
+      {ShowNavbarBoolean === 'wish' ? <Navbar /> : <></>}
+      {ShowNavbarBoolean === 'cart' ? <Navbar /> : <></>}
 
       <Routes>
         <Route index element={<Main />} />
@@ -40,6 +42,13 @@ export const App: React.FC = () => {
         <Route path="test" element={<TestPage />} />
         <Route path="test2" element={<TestPage2 />} />
       </Routes>
+      {ShowNavbarBoolean === '' ? <Footer /> : <></>}
+      {ShowNavbarBoolean === 'food' ? <Footer /> : <></>}
+      {ShowNavbarBoolean === 'clothes' ? <Footer /> : <></>}
+      {ShowNavbarBoolean === 'profile' ? <Footer /> : <></>}
+      {ShowNavbarBoolean === 'about' ? <Footer /> : <></>}
+      {ShowNavbarBoolean === 'wish' ? <Footer /> : <></>}
+      {ShowNavbarBoolean === 'cart' ? <Footer /> : <></>}
     </>
   );
 };
