@@ -13,9 +13,9 @@ export const Food: React.FC = () => {
             <>
               <div key={key}>
                 <Card
-                  cardtitleprops="aasd"
+                  cardtitleprops=""
                   priceprops={value.name}
-                  imgprops="asd"
+                  imgprops={value.img}
                 />
               </div>
               <Empty />
