@@ -9,31 +9,27 @@ import { EmptySpace3rem } from 'src/components/common/MainFiles/ProductComponent
 import { AboutTitle } from 'src/components/common/AboutComponents/AboutTitle';
 import { useScrollFadeIn } from 'src/hooks/useScrollFadeIn';
 import { AboutVision } from 'src/components/common/AboutComponents/AboutVision';
+import { MouseDown } from 'src/components/common/AboutComponents/MouseDown';
 
 export const About: React.FC = () => {
   const scrollAnimated = {
-    0: useScrollFadeIn<HTMLHeadingElement>('up', 0.7, 0),
+    0: useScrollFadeIn<HTMLHeadingElement>('down', 1, 0),
     1: useScrollFadeIn<HTMLHeadingElement>('up', 1, 0),
     2: useScrollFadeIn<HTMLHeadingElement>('up', 1, 0),
+    3: useScrollFadeIn<HTMLHeadingElement>('up', 1.5, 0.5),
+    4: useScrollFadeIn<HTMLHeadingElement>('up', 1.5, 1),
+    5: useScrollFadeIn<HTMLHeadingElement>('up', 1.5, 1.5),
   };
   return (
     <>
-      <Global styles={globalPadding} />
-
       <S.AboutContainer>
-        <AboutUs />
-        <S.Flex {...scrollAnimated[0]}>
-          <S.Logo />
-          <S.Description>
-            <S.DescriptionTitle>
-              신속하고 안전한 다종류 배달 서비스 dp!
-            </S.DescriptionTitle>
-            여러 카테고리의 상품들을 신속하고 안전하게 배달시켜보세요! 저희 dp는
-            드론을 통해 다양한 상품들을 신속하고 안전하게 배달해주는 드론 배달
-            서비스입니다.
-          </S.Description>
+        <S.Flex>
+          <AboutUs />
+          <S.MouseDownContainer {...scrollAnimated[0]}>
+            <MouseDown />
+          </S.MouseDownContainer>
         </S.Flex>
-        <S.DescriptionTop10Rem />
+        <S.DescriptionTop6Rem />
         <S.ScrollAnimation {...scrollAnimated[1]}>
           <S.AboutSectionOne>
             <AboutTitle
@@ -67,14 +63,36 @@ export const About: React.FC = () => {
             />
           </S.AboutOurVisionTitle>
           <S.AboutVisionContainer>
-            <AboutVision />
-            <AboutVision />
-            <AboutVision />
+            <S.AnimationAboutVisionContainer {...scrollAnimated[3]}>
+              <AboutVision
+                VisionText="4차산업기술"
+                VisionIcon={
+                  'https://cdn-icons-png.flaticon.com/128/4257/4257483.png'
+                }
+              />
+            </S.AnimationAboutVisionContainer>
+            <EmptySpace3rem />
+            <S.AnimationAboutVisionContainer {...scrollAnimated[4]}>
+              <AboutVision
+                VisionText="전기자동차 관련 모터 개발"
+                VisionIcon={
+                  'https://cdn-icons-png.flaticon.com/128/1835/1835948.png'
+                }
+              />
+            </S.AnimationAboutVisionContainer>
+            <EmptySpace3rem />
+            <S.AnimationAboutVisionContainer {...scrollAnimated[5]}>
+              <AboutVision
+                VisionText="배달팁"
+                VisionIcon={
+                  'https://cdn-icons-png.flaticon.com/128/1495/1495118.png'
+                }
+              />
+            </S.AnimationAboutVisionContainer>
           </S.AboutVisionContainer>
         </S.AboutSectionTwo>
         <S.DescriptionTop />
       </S.AboutContainer>
-      <Footer />
     </>
   );
 };

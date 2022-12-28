@@ -6,8 +6,10 @@ export const AboutContainer = styled.div`
 
 export const Flex = styled.div`
   display: flex;
-  padding-top: 10rem;
-  margin-bottom: 12.5rem;
+  flex-direction: column;
+  height: 70rem;
+  margin-bottom: 5rem;
+  background: rgba(36, 37, 41);
 `;
 
 export const Logo = styled.img`
@@ -40,8 +42,8 @@ export const DescriptionTop = styled.div`
   padding-top: 50rem;
 `;
 
-export const DescriptionTop10Rem = styled.div`
-  padding-top: 10rem;
+export const DescriptionTop6Rem = styled.div`
+  padding-top: 6rem;
 `;
 
 export const ScrollAnimation = styled.div`
@@ -64,9 +66,11 @@ export const AboutSectionOne = styled.div`
 
 export const AboutSectionTwo = styled.div`
   width: 100%;
-  height: 40rem;
+  height: 45rem;
   background: rgba(237, 241, 244);
   margin-top: 20rem;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const AboutOurVisionTitle = styled.div`
@@ -82,6 +86,13 @@ export const AboutOurPossibility = styled.div`
 `;
 
 export const AboutVisionContainer = styled.div`
+  margin: auto;
   display: flex;
-  margin-top: 4rem;
+`;
+
+export const AnimationAboutVisionContainer = styled.div``;
+
+export const MouseDownContainer = styled.div`
+  margin: auto;
+  margin-top: 30rem;
 `;
