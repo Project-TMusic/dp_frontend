@@ -1,5 +1,5 @@
 import React from 'react';
-import { Banner, Footer, Review } from 'src/components';
+import { Banner, Review } from 'src/components';
 import { CategoryTemplate } from 'src/Template';
 import { Global } from '@emotion/react';
 import { globalPadding } from 'src/styles/globalPadding';
@@ -10,7 +10,6 @@ export const Main: React.FC = () => {
       <Banner />
       <CategoryTemplate />
       <Review />
-      <Footer />
     </>
   );
 };
