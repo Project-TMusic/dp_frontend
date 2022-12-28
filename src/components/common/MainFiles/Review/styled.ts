@@ -6,6 +6,7 @@ export const ReviewContainer = styled.div`
   width: 100%;
   height: 40rem;
   margin-top: 10rem;
+  margin-bottom: -10rem;
 `;
 
 export const ReviewTitleContainer = styled.div`

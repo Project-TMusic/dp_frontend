@@ -25,7 +25,7 @@ export const CartHeaderUnderline = styled.div`
 `;
 
 export const CartBody = styled.div`
-  witdh: 75%;
+  width: 75%;
 `;
 
 export const StoreHeader = styled.div`
@@ -104,9 +104,19 @@ export const ProductPrice = styled.div`
   color: rgba(0, 0, 0, 0.8);
 `;
 
+export const PaymentContainer = styled.div`
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+`;
+
+export const PaymentButton = styled.button`
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255);
+`;
+
 export const PaymentLink = styled(Link)`
-  position: absolute;
-  margin-left: 95rem;
-  font-size: 40px;
+  font-size: 20px;
+  color: black;
   text-decoration: none;
 `;

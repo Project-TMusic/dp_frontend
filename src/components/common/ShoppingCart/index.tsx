@@ -7,7 +7,6 @@ export const ShoppingCart: React.FC = () => {
       <S.CartContainer>
         <S.CartHeader>
           <S.CartHeaderText>장바구니</S.CartHeaderText>
-          <S.PaymentLink to="/payment">결제하러 가기</S.PaymentLink>
         </S.CartHeader>
         <S.CartHeaderUnderline />
         <S.CartBody>
@@ -79,6 +78,11 @@ export const ShoppingCart: React.FC = () => {
               </S.ProductFlex>
             </S.ProductContainer>
           </S.StoreProduct>
+          <S.PaymentContainer>
+            <S.PaymentButton>
+              <S.PaymentLink to="/payment">구매하기</S.PaymentLink>
+            </S.PaymentButton>
+          </S.PaymentContainer>
         </S.CartBody>
       </S.CartContainer>
     </>

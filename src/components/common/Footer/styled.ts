@@ -5,6 +5,7 @@ export const FooterContainer = styled.div`
   display: flex;
   background: rgba(0, 0, 0, 0.8);
   padding-top: 6rem;
+  margin-top: 10rem;
 `;
 
 export const coverMargin = styled.div`
