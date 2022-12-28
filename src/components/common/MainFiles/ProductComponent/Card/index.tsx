@@ -15,7 +15,10 @@ export const Card: React.FC<CardType> = ({
 }) => {
   return (
     <S.CardContainer>
-      <S.Card>{priceprops}</S.Card>
+      <S.Card>
+        <S.CardImg src={imgprops} />
+        {priceprops}
+      </S.Card>
     </S.CardContainer>
   );
 };
