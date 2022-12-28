@@ -20,18 +20,18 @@ export const AboutContainer = styled.div`
 export const About = styled.div`
   font-family: 'Pretendard';
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 500;
   color: rgba(255, 255, 255, 0.8);
 `;
 
 export const CompanyInfoContainer = styled.div`
-  margin-left: 14%;
+  margin-left: 12%;
 `;
 
 export const CompanyInfo = styled.div`
   font-family: 'Pretendard';
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: 500;
   color: rgba(255, 255, 255, 0.8);
 `;
 
@@ -58,7 +58,7 @@ export const PolicyContainer = styled.div`
 export const Policy = styled.div`
   font-family: 'Pretendard';
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: 500;
   color: rgba(255, 255, 255, 0.8);
 `;
 

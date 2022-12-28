@@ -7,6 +7,7 @@ import { App } from './App';
 import reportWebVitals from './reportWebVitals';
 import { globalStyle } from './styles';
 import { RecoilRoot } from 'recoil';
+import { ScrollSetTop } from 'src/hooks';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -16,6 +17,7 @@ root.render(
     <RecoilRoot>
       <CookiesProvider>
         <Global styles={globalStyle} />
+        <ScrollSetTop />
         <App />
       </CookiesProvider>
     </RecoilRoot>
