@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import Slider from 'react-slick';
 
 export const ReviewContainer = styled.div`
-  background: rgba(0, 0, 0, 0.02);
+  background: rgba(237, 241, 244);
   width: 100%;
   height: 40rem;
   margin-top: 10rem;
