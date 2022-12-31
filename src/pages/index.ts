@@ -5,4 +5,5 @@ export * from './Account';
 export * from './Payment';
 export * from './ShoppingCart';
 export * from './Wish';
+export * from './Search';
 export * from './test';
