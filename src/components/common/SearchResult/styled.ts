@@ -75,7 +75,7 @@ export const StoreInfo = styled.div`
 
 export const Infoflex = styled.div`
   display: flex;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 `;
 
 export const StoreTitle = styled.span`
