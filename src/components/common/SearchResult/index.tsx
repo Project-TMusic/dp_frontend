@@ -5,9 +5,13 @@ export const SearchResult: React.FC = () => {
   return (
     <S.SearchResultContainer>
       <S.SearchHeader>
-        <S.SearchWhat>검색한 것</S.SearchWhat>에 대한 검색결과
-        {/* 검색된 가게 수에 따라 괄호 안 숫자가 달라지게 */}
-        <S.SearchCount>가게 (30)</S.SearchCount>
+        <S.SearchHeaderColumn>
+          <S.SearchHeaderPadding>
+            <S.SearchWhat>검색한 것</S.SearchWhat>에 대한 검색결과
+          </S.SearchHeaderPadding>
+          {/* 검색된 가게 수에 따라 괄호 안 숫자가 달라지게 */}
+          <S.SearchCount>가게 (30)</S.SearchCount>
+        </S.SearchHeaderColumn>
         <S.SearchSort>
           {/* 선택한 정렬 방법은 #8aaae5 색깔로 표기되게 */}
           <S.SearchSortText>기본 정렬</S.SearchSortText>

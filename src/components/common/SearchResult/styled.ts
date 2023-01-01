@@ -16,6 +16,10 @@ export const SearchHeader = styled.div`
   background-color: #edf1f4;
 `;
 
+export const SearchHeaderPadding = styled.div`
+  padding: 0.5rem 0.5rem;
+`;
+
 export const SearchWhat = styled.span`
   padding-left: 0.8rem;
   color: #8aaae5;
@@ -23,15 +27,18 @@ export const SearchWhat = styled.span`
 `;
 
 export const SearchCount = styled.span`
-  position: absolute;
-  left: 18%;
-  top: 14%;
+  margin-left: 1.3rem;
   font-weight: bold;
   font-size: 1.8rem;
 `;
 
+export const SearchHeaderColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 export const SearchSort = styled.div`
-  margin-top: 3.5rem;
+  margin-top: 1rem;
   height: 4rem;
   line-height: 4rem;
   display: flex;
@@ -85,7 +92,7 @@ export const StoreTitle = styled.span`
 
 export const StoreStar = styled.span`
   font-size: 1.5rem;
-  color: yellow;
+  color: #e9b738;
 `;
 
 export const StoreDescSt = styled.span`
