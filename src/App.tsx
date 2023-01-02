@@ -11,6 +11,7 @@ import {
   WishPage,
   TestPage,
   ProductPage,
+  Search,
 } from 'src/pages';
 import { Footer, Navbar } from './components';
 import { TestPage2 } from './pages/test2/index';
@@ -41,6 +42,7 @@ export const App: React.FC = () => {
         <Route path="payment" element={<PaymentPage />} />
         <Route path="cart" element={<Cart />} />
         <Route path="wish" element={<WishPage />} />
+        <Route path="search" element={<Search />} />
         <Route path="test" element={<TestPage />} />
         <Route path="test2" element={<TestPage2 />} />
         <Route path={'*'} element={<NotFound />} />

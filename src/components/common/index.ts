@@ -9,3 +9,4 @@ export * from './MainFiles';
 export * from './Payment';
 export * from './ShoppingCart';
 export * from './Wish';
+export * from './SearchResult';
