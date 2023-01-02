@@ -10,9 +10,11 @@ import {
   Cart,
   WishPage,
   TestPage,
+  ProductPage,
 } from 'src/pages';
 import { Footer, Navbar } from './components';
 import { TestPage2 } from './pages/test2/index';
+import { NotFound } from './NotFound';
 
 export const App: React.FC = () => {
   const location = useLocation();
@@ -41,6 +43,7 @@ export const App: React.FC = () => {
         <Route path="wish" element={<WishPage />} />
         <Route path="test" element={<TestPage />} />
         <Route path="test2" element={<TestPage2 />} />
+        <Route path={'*'} element={<NotFound />} />
       </Routes>
       {ShowNavbarBoolean === '' ? <Footer /> : <></>}
       {ShowNavbarBoolean === 'food' ? <Footer /> : <></>}
