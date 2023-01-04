@@ -2,9 +2,9 @@ import React from 'react';
 import * as S from './styled';
 
 export interface DetailData {
-  ImgSrc: string;
-  FoodName: string;
-  FoodDescription: string;
+  ImgSrc: any;
+  FoodName: any;
+  FoodDescription: any;
   FoodOnClick: any;
 }
 
@@ -23,7 +23,13 @@ export const DetailProduct: React.FC<DetailData> = ({
         <S.FoodName>{FoodName}</S.FoodName>
         <S.FoodDescription>{FoodDescription}</S.FoodDescription>
         <S.AddToCartContainer>
-          <S.AddToCartButton onClick={FoodOnClick}>담기</S.AddToCartButton>
+          <S.AddToCartButton
+            onClick={() => {
+              FoodOnClick;
+            }}
+          >
+            담기
+          </S.AddToCartButton>
         </S.AddToCartContainer>
       </S.FoodTextContainer>
     </S.DetailProductContainer>
