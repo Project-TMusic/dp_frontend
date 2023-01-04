@@ -8,6 +8,8 @@ import reportWebVitals from './reportWebVitals';
 import { globalStyle } from './styles';
 import { RecoilRoot } from 'recoil';
 import { ScrollSetTop } from 'src/hooks';
+import { Provider } from 'react-redux';
+import { Store } from './store';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -16,9 +18,11 @@ root.render(
   <BrowserRouter>
     <RecoilRoot>
       <CookiesProvider>
-        <Global styles={globalStyle} />
-        <ScrollSetTop />
-        <App />
+        <Provider store={Store}>
+          <Global styles={globalStyle} />
+          <ScrollSetTop />
+          <App />
+        </Provider>
       </CookiesProvider>
     </RecoilRoot>
   </BrowserRouter>
