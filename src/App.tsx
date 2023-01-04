@@ -10,11 +10,10 @@ import {
   Cart,
   WishPage,
   TestPage,
-  ProductPage,
+  ProductDetailPage,
   Search,
 } from 'src/pages';
 import { Footer, Navbar } from './components';
-import { TestPage2 } from './pages/test2/index';
 import { NotFound } from './NotFound';
 
 export const App: React.FC = () => {
@@ -30,6 +29,7 @@ export const App: React.FC = () => {
       {ShowNavbarBoolean === 'about' ? <Navbar /> : <></>}
       {ShowNavbarBoolean === 'wish' ? <Navbar /> : <></>}
       {ShowNavbarBoolean === 'cart' ? <Navbar /> : <></>}
+      {ShowNavbarBoolean === 'detail' ? <Navbar /> : <></>}
 
       <Routes>
         <Route index element={<Main />} />
@@ -44,7 +44,7 @@ export const App: React.FC = () => {
         <Route path="wish" element={<WishPage />} />
         <Route path="search" element={<Search />} />
         <Route path="test" element={<TestPage />} />
-        <Route path="test2" element={<TestPage2 />} />
+        <Route path="detail/:id" element={<ProductDetailPage />} />
         <Route path={'*'} element={<NotFound />} />
       </Routes>
       {ShowNavbarBoolean === '' ? <Footer /> : <></>}

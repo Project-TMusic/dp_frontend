@@ -1,7 +1,17 @@
 {
   "version": "0.2",
   "language": "en",
-  "words": ["browserslist", "craco", "Sert", "spoqa", "TTFB"],
+  "words": [
+    "addtocart",
+    "browserslist",
+    "craco",
+    "removefromcart",
+    "Sert",
+    "spoqa",
+    "TTFB"
+  ],
   "flagWords": [],
-  "ignorePaths": ["node_modules/**"]
+  "ignorePaths": [
+    "node_modules/**"
+  ]
 }

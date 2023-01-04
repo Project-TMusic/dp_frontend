@@ -10,3 +10,4 @@ export * from './Payment';
 export * from './ShoppingCart';
 export * from './Wish';
 export * from './SearchResult';
+export * from './DetailComponents';
