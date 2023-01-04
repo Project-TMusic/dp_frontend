@@ -7,4 +7,4 @@ export * from './ShoppingCart';
 export * from './Wish';
 export * from './Search';
 export * from './test';
-export * from './Product';
+export * from './Detail';
