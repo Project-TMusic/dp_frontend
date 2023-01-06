@@ -3,7 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 
 import * as S from './styled';
 import { DUMMY_ITEM_Food, DUMMY_ITEM_Clothes, All_Product } from 'src/api';
-import { useLocation } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,6 +60,7 @@ export const Navbar: React.FC = () => {
     console.log(searchTerm);
   };
 
+  const navigate = useNavigate();
   return (
     <S.NavbarContainer scrollShowNav={cls} scrollPosition={scrollPosition}>
       <S.LogoContainer>
@@ -93,7 +94,9 @@ export const Navbar: React.FC = () => {
             return isActive ? (
               <S.SearchResultContainer>
                 <S.SearchResult key={key}>
-                  <S.SearchResultText>{value.name}</S.SearchResultText>
+                  <S.SearchResultText to={`/search/results/${value.name}`}>
+                    {value.name}
+                  </S.SearchResultText>
                 </S.SearchResult>
               </S.SearchResultContainer>
             ) : (

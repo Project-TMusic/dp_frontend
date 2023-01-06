@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 import { All_Product } from 'src/api';
 
 export const ProductDetailPage: React.FC = () => {
-  const [local, setLocal] = useState() as any;
+  const [local, setLocal] = useState();
   const dispatch = useDispatch();
   const list = useSelector((state: any) => state.CartReducer.list);
   const AddToCartOnClick = () => {
@@ -24,7 +24,6 @@ export const ProductDetailPage: React.FC = () => {
   useEffect(() => {
     setLocal(localStorage.getItem('AddCart') as any);
   }, [list]);
-  console.log(local);
   return (
     <S.ProductDetailContainer>
       <S.BannerSection>
