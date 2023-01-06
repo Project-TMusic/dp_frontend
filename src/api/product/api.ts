@@ -10,6 +10,10 @@ export const All_Product = [
       'https://doewxs707ovkc.cloudfront.net/v3/prod/image/item/mainpage/907/ad4474bef39c4167b84477eaa7a5052f20210708171733.',
     menuName: '국물떡볶이',
     menuDesc: '매콤한 국물이 매력적입니다.',
+    reviewCount: 10,
+    reviewStar: 4.5,
+    minOrder: '10,000',
+    orderTip: '1,000',
   },
   {
     id: 2 as number,
