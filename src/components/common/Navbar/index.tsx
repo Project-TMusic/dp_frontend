@@ -103,7 +103,9 @@ export const Navbar: React.FC = () => {
             return isActive ? (
               <S.SearchResultContainer>
                 <S.SearchResult key={key}>
-                  <S.SearchResultText>{value.name}</S.SearchResultText>
+                  <S.SearchResultText to={`/search/results/${value.name}`}>
+                    {value.name}
+                  </S.SearchResultText>
                 </S.SearchResult>
               </S.SearchResultContainer>
             ) : (

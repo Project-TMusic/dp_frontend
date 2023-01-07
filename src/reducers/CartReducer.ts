@@ -6,7 +6,7 @@ export const CartReducer = (state = INIT_CART, action: any) => {
     case AddToCart:
       // eslint-disable-next-line no-case-declarations
       const { id, product } = action.payload;
-      console.log(action.payload.id, '반갑워');
+      // eslint-disable-next-line no-case-declarations
       return {
         ...state,
         list: [

@@ -227,6 +227,7 @@ export const SearchResult = styled.div`
 
 export const SearchResultText = styled.span`
   margin-left: 1rem;
+  color: white;
 `;
 
 export const SearchIcon = styled.div``;

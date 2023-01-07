@@ -1,10 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import * as S from './styled';
+import { useParams } from 'react-router';
+import { All_Product } from 'src/api';
 
 export const SearchResult: React.FC = () => {
   const queryParams = new URLSearchParams(location.search);
   const searchResult = queryParams.getAll('q');
 
+  const [listOf, setListOf] = useState([]) as any;
+  const { id } = useParams();
+  console.log(id);
+  if (
+    All_Product.filter((value) => {
+      if (value.name === id) {
+        useEffect(() => {
+          setListOf(value);
+        }, [id]);
+      }
+    })
+  ) {
+    console.log(200);
+  } else {
+    console.error(404);
+  }
   return (
     <S.SearchResultContainer>
       <S.SearchHeader>
@@ -26,21 +44,25 @@ export const SearchResult: React.FC = () => {
         </S.SearchSort>
       </S.SearchHeader>
       <S.SearchContentContainer>
-        <S.SearchContent>
-          <S.StoreImage />
-          <S.StoreInfo>
-            <S.StoreTitle>가게 이름</S.StoreTitle>
-            <S.Infoflex>
-              <S.StoreStar>★ 0.0</S.StoreStar>
-              <S.StoreDesc>리뷰 1,000</S.StoreDesc>
-            </S.Infoflex>
-            <S.Infoflex>
-              <S.StoreDescSt>최소주문 0,000원</S.StoreDescSt>
-              <S.StoreDesc>배달팁 0,000원</S.StoreDesc>
-            </S.Infoflex>
-            <S.DeliveryTime>5~10분</S.DeliveryTime>
-          </S.StoreInfo>
-        </S.SearchContent>
+        {listOf.reviewStar === '' ? (
+          <></>
+        ) : (
+          <S.SearchContent>
+            <S.StoreImage />
+            <S.StoreInfo>
+              <S.StoreTitle>가게 이름</S.StoreTitle>
+              <S.Infoflex>
+                <S.StoreStar>★ {listOf.reviewStar}</S.StoreStar>
+                <S.StoreDesc>리뷰 {listOf.reviewCount}</S.StoreDesc>
+              </S.Infoflex>
+              <S.Infoflex>
+                <S.StoreDescSt>최소주문 {listOf.minOrder}원</S.StoreDescSt>
+                <S.StoreDesc>배달팁 {listOf.orderTip}원</S.StoreDesc>
+              </S.Infoflex>
+              <S.DeliveryTime>5~10분</S.DeliveryTime>
+            </S.StoreInfo>
+          </S.SearchContent>
+        )}
       </S.SearchContentContainer>
     </S.SearchResultContainer>
   );
