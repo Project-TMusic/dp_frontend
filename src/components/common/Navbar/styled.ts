@@ -225,7 +225,7 @@ export const SearchResult = styled.div`
   color: white;
 `;
 
-export const SearchResultText = styled.span`
+export const SearchResultText = styled(NavLink)`
   margin-left: 1rem;
   color: white;
 `;

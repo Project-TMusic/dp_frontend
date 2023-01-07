@@ -42,9 +42,7 @@ export const App: React.FC = () => {
         <Route path="payment" element={<PaymentPage />} />
         <Route path="cart" element={<Cart />} />
         <Route path="wish" element={<WishPage />} />
-        <Route path="search">
-          <Route path="results/:id" element={<Search />} />
-        </Route>
+        <Route path="search" element={<Search />} />
         <Route path="test" element={<TestPage />} />
         <Route path="detail/:id" element={<ProductDetailPage />} />
         <Route path={'*'} element={<NotFound />} />
