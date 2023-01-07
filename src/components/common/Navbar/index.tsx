@@ -61,6 +61,14 @@ export const Navbar: React.FC = () => {
   };
 
   const navigate = useNavigate();
+
+  const search = (e: any) => {
+    if (e.key === 'Enter') {
+      const item = e.target.value;
+      navigate(`/search?q=${item}`);
+    }
+  };
+
   return (
     <S.NavbarContainer scrollShowNav={cls} scrollPosition={scrollPosition}>
       <S.LogoContainer>
@@ -76,9 +84,10 @@ export const Navbar: React.FC = () => {
             <S.SearchInput
               onBlur={onBlurClicked}
               SearchProps={isActive}
+              onChange={searchHandler}
+              onKeyPress={(e) => search(e)}
               type="text"
               placeholder="Search"
-              onChange={searchHandler}
             />
             <S.SearchIcon onClick={inActiveClicked}>🔍</S.SearchIcon>
           </div>

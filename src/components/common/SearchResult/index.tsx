@@ -4,6 +4,9 @@ import { useParams } from 'react-router';
 import { All_Product } from 'src/api';
 
 export const SearchResult: React.FC = () => {
+  const queryParams = new URLSearchParams(location.search);
+  const searchResult = queryParams.getAll('q');
+
   const [listOf, setListOf] = useState([]) as any;
   const { id } = useParams();
   console.log(id);
@@ -25,7 +28,7 @@ export const SearchResult: React.FC = () => {
       <S.SearchHeader>
         <S.SearchHeaderColumn>
           <S.SearchHeaderPadding>
-            <S.SearchWhat>검색한 것</S.SearchWhat>에 대한 검색결과
+            <S.SearchWhat>{searchResult}</S.SearchWhat>에 대한 검색결과
           </S.SearchHeaderPadding>
           {/* 검색된 가게 수에 따라 괄호 안 숫자가 달라지게 */}
           <S.SearchCount>가게 (30)</S.SearchCount>
