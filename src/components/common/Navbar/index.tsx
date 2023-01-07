@@ -27,9 +27,9 @@ export const Navbar: React.FC = () => {
   const [position, setPosition] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
   const location = useLocation();
-  const asd = location.pathname.split('/')[1];
+  const UpNavbar = location.pathname.split('/')[1];
   {
-    asd === 'about'
+    UpNavbar === 'about'
       ? useEffect(() => {
           const handleScroll = () => {
             const moving = window.pageYOffset;
