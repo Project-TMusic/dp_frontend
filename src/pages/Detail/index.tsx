@@ -24,6 +24,7 @@ export const ProductDetailPage: React.FC = () => {
   useEffect(() => {
     setLocal(localStorage.getItem('AddCart') as any);
   }, [list]);
+
   return (
     <S.ProductDetailContainer>
       <S.BannerSection>

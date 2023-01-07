@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import * as S from './styled';
-import { useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import { All_Product } from 'src/api';
 
 export const SearchResult: React.FC = () => {
   const queryParams = new URLSearchParams(location.search);
   const searchResult = queryParams.getAll('q');
   const StringResult = String(searchResult);
+  const navigate = useNavigate();
 
   return (
     <S.SearchResultContainer>
@@ -39,7 +40,7 @@ export const SearchResult: React.FC = () => {
           }
         }).map((value, key) => {
           return (
-            <S.SearchContent key={key}>
+            <S.SearchContent key={key} to={`/detail/${value.name}`}>
               <S.StoreImage />
               <S.StoreInfo>
                 <S.StoreTitle>{value.name}</S.StoreTitle>

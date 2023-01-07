@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { NavLink } from 'react-router-dom';
 
 export const SearchResultContainer = styled.div`
   width: 65%;
@@ -60,11 +61,13 @@ export const SearchContentContainer = styled.div`
   background-color: white;
 `;
 
-export const SearchContent = styled.div`
+export const SearchContent = styled(NavLink)`
   width: 27%;
   display: flex;
   margin-bottom: 5rem;
   margin-left: 5%;
+  color: black;
+  text-decoration: none;
 `;
 
 export const StoreImage = styled.img`
