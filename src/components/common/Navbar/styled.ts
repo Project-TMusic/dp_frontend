@@ -212,7 +212,7 @@ export const SearchBarContainer = styled.div`
   z-index: 99;
 `;
 
-export const SearchResultContainer = styled.div`
+export const SearchResultContainer = styled.form`
   position: absolute;
   margin-top: 3rem;
 `;
@@ -225,7 +225,7 @@ export const SearchResult = styled.div`
   color: white;
 `;
 
-export const SearchResultText = styled.div`
+export const SearchResultText = styled.span`
   margin-left: 1rem;
 `;
 
