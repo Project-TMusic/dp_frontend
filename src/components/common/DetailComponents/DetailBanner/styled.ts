@@ -12,6 +12,7 @@ export const BannerDiv = styled.div`
 
 export const BannerImg = styled.img`
   margin: auto;
-  width: 200px;
   object-fit: cover;
+  border-radius: 4rem;
+  height: 19rem;
 `;

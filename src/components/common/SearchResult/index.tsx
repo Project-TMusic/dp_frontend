@@ -8,7 +8,10 @@ export const SearchResult: React.FC = () => {
   const searchResult = queryParams.getAll('q');
   const StringResult = String(searchResult);
   const navigate = useNavigate();
-
+  const A = All_Product.map((val: any) => {
+    return val.menuName;
+  });
+  console.log(A);
   return (
     <S.SearchResultContainer>
       <S.SearchHeader>

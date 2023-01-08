@@ -13,6 +13,8 @@ export const Food: React.FC = () => {
             <>
               <div key={key}>
                 <Card
+                  idNumber={value.id - 1}
+                  toGoDetail={value.name}
                   cardtitleprops=""
                   priceprops={value.name}
                   imgprops={value.img}

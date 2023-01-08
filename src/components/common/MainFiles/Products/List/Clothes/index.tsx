@@ -12,6 +12,8 @@ export const Clothes: React.FC = () => {
             <>
               <div key={key}>
                 <Card
+                  toGoDetail={value.name}
+                  idNumber={value.id - 1}
                   cardtitleprops="aasd"
                   priceprops={value.name}
                   imgprops="asd"

@@ -9,6 +9,8 @@ export const FoodImg = styled.img`
   width: 12rem;
   height: 12rem;
   border-radius: 2rem;
+  object-fit: cover;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 `;
 
 export const FoodTextContainer = styled.div`

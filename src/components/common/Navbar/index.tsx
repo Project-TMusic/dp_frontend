@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 import * as S from './styled';
-import { DUMMY_ITEM_Food, DUMMY_ITEM_Clothes, All_Product } from 'src/api';
+import { All_Product } from 'src/api';
 import { useLocation, useNavigate } from 'react-router';
 
 export const Navbar: React.FC = () => {
