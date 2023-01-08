@@ -1,8 +1,11 @@
 import styled from '@emotion/styled';
+import { NavLink } from 'react-router-dom';
 
-export const CardContainer = styled.div`
+export const CardContainer = styled(NavLink)`
   margin-top: 2rem;
   margin-bottom: 2rem;
+  color: black;
+  text-decoration: none;
 `;
 
 export const Card = styled.div`
@@ -12,6 +15,8 @@ export const Card = styled.div`
   border-radius: 2rem;
   background-color: #fff;
 `;
+
+export const nameText = styled.div``;
 
 export const CardImg = styled.img`
   width: 100%;
