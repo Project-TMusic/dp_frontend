@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { addtocart, removefromcart } from 'src/action';
 import { useSelector } from 'react-redux';
 import { All_Product } from 'src/api';
+import { useParams } from 'react-router';
 
 export const ProductDetailPage: React.FC = () => {
   const [local, setLocal] = useState();
@@ -24,20 +25,22 @@ export const ProductDetailPage: React.FC = () => {
   useEffect(() => {
     setLocal(localStorage.getItem('AddCart') as any);
   }, [list]);
+  const { id } = useParams();
+  const ResultId = Number(id) - 1;
 
   return (
     <S.ProductDetailContainer>
       <S.BannerSection>
-        <DetailBanner ImgSrc={All_Product[1].img} />
+        <DetailBanner ImgSrc={All_Product[ResultId].img} />
       </S.BannerSection>
       <S.TwoSection>
         <S.DetailProductListSection>
           <S.DetailProductList>
             <DetailProduct
               FoodOnClick={AddToCartOnClick}
-              ImgSrc={All_Product[0].menuImg}
-              FoodName={All_Product[0].menuName}
-              FoodDescription={All_Product[0].menuDesc}
+              ImgSrc={All_Product[ResultId].menuImg}
+              FoodName={All_Product[ResultId].menuName}
+              FoodDescription={All_Product[ResultId].menuDesc}
             />
           </S.DetailProductList>
         </S.DetailProductListSection>

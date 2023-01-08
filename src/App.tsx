@@ -44,7 +44,7 @@ export const App: React.FC = () => {
         <Route path="wish" element={<WishPage />} />
         <Route path="search" element={<Search />} />
         <Route path="test" element={<TestPage />} />
-        <Route path="detail/:id" element={<ProductDetailPage />} />
+        <Route path="detail/:id/:id" element={<ProductDetailPage />} />
         <Route path={'*'} element={<NotFound />} />
       </Routes>
       {ShowNavbarBoolean === '' ? <Footer /> : <></>}
