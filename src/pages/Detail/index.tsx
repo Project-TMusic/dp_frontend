@@ -38,9 +38,15 @@ export const ProductDetailPage: React.FC = () => {
           <S.DetailProductList>
             <DetailProduct
               FoodOnClick={AddToCartOnClick}
-              ImgSrc={All_Product[ResultId].menuImg}
-              FoodName={All_Product[ResultId].menuName}
-              FoodDescription={All_Product[ResultId].menuDesc}
+              ImgSrc={All_Product[ResultId].menuImg[0]}
+              FoodName={All_Product[ResultId].menuName[0]}
+              FoodDescription={All_Product[ResultId].menuDesc[0]}
+            />
+            <DetailProduct
+              FoodOnClick={AddToCartOnClick}
+              ImgSrc={All_Product[ResultId].menuImg[1]}
+              FoodName={All_Product[ResultId].menuName[1]}
+              FoodDescription={All_Product[ResultId].menuDesc[1]}
             />
           </S.DetailProductList>
         </S.DetailProductListSection>

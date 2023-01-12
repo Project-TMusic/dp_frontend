@@ -17,11 +17,11 @@ export const DetailProduct: React.FC<DetailData> = ({
   return (
     <S.DetailProductContainer>
       <S.FoodImgContainer>
-        <S.FoodImg src={ImgSrc[0]} />
+        <S.FoodImg src={ImgSrc} />
       </S.FoodImgContainer>
       <S.FoodTextContainer>
-        <S.FoodName>{FoodName[0]}</S.FoodName>
-        <S.FoodDescription>{FoodDescription[0]}</S.FoodDescription>
+        <S.FoodName>{FoodName}</S.FoodName>
+        <S.FoodDescription>{FoodDescription}</S.FoodDescription>
         <S.AddToCartContainer>
           <S.AddToCartButton
             onClick={() => {
