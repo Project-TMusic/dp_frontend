@@ -44,7 +44,7 @@ export const SearchResult: React.FC = () => {
         }).map((value, key) => {
           return (
             <S.SearchContent key={key} to={`/detail/${value.name}/${value.id}`}>
-              <S.StoreImage />
+              <S.StoreImage src={value.img} />
               <S.StoreInfo>
                 <S.StoreTitle>{value.name}</S.StoreTitle>
                 <S.Infoflex>
