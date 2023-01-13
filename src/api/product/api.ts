@@ -141,7 +141,7 @@ export const All_Product = [
     id: 9 as number,
     name: '스프링옷' as string,
     packingState: '포장불가' as string,
-    img: 'https://thumb.mt.co.kr/06/2021/03/2021031910212950541_1.jpg/dims/optimize/' as string,
+    img: 'https://img.freepik.com/premium-vector/clothing-store-logo-design-inspiration-vector-illustration_500223-481.jpg?w=826' as string,
     tag: 'clothes',
     menuImg:
       'https://doewxs707ovkc.cloudfront.net/v3/prod/image/item/mainpage/907/ad4474bef39c4167b84477eaa7a5052f20210708171733.',
