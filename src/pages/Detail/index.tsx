@@ -27,7 +27,7 @@ export const ProductDetailPage: React.FC = () => {
   }, [list]);
   const { id } = useParams();
   const ResultId = Number(id) - 1;
-
+  const IndexNumber = [0, 1];
   return (
     <S.ProductDetailContainer>
       <S.BannerSection>
@@ -36,12 +36,18 @@ export const ProductDetailPage: React.FC = () => {
       <S.TwoSection>
         <S.DetailProductListSection>
           <S.DetailProductList>
-            <DetailProduct
-              FoodOnClick={AddToCartOnClick}
-              ImgSrc={All_Product[ResultId].menuImg}
-              FoodName={All_Product[ResultId].menuName}
-              FoodDescription={All_Product[ResultId].menuDesc}
-            />
+            {IndexNumber.map((Num: number, key: number) => {
+              return (
+                <div key={key}>
+                  <DetailProduct
+                    FoodOnClick={AddToCartOnClick}
+                    ImgSrc={All_Product[ResultId].menuImg[Num]}
+                    FoodName={All_Product[ResultId].menuName[Num]}
+                    FoodDescription={All_Product[ResultId].menuDesc[Num]}
+                  />
+                </div>
+              );
+            })}
           </S.DetailProductList>
         </S.DetailProductListSection>
         <S.DetailCartSection>
