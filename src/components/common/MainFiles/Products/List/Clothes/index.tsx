@@ -12,11 +12,11 @@ export const Clothes: React.FC = () => {
             <>
               <div key={key}>
                 <Card
+                  idNumber={value.id}
                   toGoDetail={value.name}
-                  idNumber={value.id - 1}
-                  cardtitleprops="aasd"
+                  cardtitleprops=""
                   priceprops={value.name}
-                  imgprops="asd"
+                  imgprops={value.img}
                 />
               </div>
               <Empty />
