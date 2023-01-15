@@ -204,22 +204,22 @@ export const DUMMY_ITEM_Clothes = [
     id: 1 as number,
     name: '동대문할매옷가게' as string,
     packingState: '포장불가' as string,
-    img: 'https://www.yupdduk.com/images/logo61.png' as string,
-    orderCount: 20,
+    img: 'https://t1.daumcdn.net/cfile/tistory/99438F425ED0A03328' as string,
+    orderCount: 40,
   },
   {
     id: 2 as number,
     name: '너좀입니' as string,
     packingState: '포장불가' as string,
-    img: 'http://baedduck.co.kr/theme/bae-default/layout/assets/img/logo-b.png',
-    orderCount: 20,
+    img: 'https://t1.daumcdn.net/cfile/tistory/99438F425ED0A03328',
+    orderCount: 40,
   },
   {
     id: 3 as number,
     name: '스프링옷' as string,
     packingState: '포장불가' as string,
-    img: 'https://thumb.mt.co.kr/06/2021/03/2021031910212950541_1.jpg/dims/optimize/' as string,
-    orderCount: 20,
+    img: 'https://img.freepik.com/premium-vector/clothing-store-logo-design-inspiration-vector-illustration_500223-481.jpg?w=826' as string,
+    orderCount: 10,
   },
 ];
 
