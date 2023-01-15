@@ -176,6 +176,7 @@ export const CategoryTypeContainer = styled.div`
 export const CategoryTypeCenter = styled.div`
   width: 100%;
   display: flex;
+  margin-top: 2rem;
 `;
 
 export const CategoryTypeFlex = styled.div`
