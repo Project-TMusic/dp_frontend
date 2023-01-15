@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { NavLink } from 'react-router-dom';
 export const positionCenter = styled.div`
   margin: auto;
 `;
@@ -87,23 +88,23 @@ export const WishAllContainer = styled.div`
 
 export const WishCenterDisplay = styled.div`
   width: 91rem;
-  margin: auto;
 `;
 
-export const WishListContainer = styled.div`
+export const WishListContainer = styled.div``;
+
+export const WishListContent = styled(NavLink)`
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-`;
-
-export const WishListContent = styled.div`
-  width: 27rem;
-  height: 33rem;
-  border-radius: 5%;
-  background-color: #d8d8d8;
-  margin-top: 5rem;
+  width: 100%;
+  height: 18rem;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 2rem;
+  transition: all 0.5s;
+  font-size: 22px;
+  color: black;
+  text-decoration: none;
   &:hover {
-    box-shadow: 10px 5px 10px #bdbdbd;
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.05);
   }
 `;
 
@@ -113,32 +114,31 @@ export const EmptySpace = styled.div`
 `;
 
 export const WishListImage = styled.img`
-  width: 100%;
+  width: 15rem;
   height: 15rem;
-  border-radius: 5% 5% 0% 0%;
   background-color: #e6e6e6;
   object-fit: cover;
+  margin: auto;
+  margin-left: 1.5rem;
 `;
 
 export const WishListDescription = styled.div`
-  display: flex;
+  width: 74rem;
 `;
 
 export const WishListTitle = styled.div`
+  display: flex;
   padding: 15px 15px;
   width: 85%;
-  font-size: 22px;
   font-weight: bold;
 `;
 
 export const WishListHeart = styled.div`
-  font-size: 30px;
-  margin-top: 13px;
+  font-size: 25px;
   color: red;
-
   &:hover {
     color: #f78181;
-    font-size: 32px;
+    font-size: 30px;
   }
 `;
 

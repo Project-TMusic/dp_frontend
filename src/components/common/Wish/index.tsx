@@ -3,7 +3,7 @@ import * as S from './styled';
 import { All_Product } from 'src/api';
 
 export const Wish: React.FC = () => {
-  const [CategoryProduct, setCategoryProduct] = useState('');
+  const [CategoryProduct, setCategoryProduct] = useState('food');
   const ChangeCategoryFood = () => {
     setCategoryProduct('food');
   };
@@ -39,13 +39,17 @@ export const Wish: React.FC = () => {
               }
             }).map((value: any, key: any) => {
               return (
-                <S.WishListContent key={key}>
-                  <S.WishListImage />
+                <S.WishListContent
+                  key={key}
+                  to={`/detail/${value.name}/${value.id}`}
+                >
+                  <S.WishListImage src={value.img} />
                   <S.WishListDescription>
-                    <S.WishListTitle>{value.name}</S.WishListTitle>
-                    <S.WishListHeart>❤️</S.WishListHeart>
+                    <S.WishListTitle>
+                      {value.name}
+                      <S.WishListHeart>❤️</S.WishListHeart>
+                    </S.WishListTitle>
                   </S.WishListDescription>
-                  <S.WishListStore></S.WishListStore>
                 </S.WishListContent>
               );
             })}
