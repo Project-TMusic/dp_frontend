@@ -30,93 +30,234 @@ export const CartBody = styled.div`
 
 export const StoreHeader = styled.div`
   display: flex;
+  justify-content: space-between;
   width: 75%;
-  height: 7rem;
-  margin-top: 3rem;
+  height: 5rem;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 2.5rem;
+  margin-right: 5rem;
+  color: rgba(0, 0, 0, 0.8);
   border-bottom: 1px solid rgba(0, 0, 0, 0.8);
 `;
 
-export const StoreImage = styled.img`
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.8);
-  margin-top: 1.5rem;
-  margin-left: 1rem;
+export const Store = styled.div`
+  font-size: 18px;
+  margin-top: 2.5rem;
+  margin-right: 8rem;
+  color: rgba(0, 0, 0, 0.8);
 `;
 
-export const StoreName = styled.div`
-  font-size: 24px;
-  font-weight: bold;
+export const Product = styled.div`
+  font-size: 18px;
   margin-top: 2.5rem;
-  margin-left: 1.5rem;
+  margin-right: 15rem;
   color: rgba(0, 0, 0, 0.8);
+`;
+
+export const Quantity = styled.div`
+  font-size: 18px;
+  margin-top: 2.5rem;
+  color: rgba(0, 0, 0, 0.8);
+`;
+
+export const Price = styled.div`
+  font-size: 18px;
+  margin-top: 2.5rem;
+  margin-right: 14rem;
+  color: rgba(0, 0, 0, 0.8);
+`;
+
+export const CartContent = styled.div`
+  display: flex;
+  margin-top: 2rem;
+  width: 75%;
+  height: auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+`;
+
+export const StoreVertical = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 export const StoreProduct = styled.div`
-  margin-top: 2rem;
-  display: column;
-  width: 75%;
-  height: auto;
-  padding-top: 1rem;
-  padding-bottom: 3rem;
-  box-shadow: 6px 5px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
 `;
 
-export const ProductContainer = styled.div`
-  margin-top: 2rem;
+export const StoreWarp = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 5rem;
+`;
+
+export const StoreGroup = styled.div`
+  display: flex;
+  margin-bottom: 2rem;
+`;
+
+export const StoreName = styled.div`
+  font-size: 20px;
+  margin-bottom: 1rem;
+`;
+
+export const StoreImg = styled.img`
+  background: skyblue;
+  width: 15rem;
+  height: 12rem;
+`;
+
+export const ProductContent = styled.div`
+  display: flex;
+  margin-left: 2rem;
+`;
+
+export const ProductImg = styled.div`
+  background: skyblue;
+  width: 10rem;
+  height: 8rem;
 `;
 
 export const ProductName = styled.div`
-  font-size: 20px;
-  font-weight: bold;
-  margin-left: 6.5rem;
-  padding-bottom: 1.5rem;
+  margin-left: 3rem;
+  margin-top: 3rem;
+  font-size: 18px;
 `;
 
-export const ProductFlex = styled.div`
+export const QuantityContent = styled.div`
   display: flex;
+  margin-top: 2.5rem;
+  margin-left: 10.5rem;
 `;
 
-export const ProductColumn = styled.div`
-  display: column;
+export const QuantityMinusButton = styled.button`
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50% 0 0 50%;
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+  }
 `;
 
-export const ProductImage = styled.img`
-  width: 8rem;
-  height: 8rem;
-  margin-left: 8rem;
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 15%;
+export const QuantityPlusButton = styled.button`
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0 50% 50% 0;
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+  }
 `;
 
-export const ProductDetail = styled.div`
-  font-size: 16px;
-  margin-left: 2rem;
-  margin-top: 5px;
-  color: rgba(0, 0, 0, 0.6);
+export const QuantityNumber = styled.div`
+  font-size: 18px;
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  line-height: 3rem;
 `;
 
-export const ProductPrice = styled.div`
-  font-size: 16px;
-  margin-top: 1.5rem;
-  margin-left: 2rem;
-  color: rgba(0, 0, 0, 0.8);
+export const PriceContent = styled.div`
+  margin-left: 9rem;
+  margin-right: 5rem;
+`;
+
+export const PriceText = styled.div`
+  font-size: 18px;
+  margin-top: 3rem;
+`;
+
+export const DeleteButton = styled.button`
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  margin-top: 2.5rem;
+  margin-right: 2rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+  }
 `;
 
 export const PaymentContainer = styled.div`
+  position: fixed;
+  right: 21%;
+  display: flex;
+  flex-direction: column;
   margin-top: 2rem;
-  margin-bottom: 4rem;
+  width: 25rem;
+  height: 26rem;
 `;
 
-export const PaymentButton = styled.button`
-  border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background: rgba(255, 255, 255);
+export const PaymentUpside = styled.div`
+  width: 100%;
+  height: 16rem;
+  background-color: #e9e9e9;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 `;
 
-export const PaymentLink = styled(Link)`
+export const PaymentUpsideTitle = styled.div`
   font-size: 20px;
-  color: black;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+`;
+
+export const PaymentTextGroup = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const PaymentText = styled.div`
+  font-size: 18px;
+  margin-top: 2rem;
+  margin-left: 2rem;
+`;
+
+export const PaymentPrice = styled.div`
+  font-size: 18px;
+  margin-top: 2rem;
+  margin-right: 2rem;
+`;
+
+export const PaymentMiddleSide = styled.div`
+  width: 100%;
+  height: 6rem;
+  background-color: #e2e2e2;
+`;
+
+export const PaymentDownside = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+`;
+
+export const PaymentButton = styled.a`
+  border: none;
+  background: #8aaae5;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  text-align: center;
+  line-height: 4rem;
+  font-size: 18px;
+  color: white;
   text-decoration: none;
 `;

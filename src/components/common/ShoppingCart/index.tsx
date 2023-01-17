@@ -3,88 +3,151 @@ import * as S from './styled';
 
 export const ShoppingCart: React.FC = () => {
   return (
-    <>
-      <S.CartContainer>
-        <S.CartHeader>
-          <S.CartHeaderText>장바구니</S.CartHeaderText>
-        </S.CartHeader>
-        <S.CartHeaderUnderline />
-        <S.CartBody>
-          <S.StoreHeader>
-            <S.StoreImage />
-            <S.StoreName>준희네 떡볶이 남가좌동점</S.StoreName>
-          </S.StoreHeader>
-          <S.StoreProduct>
-            <S.ProductContainer>
-              <S.ProductName>준희표 로제마라짜장카레 떡볶이</S.ProductName>
-              <S.ProductFlex>
-                <S.ProductImage />
-                <S.ProductColumn>
-                  <S.ProductDetail>· 토핑 선택 : 라면사리 추가</S.ProductDetail>
-                  <S.ProductDetail>
-                    · 죽고싶을 때 추천! : 준희표 용암소스 추가
-                  </S.ProductDetail>
-                  <S.ProductPrice>19,800원</S.ProductPrice>
-                </S.ProductColumn>
-              </S.ProductFlex>
-            </S.ProductContainer>
-            <S.ProductContainer>
-              <S.ProductName>
-                준희표 9300℃ 기름에서 튀긴 오징어튀김
-              </S.ProductName>
-              <S.ProductFlex>
-                <S.ProductImage />
-                <S.ProductColumn>
-                  <S.ProductDetail>· 10800℃에서 튀기기</S.ProductDetail>
-                  <S.ProductDetail>
-                    · 준희표 지옥에서 온 소스 추가
-                  </S.ProductDetail>
-                  <S.ProductDetail>
-                    · 토핑 선택 : 낙지 탕탕이 같은 낙지 튀김 추가 / 오징어 머리
-                    튀김 추가
-                  </S.ProductDetail>
-                  <S.ProductPrice>132,900원</S.ProductPrice>
-                </S.ProductColumn>
-              </S.ProductFlex>
-            </S.ProductContainer>
-          </S.StoreProduct>
-          <S.StoreHeader>
-            <S.StoreImage />
-            <S.StoreName>준희네 옷가게 남서울대학교점</S.StoreName>
-          </S.StoreHeader>
-          <S.StoreProduct>
-            <S.ProductContainer>
-              <S.ProductName>빨롄씨야꺄 후드티</S.ProductName>
-              <S.ProductFlex>
-                <S.ProductImage />
-                <S.ProductColumn>
-                  <S.ProductPrice>955,000원</S.ProductPrice>
-                </S.ProductColumn>
-              </S.ProductFlex>
-            </S.ProductContainer>
-          </S.StoreProduct>
-          <S.StoreHeader>
-            <S.StoreImage />
-            <S.StoreName>준희네 컴퓨터 용품 영등포점</S.StoreName>
-          </S.StoreHeader>
-          <S.StoreProduct>
-            <S.ProductContainer>
-              <S.ProductName>모니터 지지대</S.ProductName>
-              <S.ProductFlex>
-                <S.ProductImage />
-                <S.ProductColumn>
-                  <S.ProductPrice>37,500원</S.ProductPrice>
-                </S.ProductColumn>
-              </S.ProductFlex>
-            </S.ProductContainer>
-          </S.StoreProduct>
-          <S.PaymentContainer>
-            <S.PaymentButton>
-              <S.PaymentLink to="/payment">구매하기</S.PaymentLink>
-            </S.PaymentButton>
-          </S.PaymentContainer>
-        </S.CartBody>
-      </S.CartContainer>
-    </>
+    <S.CartContainer>
+      <S.CartHeader>
+        <S.CartHeaderText>장바구니</S.CartHeaderText>
+      </S.CartHeader>
+      <S.CartHeaderUnderline />
+      <S.PaymentContainer>
+        <S.PaymentUpside>
+          <S.PaymentUpsideTitle>주문 현황</S.PaymentUpsideTitle>
+          <S.PaymentTextGroup>
+            <S.PaymentText>총 상품 금액</S.PaymentText>
+            <S.PaymentPrice>100,000원</S.PaymentPrice>
+          </S.PaymentTextGroup>
+          <S.PaymentTextGroup>
+            <S.PaymentText>할인 금액</S.PaymentText>
+            <S.PaymentPrice>10,000원</S.PaymentPrice>
+          </S.PaymentTextGroup>
+        </S.PaymentUpside>
+        <S.PaymentMiddleSide>
+          <S.PaymentTextGroup>
+            <S.PaymentText>총 결제 금액</S.PaymentText>
+            <S.PaymentPrice>90,000원</S.PaymentPrice>
+          </S.PaymentTextGroup>
+        </S.PaymentMiddleSide>
+        <S.PaymentDownside>
+          <S.PaymentButton href="/payment">구매하기</S.PaymentButton>
+        </S.PaymentDownside>
+      </S.PaymentContainer>
+      <S.CartBody>
+        <S.StoreHeader>
+          <S.Store>가게</S.Store>
+          <S.Product>제품</S.Product>
+          <S.Quantity>수량</S.Quantity>
+          <S.Price>가격</S.Price>
+        </S.StoreHeader>
+        <S.CartContent>
+          <S.StoreVertical>
+            <S.StoreProduct>
+              <S.StoreName>가게 이름</S.StoreName>
+              <S.StoreImg />
+            </S.StoreProduct>
+          </S.StoreVertical>
+          <S.StoreWarp>
+            <S.StoreGroup>
+              <S.ProductContent>
+                <S.ProductImg />
+                <S.ProductName>제품 이름</S.ProductName>
+              </S.ProductContent>
+              <S.QuantityContent>
+                <S.QuantityMinusButton>-</S.QuantityMinusButton>
+                <S.QuantityNumber>0</S.QuantityNumber>
+                <S.QuantityPlusButton>+</S.QuantityPlusButton>
+              </S.QuantityContent>
+              <S.PriceContent>
+                <S.PriceText>10,000원</S.PriceText>
+              </S.PriceContent>
+              <S.DeleteButton>X</S.DeleteButton>
+            </S.StoreGroup>
+            <S.StoreGroup>
+              <S.ProductContent>
+                <S.ProductImg />
+                <S.ProductName>제품 이름</S.ProductName>
+              </S.ProductContent>
+              <S.QuantityContent>
+                <S.QuantityMinusButton>-</S.QuantityMinusButton>
+                <S.QuantityNumber>0</S.QuantityNumber>
+                <S.QuantityPlusButton>+</S.QuantityPlusButton>
+              </S.QuantityContent>
+              <S.PriceContent>
+                <S.PriceText>10,000원</S.PriceText>
+              </S.PriceContent>
+              <S.DeleteButton>X</S.DeleteButton>
+            </S.StoreGroup>
+            <S.StoreGroup>
+              <S.ProductContent>
+                <S.ProductImg />
+                <S.ProductName>제품 이름</S.ProductName>
+              </S.ProductContent>
+              <S.QuantityContent>
+                <S.QuantityMinusButton>-</S.QuantityMinusButton>
+                <S.QuantityNumber>0</S.QuantityNumber>
+                <S.QuantityPlusButton>+</S.QuantityPlusButton>
+              </S.QuantityContent>
+              <S.PriceContent>
+                <S.PriceText>10,000원</S.PriceText>
+              </S.PriceContent>
+              <S.DeleteButton>X</S.DeleteButton>
+            </S.StoreGroup>
+            <S.StoreGroup>
+              <S.ProductContent>
+                <S.ProductImg />
+                <S.ProductName>제품 이름</S.ProductName>
+              </S.ProductContent>
+              <S.QuantityContent>
+                <S.QuantityMinusButton>-</S.QuantityMinusButton>
+                <S.QuantityNumber>0</S.QuantityNumber>
+                <S.QuantityPlusButton>+</S.QuantityPlusButton>
+              </S.QuantityContent>
+              <S.PriceContent>
+                <S.PriceText>10,000원</S.PriceText>
+              </S.PriceContent>
+              <S.DeleteButton>X</S.DeleteButton>
+            </S.StoreGroup>
+          </S.StoreWarp>
+        </S.CartContent>
+        <S.CartContent>
+          <S.StoreVertical>
+            <S.StoreProduct>
+              <S.StoreName>가게 이름</S.StoreName>
+              <S.StoreImg />
+            </S.StoreProduct>
+          </S.StoreVertical>
+          <S.StoreWarp>
+            <S.StoreGroup>
+              <S.ProductContent>
+                <S.ProductImg />
+                <S.ProductName>제품 이름</S.ProductName>
+              </S.ProductContent>
+              <S.QuantityContent>
+                <S.QuantityMinusButton>-</S.QuantityMinusButton>
+                <S.QuantityNumber>0</S.QuantityNumber>
+                <S.QuantityPlusButton>+</S.QuantityPlusButton>
+              </S.QuantityContent>
+              <S.PriceContent>
+                <S.PriceText>10,000원</S.PriceText>
+              </S.PriceContent>
+              <S.DeleteButton>X</S.DeleteButton>
+            </S.StoreGroup>
+            <S.StoreGroup>
+              <S.ProductContent>
+                <S.ProductImg />
+                <S.ProductName>제품 이름</S.ProductName>
+              </S.ProductContent>
+              <S.QuantityContent>
+                <S.QuantityMinusButton>-</S.QuantityMinusButton>
+                <S.QuantityNumber>0</S.QuantityNumber>
+                <S.QuantityPlusButton>+</S.QuantityPlusButton>
+              </S.QuantityContent>
+              <S.PriceContent>
+                <S.PriceText>10,000원</S.PriceText>
+              </S.PriceContent>
+              <S.DeleteButton>X</S.DeleteButton>
+            </S.StoreGroup>
+          </S.StoreWarp>
+        </S.CartContent>
+      </S.CartBody>
+    </S.CartContainer>
   );
 };
